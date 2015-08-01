@@ -44,4 +44,5 @@ class TailorsController < ApplicationController
   def tailor_params
     params.require(:tailor).permit(:company_id, :first_name, :last_name, :email, :password)
   end
+
 end
