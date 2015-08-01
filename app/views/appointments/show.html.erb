@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stages:</strong>
+  <%= @appointment.stages %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @appointment.address %>
+</p>
+
+<p>
+  <strong>Appointment time:</strong>
+  <%= @appointment.appointment_time %>
+</p>
+
+<p>
+  <strong>Due time:</strong>
+  <%= @appointment.due_time %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @appointment.service %>
+</p>
+
+<p>
+  <strong>Pickup location:</strong>
+  <%= @appointment.pickup_location %>
+</p>
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>

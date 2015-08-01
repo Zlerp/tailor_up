@@ -1,0 +1,2 @@
+class TailorsController < ApplicationController
+end
