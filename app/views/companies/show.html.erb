@@ -6,11 +6,11 @@
 <hr>
 <h2>Tailors</h2>
 <ul>
-  <%# @company.tailors.each do |tailor| %>
-    <li> <%# link_to tailor.name, tailor %></li>
-    <%# end %>
+  <% @company.tailors.each do |tailor| %>
+    <li> <%= link_to tailor.first_name, tailor %></li>
+    <% end %>
 </ul>
 
 <h3>New Tailor</h3>
 
-<%= link_to 'Back', companies_path %>
+<%= link_to 'New Tailors', new_tailor_path %>

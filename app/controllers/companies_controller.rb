@@ -47,11 +47,12 @@ class CompaniesController < ApplicationController
   private
 
   def set_company
-    @company = Company.find(params[:id])
+    # company_id is stored in the sessions, not params!!!!
+    @company = Company.find(session[:company_id])
   end
 
   def company_params
-    params.require(:company).permit(:name, :email, :password, :password_confirmation, :location)
+    params.require(:company).permit(:name, :email, :password, :location)
   end
 
 end

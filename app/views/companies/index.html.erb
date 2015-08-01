@@ -1,5 +1,17 @@
+<% if company_signed_in? %>
+<h2>Logged In</h2>
+  <li>
+  <%= link_to('Logout', destroy_company_session_path, :method => :delete) %>
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_company_session_path)  %>
+  <%# link_to('signup', new_tailor_registration_path ) %>
+  </li>
+<% end %>
 
 <h1>Company Index Page</h1>
 <h3>Heres The Tailors</h3>
+
 
 <%# link_to 'Tailors', show_company_path(:company_id)%>
