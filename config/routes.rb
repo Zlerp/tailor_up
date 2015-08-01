@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-root 'company#index'
 
-  resources :companies do
+  root 'sessions#new'
+  resource :sessions
+  resource :companies do
     resources :tailors
   end
 

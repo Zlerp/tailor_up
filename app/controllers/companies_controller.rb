@@ -16,9 +16,9 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    @company = Company.new(company_params)
+    @company = Company.new company_params
     if @company.save
-      redirect_to @company, notice: 'Company: #{@company.name} has been created!'
+      redirect_to root_path, notice: 'Company: #{@company.name} has been created!'
     else
       render :new
     end
@@ -51,7 +51,7 @@ class CompaniesController < ApplicationController
   end
 
   def company_params
-    params.require(:company).permit(:name, :email, :location)
+    params.require(:company).permit(:name, :email, :password, :password_confirmation, :location)
   end
 
 end

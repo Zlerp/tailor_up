@@ -1,7 +1,8 @@
 <%= simple_form_for @company do |f| %>
   <%= f.input :name %>
   <%= f.input :email %>
-  <%= f.input :password_digest %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
   <%= f.input :location %>
   <%= f.button :submit %>
 <% end %>
