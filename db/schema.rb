@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150801182346) do
+ActiveRecord::Schema.define(version: 20150801200238) do
 
   create_table "appointments", force: :cascade do |t|
     t.string   "stages"
@@ -34,7 +34,8 @@ ActiveRecord::Schema.define(version: 20150801182346) do
   end
 
   create_table "tailors", force: :cascade do |t|
-    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email"
     t.string   "password_digest"
     t.string   "phone"
