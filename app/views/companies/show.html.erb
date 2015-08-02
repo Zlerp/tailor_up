@@ -1,6 +1,6 @@
 
 
-<% end %>
+
 <h1>Company Show Page</h1>
 
 <h3>Company:</h3>
@@ -11,7 +11,7 @@
 <ul>
   <% @company.tailors.each do |tailor| %>
     <li> <%= link_to tailor.first_name, tailor %></li>
-    <% end %>
+<% end %>
 </ul>
 
 <h3>New Tailor</h3>
