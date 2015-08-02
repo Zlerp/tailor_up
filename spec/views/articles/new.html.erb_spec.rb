@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "articles/new", type: :view do
   before(:each) do
     assign(:article, Article.new(
-      :type => "",
+      :kind => "MyString",
       :quantity => 1,
       :other => "MyString",
       :appointment => nil
@@ -15,7 +15,7 @@ RSpec.describe "articles/new", type: :view do
 
     assert_select "form[action=?][method=?]", articles_path, "post" do
 
-      assert_select "input#article_type[name=?]", "article[type]"
+      assert_select "input#article_kind[name=?]", "article[kind]"
 
       assert_select "input#article_quantity[name=?]", "article[quantity]"
 
