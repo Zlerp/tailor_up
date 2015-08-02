@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :articles
   root 'sessions#new'
 
   get '/new_company' => 'sessions#new_company'
