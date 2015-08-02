@@ -11,8 +11,6 @@ class CompaniesController < ApplicationController
   end
 
   def index
-    # @company.id = current_company.id
-    # @companies = Company.fi
   end
 
   def create

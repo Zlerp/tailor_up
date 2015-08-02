@@ -1,16 +1,23 @@
 class SessionsController < ApplicationController
-  def new
+  def new_company
   end
+  def new_session_tailor
+  end
+
+
 
   def create
     @company = Company.find_by(email: params[:email]).try(:authenticate, params[:password])
     if @company
-      p "*************************************************"
-      # logged in, Woohoo!!!!
       session[:company_id] = @company.id
       redirect_to companies_path
     else
       render action: 'new'
     end
+  end
+
+  def destroy
+    session[:company_id] = nil
+    redirect_to '/'
   end
 end
