@@ -1,6 +1,7 @@
 class TailorsController < ApplicationController
   before_action :set_tailor, only: [:show, :edit, :update, :destroy]
-  before_action :require_logged_in
+  before_action :require_logged_in, only: [:create, :new]
+  # before_filter :authenticate_user!, only: [:new, :create]
 
   def new
     @tailor = current_company.tailors.new

@@ -1,6 +1,39 @@
-  <%= link_to 'Login Company', new_company_path  %>
-  <%= link_to('Login Tailor', new_session_tailor_path)  %>
-  <%= link_to('Login User', new_session_user_path)  %>
+
+<% if current_company %>
+<div class="">
+    <%= link_to 'Company Logout', logout_path, method:"delete"%>
+</div>
+<% else %>
+<div class="">
+  <%= link_to 'Company Login', new_company_path%>
+</div>
+<% end %>
+
+<% if current_user %>
+<div class="">
+    <%= link_to 'User Logout', logout_path, method:"delete"%>
+</div>
+<% else %>
+<div class="">
+  <%= link_to 'User Login', new_session_user_path%>
+</div>
+<% end %>
+<% if current_tailor %>
+<div class="">
+    <%= link_to 'Tailor Logout', logout_path, method:"delete"%>
+</div>
+<% else %>
+<div class="">
+  <%= link_to 'Tailor Login', new_session_tailor_path%>
+</div>
+<% end %>
+
+
+
+
+  <%# link_to 'Login Company', new_company_path  %>
+  <%# link_to('Login Tailor', new_session_tailor_path)  %>
+  <%# link_to('Login User', new_session_user_path)  %>
 
 <!DOCTYPE html>
 <html>
