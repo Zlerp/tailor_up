@@ -4,6 +4,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
+    # @appointments = current_user.appointments.all
     @appointments = Appointment.all
   end
 
@@ -14,6 +15,7 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/new
   def new
+    # @appointment = current_user.appointments.new
     @appointment = Appointment.new
   end
 
@@ -24,6 +26,7 @@ class AppointmentsController < ApplicationController
   # POST /appointments
   # POST /appointments.json
   def create
+    # @appointment = current_user.appointments.new(appointment_params)
     @appointment = Appointment.new(appointment_params)
 
     respond_to do |format|
@@ -65,6 +68,7 @@ class AppointmentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_appointment
       @appointment = Appointment.find(params[:id])
+      # @appointment = current_user.appointments.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

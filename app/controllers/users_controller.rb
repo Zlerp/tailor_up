@@ -22,11 +22,17 @@ class UsersController < ApplicationController
       end
     end
 
+    def destroy
+      @user.destroy
+      redirect_to root_path
+    end
+
     private
 
     def set_user
-      # user_id is stored in the sessions, not params!!!!
-      @user = User.find(session[:user_id])
+      # user_id is stored in the sessions, not params, but until fixed use params.!!!!
+      # @user = User.find(session[:user_id])
+      @user = User.find(params[:id])
     end
 
     def user_params
