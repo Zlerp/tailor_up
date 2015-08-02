@@ -4,10 +4,18 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper_method :current_company
+  helper_method :current_user
 
   def current_company
     @current_company ||= Company.find_by(id: session[:company_id])
   end
+  def current_user
+    @current_user ||= User.find_by(id: session[:user_id])
+  end
+  def current_tailor
+    @current_tailor ||= Tailor.find_by(id: session[:tailor_id])
+  end
+
 
   def require_logged_in
     return true if current_company

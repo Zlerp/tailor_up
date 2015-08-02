@@ -1,0 +1,10 @@
+<h2>Appointments</h2>
+<ul>
+  <% @user.appointments.each do |appointment| %>
+    <li> <%= link_to user.first_name, appointment %></li>
+    <% end %>
+</ul>
+
+<h3>New appointment</h3>
+
+<%= link_to 'New appointments', new_appointment_path %>

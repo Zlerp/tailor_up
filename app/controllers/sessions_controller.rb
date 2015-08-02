@@ -3,6 +3,8 @@ class SessionsController < ApplicationController
   end
   def new_session_tailor
   end
+  def new_user_session
+  end
 
 
 

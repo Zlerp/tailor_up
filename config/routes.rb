@@ -2,10 +2,11 @@ Rails.application.routes.draw do
   root 'sessions#new'
 
   get '/new_company' => 'sessions#new_company'
-  get '/new_session_tailor' => 'sessions#new_session_tailor'
-
   post '/new_company' => 'sessions#new_company'
+  get '/new_session_tailor' => 'sessions#new_session_tailor'
   post '/new_session_tailor' => 'sessions#new__sessiosn_tailor'
+  get '/new_session_user' => 'sessions#new_session_user'
+  post '/new_session_user' => 'sessions#new__sessiosn_user'
 
         # get '/create_company_session' => 'sessions#create_company_session'
         # get '/create_tailor_session' => 'sessions#create_tailor_session'
@@ -17,7 +18,14 @@ Rails.application.routes.draw do
     resources :tailors
   end
 
-  resources :tailors
+  resources :tailors do
+    resources :appointments
+  end
+
+  resources :users do
+    resources :appointments
+  end
+
   resources :appointments
 
         # get '/signup' => 'users#new'
