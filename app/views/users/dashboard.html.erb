@@ -1,3 +1,8 @@
+<h1>Users Dashboard</h1>
+<p>
+  Hello <span id="userGreeting"><%= current_user.first_name %></span>,
+</p>
+
 <h2>Appointments</h2>
 <ul>
   <% current_user.appointments.each do |appointment| %>

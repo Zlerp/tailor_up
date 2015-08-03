@@ -22,9 +22,9 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:email]).try(:authenticate, params[:password])
     if @user
       session[:user_id] = @user.id
-      redirect_to users_path, flash:{notice:"#{@user.first_name} you are logged in!"}
+      redirect_to dashboard_path, flash:{notice:"#{@user.first_name} you are logged in!"}
     else
-      render action: 'new', flash:{notice:"please try to login again"}
+      render action: 'new'
     end
   end
 

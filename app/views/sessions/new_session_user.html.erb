@@ -6,6 +6,7 @@
 
 <div id="status">
 </div>
+    <%# flash[:error] unless flash[:error].blank? %>
 
 <h1>User Log in</h1>
 <%=form_tag sessions_login_user_path do %>

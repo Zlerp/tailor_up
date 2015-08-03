@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   attr_accessor :password, :password_confirmation
 
-    before_action :set_user, only: [:show, :edit, :update, :destroy, :index]
+    before_action :set_user, only: [:show, :edit, :update, :destroy]
 
     def show
       @appointment = Appointment.new
@@ -13,10 +13,15 @@ class UsersController < ApplicationController
 
     def index
     end
+
+    def dashboard
+      
+    end
+
     def create
       @user = User.new user_params
       if @user.save
-        redirect_to root_path, notice: "User logged in!"
+        redirect_to root_path
       else
         render :new
       end
