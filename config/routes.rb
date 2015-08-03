@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :articles
   root 'sessions#new'
 
   get '/new_company' => 'sessions#new_company'
@@ -27,7 +26,16 @@ Rails.application.routes.draw do
     resources :appointments
   end
 
-  resources :appointments
+  resources :appointments do
+    resource :articles
+
+
+  end
+
+  resource :articles
+        # get '/signup' => 'users#new'
+        # post '/users' => 'users#create'
+        # get '/profile' => 'users#show'
 
         # get '/signup' => 'users#new'
         # post '/users' => 'users#create'

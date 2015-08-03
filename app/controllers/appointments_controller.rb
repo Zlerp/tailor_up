@@ -11,6 +11,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   # GET /appointments/1.json
   def show
+      @artricle = Article.new
   end
 
   # GET /appointments/new
@@ -75,4 +76,5 @@ class AppointmentsController < ApplicationController
     def appointment_params
       params.require(:appointment).permit(:stages, :address, :appointment_time, :due_time, :service, :pickup_location, :zip)
     end
+
 end
