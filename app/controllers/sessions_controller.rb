@@ -32,7 +32,7 @@ class SessionsController < ApplicationController
     @tailor = Tailor.find_by(email: params[:email]).try(:authenticate, params[:password])
     if @tailor
       session[:tailor_id] = @tailor.id
-      redirect_to tailors_path, flash:{notice:"#{@tailor.first_name} you are logged in!"}
+      redirect_to @tailor, flash:{notice:"#{@tailor.first_name} you are logged in!"}
     else
       render action: 'new', flash:{notice:"please try to login again"}
     end

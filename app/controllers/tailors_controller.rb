@@ -40,7 +40,8 @@ class TailorsController < ApplicationController
   private
 
   def set_tailor
-    @tailor = current_company.tailors.find(params[:id])
+    # @tailor = current_company.tailors.find(params[:id])
+    @tailor = current_tailor    # this will stil let any company edit a tailor
     # @tailor = current_company.tailors.find(session[:user_id])
   end
 
