@@ -31,7 +31,14 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
+<h2>Articles</h2>
+<ul>
+  <% @appointment.articles.each do |art| %>
+    <li><%= link_to art.kind, art %>
+  <% end %>
+</ul>
+<%= render 'articles/form' %>
 
 <%= link_to 'New Appointment', new_appointment_path %>
+<%= link_to 'New Article', new_article_path %>
+<br>

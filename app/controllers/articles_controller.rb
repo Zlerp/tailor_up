@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_appointment, only: [:create]
   # GET /articles
   # GET /articles.json
   def index
@@ -24,7 +24,9 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    @article = Article.new(article_params)
+    # @article = Article.new(article_params)
+    @article = @appointment.articles.new(article_params)
+
 
     respond_to do |format|
       if @article.save
@@ -65,6 +67,10 @@ class ArticlesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.find(params[:id])
+    end
+
+    def set_appointment
+      @appointment = Appointment.find(params[:appointment_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
