@@ -3,15 +3,16 @@ Rails.application.routes.draw do
   root 'sessions#new'
 
   get '/new_company' => 'sessions#new_company'
+  post '/new_company' => 'sessions#new_company'
   get '/new_session_tailor' => 'sessions#new_session_tailor'
+  post '/new_session_tailor' => 'sessions#new__sessiosn_tailor'
   get '/new_session_user' => 'sessions#new_session_user'
+  post '/new_session_user' => 'sessions#new__sessiosn_user'
 
-  post 'sessions/login_user'
-  post 'sessions/login_company'
-  post 'sessions/login_tailor'
-
-  delete '/logout' => 'sessions#destroy'
-
+        # get '/create_company_session' => 'sessions#create_company_session'
+        # get '/create_tailor_session' => 'sessions#create_tailor_session'
+        # post '/create_company_session' => 'sessions#create_company_session'
+        # post '/create_tailor_session' => 'sessions#create_tailor_session'
 
   resources :sessions
   resource :companies do
@@ -28,10 +29,13 @@ Rails.application.routes.draw do
 
   resources :appointments
 
+        # get '/signup' => 'users#new'
+        # post '/users' => 'users#create'
+        # get '/profile' => 'users#show'
   get '/session' => 'sessions#show'
   get '/login' => 'sessions#new'
-  # post '/login' => 'sessions#create'
-
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

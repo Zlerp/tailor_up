@@ -8,7 +8,7 @@
 </div>
 
 <h1>User Log in</h1>
-<%=form_tag sessions_login_user_path do %>
+<%=form_tag 'sessions#new_sessions_user' do %>
 <p>
   <%= label_tag :email %>
   <%= text_field_tag :email %>
@@ -20,11 +20,8 @@
 <p>
   <%= submit_tag 'Log in' %>
 </p>
-<p>
-  Don't have an account?
-</p>
 <div class="">
-  <%= link_to 'Sign Up!', new_user_path, data: { confirm: 'At the Current time, TailorUp is only serving the Miami area including but not limited to Coconut Grove, Coral Gables, Key Biscayne, Miami Beach, Bal Harbour, Brickell, Sunny Isles, Aventura, Wynwood, and Design District. Thank you.' }%>
+  <%= link_to 'Sign Up', new_user_path, data: { confirm: 'At the Current time, TailorUp is only serving the Miami area including but not limited to Coconut Grove, Coral Gables, Key Biscayne, Miami Beach, Bal Harbour, Brickell, Sunny Isles, Aventura, Wynwood, and Design District. Thank you.' }%>
 </div>
 
 <% end %>

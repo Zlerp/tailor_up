@@ -1,5 +1,4 @@
 class TailorsController < ApplicationController
-  attr_accessor :password, :password_confirmation
   before_action :set_tailor, only: [:show, :edit, :update, :destroy]
   before_action :require_logged_in, only: [:create, :new]
   # before_filter :authenticate_user!, only: [:new, :create]
@@ -41,7 +40,6 @@ class TailorsController < ApplicationController
 
   def set_tailor
     @tailor = current_company.tailors.find(params[:id])
-    # @tailor = current_company.tailors.find(session[:user_id])
   end
 
   def tailor_params
