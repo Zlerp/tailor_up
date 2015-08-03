@@ -1,6 +1,12 @@
 
 <h3>This is the Sessions/new_sessions_user page</h3>
 
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>
+
 <h1>User Log in</h1>
 <%=form_tag sessions_login_user_path do %>
 <p>

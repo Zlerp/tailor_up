@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def new_company
   end
-  def new_session_tailor
+  def new_tailor_session
   end
   def new_user_session
   end
