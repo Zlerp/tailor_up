@@ -27,22 +27,22 @@ Rails.application.routes.draw do
   end
 
   resources :appointments do
-    resource :articles
+    resources :articles
 
 
 
   end
 
-  resource :articles
+  resources :articles
         # get '/signup' => 'users#new'
         # post '/users' => 'users#create'
         # get '/profile' => 'users#show'
->>>>>>> a53050a483fed6376ef2791d66c5effe11760333
 
 
-  end
 
-  resource :articles
+
+
+
         # get '/signup' => 'users#new'
         # post '/users' => 'users#create'
         # get '/profile' => 'users#show'
