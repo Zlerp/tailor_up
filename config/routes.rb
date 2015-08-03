@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   delete '/logout' => 'sessions#destroy'
 
-
+  resources :availabilities
   resources :sessions
   resource :companies do
     resources :tailors
