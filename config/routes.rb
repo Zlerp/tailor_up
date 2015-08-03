@@ -30,6 +30,16 @@ Rails.application.routes.draw do
     resource :articles
 
 
+
+  end
+
+  resource :articles
+        # get '/signup' => 'users#new'
+        # post '/users' => 'users#create'
+        # get '/profile' => 'users#show'
+>>>>>>> a53050a483fed6376ef2791d66c5effe11760333
+
+
   end
 
   resource :articles
