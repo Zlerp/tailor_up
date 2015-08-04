@@ -3,12 +3,6 @@
   Hello <span id="userGreeting"><%= current_user.first_name %></span>,
 </p>
 
-<h2>Appointments</h2>
-<ul>
-  <% current_user.appointments.each do |appointment| %>
-    <li> <%= link_to user.first_name, appointment %></li>
-    <% end %>
-</ul>
 
 <h3>New appointment</h3>
 
