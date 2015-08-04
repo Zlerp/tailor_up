@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   resources :tailors do
     resources :appointments
+    resources :availabilities
   end
 
   resources :users do
