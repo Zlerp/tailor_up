@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Provider:</strong>
-  <%= @availability.provider.user.email %>
+  <strong>Tailor:</strong>
+  <%= @availability.tailor_id %>
 </p>
 
 <p>
@@ -14,6 +14,4 @@
   <strong>End:</strong>
   <%= @availability.end %>
 </p>
-
-<%= link_to 'Edit', edit_availability_path(@availability) %> |
-<%= link_to 'Back', tailor_availabilities_path %>
+<div id='calendar'></div>
