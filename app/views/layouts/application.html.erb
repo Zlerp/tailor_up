@@ -1,7 +1,7 @@
 
 <% if current_company %>
 <div class="">
-    <%= link_to 'Company Logout', logout_path, method:"delete"%>
+    <%= link_to 'Company Logout', logout_company_path, method:"delete"%>
 </div>
 <% else %>
 <div class="">
@@ -11,7 +11,7 @@
 
 <% if current_user %>
 <div class="">
-    <%= link_to 'User Logout', logout_path, method:"delete"%>
+    <%= link_to 'User Logout', logout_user_path, method:"delete"%>
 </div>
 <% else %>
 <div class="">
@@ -20,7 +20,7 @@
 <% end %>
 <% if current_tailor %>
 <div class="">
-    <%= link_to 'Tailor Logout', logout_path, method:"delete"%>
+  <%= link_to 'Tailor Logout', logout_tailor_path, method:"delete"%>
 </div>
 <% else %>
 <div class="">

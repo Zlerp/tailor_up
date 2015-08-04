@@ -38,9 +38,15 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destroy
+  def logout_company
     session[:company_id] = nil
+    redirect_to '/'
+  end
+  def logout_user
     session[:user_id] = nil
+    redirect_to '/'
+  end
+  def logout_tailor
     session[:tailor_id] = nil
     redirect_to '/'
   end
