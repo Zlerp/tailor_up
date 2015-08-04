@@ -1,6 +1,5 @@
 class AvailabilitiesController < ApplicationController
-  before_action :authenticate_user!
-  before_action :require_provider
+
   before_action :set_availability, only: [:show, :edit, :update, :destroy]
 
   # GET /availabilities
@@ -12,22 +11,24 @@ class AvailabilitiesController < ApplicationController
   # GET /availabilities/1
   # GET /availabilities/1.json
   def show
+    @availabilties = current_tailor.Availability.all
   end
 
   # GET /availabilities/new
   def new
     @availability = Availability.new
-    @availabilities = current_user.provider.availabilities
+    @availabilities = current_tailor.availabilities
   end
 
   # GET /availabilities/1/edit
   def edit
+
   end
 
   # POST /availabilities
   # POST /availabilities.json
   def create
-    @availability = current_user.provider.availabilities.new(availability_params)
+    @availability = current_tailor.availabilities.new(availability_params)
 
     if @availability.end.nil?
       @availability.end = @availability.start + 1.hour
@@ -78,6 +79,6 @@ class AvailabilitiesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def availability_params
-    params.require(:availability).permit(:provider_id, :start, :end, :patient_id)
+    params.require(:availability).permit(:booked, :tailor_id, :start, :end, :user_id)
   end
 end

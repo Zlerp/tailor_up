@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>My Availabilities This Week</h1>
+
+<table>
+  <thead>
+    <tr>
+
+      <th>Start</th>
+      <th>End</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @availabilities.each do |availability| %>
+      <tr>
+        <td><%= availability.tailor %></td>
+        <td><%= availability.start %></td>
+        <td><%= availability.end %></td>
+      </tr>
+
+  <%= (render partial: 'availabilities/form') %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'My Dashboard'%>
+
+<br>
+
+<div id="calendar"></div>
