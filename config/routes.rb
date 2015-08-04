@@ -11,7 +11,13 @@ Rails.application.routes.draw do
   post 'sessions/login_company'
   post 'sessions/login_tailor'
 
-  delete '/logout' => 'sessions#destroy'
+  post '/tailors/:id' => 'tailors#destroy'
+
+  delete '/logout_company' => 'sessions#logout_company'
+  delete '/logout_user' => 'sessions#logout_user'
+  delete '/logout_tailor' => 'sessions#logout_tailor'
+
+  # get '/company/tailor/:tailor' => 'company_tailor#'
 
 
   resources :sessions

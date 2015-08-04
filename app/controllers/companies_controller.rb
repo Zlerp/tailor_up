@@ -22,10 +22,6 @@ class CompaniesController < ApplicationController
     end
   end
 
-  def show
-    @tailor = Tailor.new
-  end
-
   def edit
   end
 
