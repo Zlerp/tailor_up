@@ -20,7 +20,7 @@ class TailorsController < ApplicationController
   def create
     @tailor = current_company.tailors.new(tailor_params)
     if @tailor.save
-      redirect_to @tailor, notice: 'Tailor was created!'
+      redirect_to companies_path, notice: 'Tailor was created!'
     else
       render :new
     end
@@ -35,12 +35,22 @@ class TailorsController < ApplicationController
   end
 
   def show
+    @tailor = Tailor.find_by(params[:id])
   end
 
   def delete
     @tailor.destroy
     redirect_to tailors_url
   end
+
+  def destroy
+    @tailor = current_company.tailors.find(params[:id])
+    @tailor.destroy
+    redirect_to companies_path
+  end
+
+
+
 
   private
 
