@@ -1,6 +1,6 @@
 class TailorsController < ApplicationController
   attr_accessor :password, :password_confirmation
-  before_action :set_tailor, only: [:show, :edit, :update, :destroy]
+  before_action :set_tailor, only: [:show, :edit, :update, :delete]
   before_action :require_logged_in, only: [:create, :new]
   # before_filter :authenticate_user!, only: [:new, :create]
 
@@ -10,6 +10,8 @@ class TailorsController < ApplicationController
 
   def index
     @tailors = current_company.tailors.all
+    # @tailors = Tailors.all
+
   end
 
   def edit
@@ -32,7 +34,10 @@ class TailorsController < ApplicationController
     end
   end
 
-  def destroy
+  def show
+  end
+
+  def delete
     @tailor.destroy
     redirect_to tailors_url
   end
@@ -46,7 +51,7 @@ class TailorsController < ApplicationController
   end
 
   def tailor_params
-    params.require(:tailor).permit(:company_id, :first_name, :last_name, :email, :password)
+    params.require(:tailor).permit(:company_id, :first_name, :last_name, :email, :phone, :location, :password)
   end
 
 end
