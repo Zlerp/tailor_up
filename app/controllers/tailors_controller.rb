@@ -5,8 +5,8 @@ class TailorsController < ApplicationController
   # before_filter :authenticate_user!, only: [:new, :create]
 
   def new
-    @tailor = current_company.tailors.new
-  end
+  @tailors = current_company.tailors.new
+end
 
   def index
     @tailors = current_company.tailors.all
