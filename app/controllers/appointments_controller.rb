@@ -11,13 +11,12 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   # GET /appointments/1.json
   def show
-      @article = Article.new
-      @articles = Article.all
+      @artricle = Article.new
   end
 
   # GET /appointments/new
   def new
-    if current_user.appointments.count <= 0
+    if current_user.appointments.count <= 0 
       @appointment = current_user.appointments.new
     else
       redirect_to dashboard_path

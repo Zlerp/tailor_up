@@ -4,3 +4,21 @@
   this is currently Tailor:
   <%= @tailor.first_name %>
 </p>
+
+<h3>Your Appointments</h3>
+<ul>
+    <% @appointments.each do |a| %>
+    <% if a.tailor_id == current_tailor.id %>
+    <li><%= a.user.first_name %> </li>
+    <% end %>
+  <% end%>
+</ul>
+
+<h3>Available Appointments</h3>
+<ul>
+    <% @appointments.each do |a| %>
+    <% if a.tailor_id == nil%>
+    <li><%= a.user.first_name %> </li>
+    <% end %>
+  <% end%>
+</ul>
