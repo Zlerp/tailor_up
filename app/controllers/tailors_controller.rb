@@ -5,8 +5,13 @@ class TailorsController < ApplicationController
   # before_filter :authenticate_user!, only: [:new, :create]
 
   def new
-    @tailor = current_company.tailors.new
+<<<<<<< HEAD
+    @tailors = current_company.tailors.new
   end
+=======
+  @tailors = current_company.tailors.new
+end
+>>>>>>> 4d72b39678644e99c5a2831d071e1b2847373fe9
 
   def index
     @tailors = current_company.tailors.all
@@ -20,7 +25,7 @@ class TailorsController < ApplicationController
   def create
     @tailor = current_company.tailors.new(tailor_params)
     if @tailor.save
-      redirect_to @tailor, notice: 'Tailor was created!'
+      redirect_to companies_path, notice: 'Tailor was created!'
     else
       render :new
     end
@@ -35,12 +40,22 @@ class TailorsController < ApplicationController
   end
 
   def show
+    @tailor = Tailor.find_by(params[:id])
   end
 
   def delete
     @tailor.destroy
     redirect_to tailors_url
   end
+
+  def destroy
+    @tailor = current_company.tailors.find(params[:id])
+    @tailor.destroy
+    redirect_to companies_path
+  end
+
+
+
 
   private
 

@@ -1,1 +1,1 @@
-json.extract! @event, :tailor_id, :service, :start_time, :end_time, :created_at, :updated_at
+json.extract! @availability, :user_id, :start, :end, :created_at, :updated_at

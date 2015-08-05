@@ -14,8 +14,10 @@ class UsersController < ApplicationController
     def index
     end
 
+    def edit
+    end
+
     def dashboard
-      
     end
 
     def create
@@ -24,6 +26,14 @@ class UsersController < ApplicationController
         redirect_to root_path
       else
         render :new
+      end
+    end
+
+    def update
+      if @user.update(user_params)
+        redirect_to dashboard_path
+      else
+         redirect_to dashboard_path
       end
     end
 

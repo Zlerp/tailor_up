@@ -3,7 +3,8 @@ class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
   def show
-    @tailor = Tailor.new
+    # @tailor = Tailor.new
+    @tailor = current_company.tailors
   end
 
   def new
@@ -18,7 +19,7 @@ class CompaniesController < ApplicationController
     if @company.save
       redirect_to root_path, notice: 'Company: #{@company.name} has been created!'
     else
-      render :new
+      redirect_to :new
     end
   end
 

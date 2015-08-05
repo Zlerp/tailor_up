@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       session[:company_id] = @company.id
       redirect_to companies_path
     else
-      render action: 'new'
+      redirect_to new_company_path
     end
   end
 
@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to dashboard_path, flash:{notice:"#{@user.first_name} you are logged in!"}
     else
-      render action: 'new'
+      redirect_to dashboard_path
     end
   end
 
@@ -34,7 +34,7 @@ class SessionsController < ApplicationController
       session[:tailor_id] = @tailor.id
       redirect_to @tailor, flash:{notice:"#{@tailor.first_name} you are logged in!"}
     else
-      render action: 'new', flash:{notice:"please try to login again"}
+      redirect_to new_session_tailor_path, flash:{notice:"please try to login again"}
     end
   end
 

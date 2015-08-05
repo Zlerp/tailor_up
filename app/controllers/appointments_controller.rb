@@ -17,8 +17,13 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/new
   def new
-    # @appointment = current_user.appointments.new
-    @appointment = Appointment.new
+    if current_user.appointments.count <= 0
+      @appointment = current_user.appointments.new
+    else
+      redirect_to dashboard_path
+    end
+    # @appointment.
+    # @appointment = Appointment.new
   end
 
   # GET /appointments/1/edit
@@ -28,8 +33,8 @@ class AppointmentsController < ApplicationController
   # POST /appointments
   # POST /appointments.json
   def create
-    # @appointment = current_user.appointments.new(appointment_params)
-     @appointment = Appointment.new(appointment_params)
+    @appointment = current_user.appointments.new(appointment_params)
+    #  @appointment = Appointment.new(appointment_params)
 
     respond_to do |format|
       if @appointment.save

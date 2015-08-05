@@ -10,10 +10,17 @@ class TailorsController < ApplicationController
   # end
   #
   #
-  def destroy
+
+
+
+  # def destroy
+  #   @tailor = current_company.tailors.find(params[:id])
+  #   @tailor.destroy
+  #   redirect_to companies_path
+  # end
+
+  def view
     @tailor = current_company.tailors.find(params[:id])
-    @tailor.destroy
-    redirect_to companies_path
   end
 
 end
