@@ -1,6 +1,6 @@
-json.array!(@appointments) do |appointment|
-  json.extract! event, :service, :appointment_time
-  json.start event.start_time
-  json.end event.end_time
-  json.url event_url(event, format: :html)
+json.array!(@availabilities) do |availability|
+  json.extract! availability, :user_id, :start, :end, :booked
+  json.start availability.start_time
+  json.end availability.end_time
+  json.url availability_url(availability, format: :html)
 end
