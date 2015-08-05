@@ -29,6 +29,14 @@ class UsersController < ApplicationController
       end
     end
 
+    def update
+      if @user.update(user_params)
+        redirect_to dashboard_path
+      else
+         redirect_to dashboard_path
+      end
+    end
+
     def destroy
       @user.destroy
       redirect_to root_path
