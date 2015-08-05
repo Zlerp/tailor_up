@@ -12,7 +12,7 @@
 
 <% if current_user %>
 <div class="">
-    <%= link_to 'User Home', users_path %>  |
+    <%= link_to 'User Home', dashboard_path %>  |
     <%= link_to 'User Logout', logout_user_path, method:"delete"%>
 </div>
 <% else %>

@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to dashboard_path, flash:{notice:"#{@user.first_name} you are logged in!"}
     else
-      redirect_to new_session_user_path
+      redirect_to dashboard_path
     end
   end
 
