@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :set_appointment, only: [:index, :create]
+
+  before_action :set_appointment, only: [:create]
   # GET /articles
   # GET /articles.json
   def index
@@ -11,6 +12,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+
   end
 
   # GET /articles/new
@@ -27,6 +29,7 @@ class ArticlesController < ApplicationController
   def create
     # @article = Article.new(article_params)
     @article = @appointment.articles.new(article_params)
+
 
 
     respond_to do |format|
