@@ -31,16 +31,18 @@
     <% end %>
   </tbody>
 </table>
-<h2>Articles</h2>
+<%= link_to 'New Appointment', new_appointment_path %>
+<!-- <h2>Articles</h2>
 <ul>
   <% @appointments.each do |appointment| %>
     <% appointment.articles.each do |art| %>
     <li><%= link_to art.kind, "" %>
+    <li><%= link_to art.quantity, "" %>
       <% end %>
   <% end %>
 </ul>
-<%#= render 'articles/form' %>
 
-<%= link_to 'New Appointment', new_appointment_path %>
+
+
 <%= link_to 'New Article', new_article_path %>
-<br>
+<br> -->

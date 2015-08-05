@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   delete '/logout_user' => 'sessions#logout_user'
   delete '/logout_tailor' => 'sessions#logout_tailor'
 
-  # get '/company/tailor/:tailor' => 'company_tailor#'
+  # get '/company/tailor/:tailor' => 'company_tailor'
 
 
   resources :sessions
@@ -45,6 +45,7 @@ Rails.application.routes.draw do
 
 
   resources :articles
+
         # get '/signup' => 'users#new'
         # post '/users' => 'users#create'
         # get '/profile' => 'users#show'
