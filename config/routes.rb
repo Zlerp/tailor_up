@@ -9,11 +9,13 @@ Rails.application.routes.draw do
 
   get '/dashboard' => 'users#dashboard'
 
+  get '/tailors/dashboard'  => 'tailors#dashboard'
+
   post 'sessions/login_user'
   post 'sessions/login_company'
   post 'sessions/login_tailor'
 
-  post '/tailors/:id/' => 'tailors#destroy'
+  post '/tailors/:tailor_id/appointments/:id' => 'tailors#add_tailor_to_appointment'
   # get '/tailors/:id/' => 'tailors#view', as: 'tailor_profile'
   # get '/tailors/:id' => 'tailors#new'
 

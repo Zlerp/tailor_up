@@ -11,23 +11,27 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   # GET /appointments/1.json
   def show
+<<<<<<< HEAD
       @article = Article.new
 
+=======
+      @artricle = Article.new
+      @appointment = current_tailor
+>>>>>>> 1bec83b0cdcb18c9662b0686e30f77200d99e207
   end
 
   # GET /appointments/new
   def new
-    if current_user.appointments.count <= 0
-      @appointment = current_user.appointments.new
-      @appointment.address = current_user.address
-      # DateTime.now.strftime("%Y-%d-%m %H:%M")
-        @article = Article.new
-
-    else
-      redirect_to dashboard_path
+    if current_user
+      if current_user.appointments.count <= 0
+        @appointment = current_user.appointments.new
+        @appointment.address = current_user.address
+        # DateTime.now.strftime("%Y-%d-%m %H:%M")
+          @article = Article.new
+      else
+        redirect_to dashboard_path
+      end
     end
-    # @appointment.
-    # @appointment = Appointment.new
   end
 
   # GET /appointments/1/edit
@@ -39,9 +43,11 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = current_user.appointments.new(appointment_params)
     #  @appointment = Appointment.new(appointment_params)
+    @appointment.stages = "Appointment Booked"
       if @appointment.pickup_location == ""
         @appointment.pickup_location = current_user.address
       end
+
     respond_to do |format|
       if @appointment.save
         format.html { redirect_to dashboard_path, notice: 'Appointment was successfully created.' }
@@ -81,6 +87,9 @@ class AppointmentsController < ApplicationController
 
     end
   end
+
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -1,6 +1,10 @@
 class Tailor < ActiveRecord::Base
   has_secure_password
+
+  has_many :availabilities
+
   has_many :appointments
+
   belongs_to :company
   mount_uploader :image, ImageUploader
   # validates_uniqueness_of :email, :phone

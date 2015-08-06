@@ -8,6 +8,7 @@ class TailorsController < ApplicationController
     @tailors = current_company.tailors.new
   end
 
+
   def index
     @tailors = current_company.tailors.all
     # @tailors = Tailors.all
@@ -15,7 +16,13 @@ class TailorsController < ApplicationController
   end
 
   def edit
+    @tailors = current_tailor
   end
+  def dashboard
+    @tailor = current_tailor
+    @appointments = Appointment.all
+  end
+
 
   def create
     @tailor = current_company.tailors.new(tailor_params)
@@ -35,12 +42,16 @@ class TailorsController < ApplicationController
   end
 
   def show
-    @tailor = Tailor.find_by(params[:id])
+    @tailor = Tailor.find(params[:id])
     @appointments = Appointment.all
   end
 
-  def add_appointment
-    @appointment = Appointment.find_by(params[:id])
+
+  def add_tailor_to_appointment
+    @appointment = Appointment.find(params[:id])
+    @appointment.tailor = current_tailor
+    @appointment.save!
+    redirect_to current_tailor
   end
 
   def delete
@@ -53,6 +64,7 @@ class TailorsController < ApplicationController
     @tailor.destroy
     redirect_to companies_path
   end
+
 
 
 
