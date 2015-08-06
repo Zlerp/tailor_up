@@ -8,6 +8,7 @@ class TailorsController < ApplicationController
     @tailors = current_company.tailors.new
   end
 
+
   def index
     @tailors = current_company.tailors.all
     # @tailors = Tailors.all
