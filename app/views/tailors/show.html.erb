@@ -3,6 +3,9 @@
 <p>
   this is currently Tailor:
   <%= @tailor.first_name %>
+  <div class="edit">
+    <td><%= link_to 'My Settings', edit_tailor_path(current_tailor) %></td>
+  </div>
 </p>
 
 <h3>Your Appointments</h3>
@@ -23,6 +26,7 @@
             <td><%= a.user.first_name %> </td>
             <td><%= a.address %> </td>
             <td><%= a.appointment_time.to_s[0...-7] %> </td>
+            <td><%# link_to 'add', add_appointment_tailor_path, method: :add_appointment %></td>
           </tr>
         </div>
       <% end %>

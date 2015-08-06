@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   # get '/company/tailor/:tailor' => 'company_tailor'
 
+  # post '/add_appointment_tailor' => 'appointment#add_appointment'
 
   resources :sessions
   resource :companies do
