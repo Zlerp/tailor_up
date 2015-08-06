@@ -16,6 +16,7 @@ class TailorsController < ApplicationController
   end
 
   def edit
+    @tailors = current_tailor
   end
 
   def create
@@ -38,6 +39,11 @@ class TailorsController < ApplicationController
   def show
     @tailor = Tailor.find_by(params[:id])
     @appointments = Appointment.all
+  end
+
+  def add_appointment
+    @appointment.tailor_id = current_tailor.id
+    @appointment.save
   end
 
   def delete

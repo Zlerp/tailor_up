@@ -20,7 +20,8 @@
   <li>current status: <span class="aptInfo" id=""><%= a.stages %></span></li>
   <li>Appointment Time: <span class="aptInfo"><%= a.appointment_time.to_time.to_s[0...-5] %></span></li>
   <li>Appointment Address: <span class="aptInfo"><%= a.address %></span></li>
-  <li> <span class="aptInfo"> <%= link_to 'Edit', edit_appointment_path(a) %></span> |
+  <li> <span class="addArticles"> <%= link_to 'Add Articles', new_appointment_article_path(a) %></span> |
+  <span class="aptInfo"> <%= link_to 'Edit', edit_appointment_path(a) %></span> |
   <span><%= link_to 'Destroy', a, method: :delete, data: { confirm: 'Are you sure?' } %></span></li>
   <% end %>
 </ul>

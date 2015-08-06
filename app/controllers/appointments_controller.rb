@@ -4,7 +4,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
-    # @appointments = current_user.appointments.all
+    @appointments = current_user.appointments.all
     # @appointments = Appointment.all
   end
 
@@ -38,6 +38,10 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = current_user.appointments.new(appointment_params)
     #  @appointment = Appointment.new(appointment_params)
+    @appointment.stages = "Appointment Booked"
+      if @appointment.pickup_location == ""
+        @appointment.pickup_location = current_user.address
+      end
 
     respond_to do |format|
       if @appointment.save
@@ -49,6 +53,11 @@ class AppointmentsController < ApplicationController
       end
     end
   end
+
+  # def add_appointment
+  #   @appointment.tailor_id = current_tailor.id
+  #   @appointment.save
+  # end
 
   # PATCH/PUT /appointments/1
   # PATCH/PUT /appointments/1.json
