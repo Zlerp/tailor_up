@@ -11,7 +11,8 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   # GET /appointments/1.json
   def show
-      @artricle = Article.new
+      @article = Article.new
+
   end
 
   # GET /appointments/new

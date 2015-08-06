@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   attr_accessor :password, :password_confirmation
 
-    before_action :set_user, only: [:show, :edit, :update, :destroy]
+    before_action :set_user, only: [:show, :edit, :update, :destroy, :dashboard]
 
     def show
       @appointment = Appointment.new
@@ -51,6 +51,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :address, :phone, :zip )
+      params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :address, :phone, :zip, :image, :remote_image_url)
     end
 end

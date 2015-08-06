@@ -1,7 +1,7 @@
 <h1>Tailor Edit Page</h1>
 
 <h1>Edit The Tailor</h1>
-
+<%= image_tag @tailor.image_url(:thumb).to_s %>
 <%= render 'form' %>
 
 <%= link_to 'Show', @tailor %>

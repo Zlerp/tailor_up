@@ -1,6 +1,6 @@
 class TailorsController < ApplicationController
   attr_accessor :password, :password_confirmation
-  before_action :set_tailor, only: [:show, :edit, :update, :delete]
+  before_action :set_tailor, only: [:show, :edit, :update, :delete, :dashboard]
   before_action :require_logged_in, only: [:create, :new]
   # before_filter :authenticate_user!, only: [:new, :create]
 
@@ -40,7 +40,7 @@ class TailorsController < ApplicationController
   end
 
   def add_appointment
-    @appointment = Appointment.find_by(params[:id]) 
+    @appointment = Appointment.find_by(params[:id])
   end
 
   def delete
@@ -66,7 +66,7 @@ class TailorsController < ApplicationController
   end
 
   def tailor_params
-    params.require(:tailor).permit(:company_id, :first_name, :last_name, :email, :phone, :location, :password)
+    params.require(:tailor).permit(:company_id, :first_name, :last_name, :email, :phone, :location, :password, :remote_image_url, :image)
   end
 
 end
