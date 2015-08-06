@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get '/new_session_tailor' => 'sessions#new_session_tailor'
   get '/new_session_user' => 'sessions#new_session_user'
 
-  get '/availabilities/new' => 'availabilities#new'
+
+  get 'tailors/edit_tailor' => 'tailors#edit_tailor'
+
+
+
 
 
   get '/dashboard' => 'users#dashboard'
@@ -16,7 +20,7 @@ Rails.application.routes.draw do
   post 'sessions/login_company'
   post 'sessions/login_tailor'
 
-  post '/tailors/:tailor_id/appointments/:id' => 'tailors#add_tailor_to_appointment'
+  post '/tailors/:id/' => 'tailors#destroy'
   # get '/tailors/:id/' => 'tailors#view', as: 'tailor_profile'
   # get '/tailors/:id' => 'tailors#new'
 
@@ -26,10 +30,13 @@ Rails.application.routes.draw do
 
   # get '/company/tailor/:tailor' => 'company_tailor'
 
+  # post '/add_appointment_tailor' => 'appointment#add_appointment'
 
   resources :sessions
   resource :companies do
-    resources :tailors
+    resources :tailors do
+    resources :availabilities
+  end
   end
 
   resources :tailors do

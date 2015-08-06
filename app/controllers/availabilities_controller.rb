@@ -16,8 +16,17 @@ class AvailabilitiesController < ApplicationController
 
   # GET /availabilities/new
   def new
+    @tailors = current_company.tailors
     @availability = Availability.new
     @availabilities = current_tailor.availabilities
+
+    unless current_company
+      if current_tailor
+        redirect_to tailor_path
+      else
+        redirect_to root_path
+      end
+    end
   end
 
   # GET /availabilities/1/edit
