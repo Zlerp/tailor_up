@@ -12,21 +12,21 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1.json
   def show
       @artricle = Article.new
+      @appointment = current_tailor
   end
 
   # GET /appointments/new
   def new
-    if current_user.appointments.count <= 0
-      @appointment = current_user.appointments.new
-      @appointment.address = current_user.address
-      # DateTime.now.strftime("%Y-%d-%m %H:%M")
-        @article = Article.new
-
-    else
-      redirect_to dashboard_path
+    if current_user
+      if current_user.appointments.count <= 0
+        @appointment = current_user.appointments.new
+        @appointment.address = current_user.address
+        # DateTime.now.strftime("%Y-%d-%m %H:%M")
+          @article = Article.new
+      else
+        redirect_to dashboard_path
+      end
     end
-    # @appointment.
-    # @appointment = Appointment.new
   end
 
   # GET /appointments/1/edit
@@ -53,11 +53,6 @@ class AppointmentsController < ApplicationController
       end
     end
   end
-
-  # def add_appointment
-  #   @appointment.tailor_id = current_tailor.id
-  #   @appointment.save
-  # end
 
   # PATCH/PUT /appointments/1
   # PATCH/PUT /appointments/1.json
@@ -87,6 +82,9 @@ class AppointmentsController < ApplicationController
 
     end
   end
+
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

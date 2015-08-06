@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   post 'sessions/login_company'
   post 'sessions/login_tailor'
 
-  post '/tailors/:id/' => 'tailors#destroy'
+  post '/tailors/:tailor_id/appointments/:id' => 'tailors#add_tailor_to_appointment'
   # get '/tailors/:id/' => 'tailors#view', as: 'tailor_profile'
   # get '/tailors/:id' => 'tailors#new'
 
@@ -26,7 +26,6 @@ Rails.application.routes.draw do
 
   # get '/company/tailor/:tailor' => 'company_tailor'
 
-  # post '/add_appointment_tailor' => 'appointment#add_appointment'
 
   resources :sessions
   resource :companies do

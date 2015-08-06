@@ -41,9 +41,11 @@ class TailorsController < ApplicationController
     @appointments = Appointment.all
   end
 
-  def add_appointment
+  def add_tailor_to_appointment
+    @appointment = Appointment.find_by(params[:id])
     @appointment.tailor_id = current_tailor.id
     @appointment.save
+    redirect_to tailor_path
   end
 
   def delete
@@ -56,6 +58,7 @@ class TailorsController < ApplicationController
     @tailor.destroy
     redirect_to companies_path
   end
+
 
 
 
