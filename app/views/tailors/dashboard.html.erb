@@ -1,4 +1,4 @@
-<h2>Tailor Show Page!</h2>
+<h2>Tailor Page!</h2>
 
 <p>
   this is currently Tailor:
@@ -56,6 +56,7 @@
           <td><%= a.user.first_name %> </td>
           <td><%= a.address %> </td>
           <td><%= a.appointment_time.strftime('%b %e, %l:%M %p') %> </td>
+
           <td><%= link_to 'add', tailor_appointment_path(@tailor, a ), method: :post %></td>
         <% end %>
       </tr>

@@ -18,6 +18,11 @@ class TailorsController < ApplicationController
   def edit
     @tailors = current_tailor
   end
+  def dashboard
+    @tailor = current_tailor
+    @appointments = Appointment.all
+  end
+
 
   def create
     @tailor = current_company.tailors.new(tailor_params)
@@ -37,15 +42,15 @@ class TailorsController < ApplicationController
   end
 
   def show
-    @tailor = Tailor.find_by(params[:id])
+    @tailor = Tailor.find(params[:id])
     @appointments = Appointment.all
   end
 
   def add_tailor_to_appointment
-    @appointment = Appointment.find_by(params[:id])
-    @appointment.tailor_id = current_tailor.id
-    @appointment.save
-    redirect_to tailor_path
+    @appointment = Appointment.find(params[:id])
+    @appointment.tailor = current_tailor
+    @appointment.save!
+    redirect_to current_tailor
   end
 
   def delete

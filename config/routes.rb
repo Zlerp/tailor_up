@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get '/dashboard' => 'users#dashboard'
 
+  get '/tailors/dashboard'  => 'tailors#dashboard'
+
   post 'sessions/login_user'
   post 'sessions/login_company'
   post 'sessions/login_tailor'
