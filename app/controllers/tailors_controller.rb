@@ -1,6 +1,6 @@
 class TailorsController < ApplicationController
   attr_accessor :password, :password_confirmation
-  before_action :set_tailor, only: [:show, :edit, :update, :delete]
+  before_action :set_tailor, only: [:show, :edit, :update, :delete, :dashboard]
   before_action :require_logged_in, only: [:create, :new]
   # before_filter :authenticate_user!, only: [:new, :create]
 
@@ -18,6 +18,11 @@ class TailorsController < ApplicationController
   def edit
     @tailors = current_tailor
   end
+  def dashboard
+    @tailor = current_tailor
+    @appointments = Appointment.all
+  end
+
 
   def create
     @tailor = current_company.tailors.new(tailor_params)
@@ -37,15 +42,16 @@ class TailorsController < ApplicationController
   end
 
   def show
-    @tailor = Tailor.find_by(params[:id])
+    @tailor = Tailor.find(params[:id])
     @appointments = Appointment.all
   end
 
+
   def add_tailor_to_appointment
-    @appointment = Appointment.find_by(params[:id])
-    @appointment.tailor_id = current_tailor.id
-    @appointment.save
-    redirect_to tailor_path
+    @appointment = Appointment.find(params[:id])
+    @appointment.tailor = current_tailor
+    @appointment.save!
+    redirect_to current_tailor
   end
 
   def delete
@@ -72,7 +78,7 @@ class TailorsController < ApplicationController
   end
 
   def tailor_params
-    params.require(:tailor).permit(:company_id, :first_name, :last_name, :email, :phone, :location, :password)
+    params.require(:tailor).permit(:company_id, :first_name, :last_name, :email, :phone, :location, :password, :remote_image_url, :image)
   end
 
 end

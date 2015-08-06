@@ -36,7 +36,8 @@ gem 'simple_form'
 gem 'better_errors'
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'carrierwave'
+gem 'rmagick'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

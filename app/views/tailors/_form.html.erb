@@ -1,4 +1,7 @@
 <%= simple_form_for @tailors do |f| %>
+  <%=f.file_field :image %>
+  <%= f.label :remote_image_url, "or image URL" %> <br />
+  <%= f.text_field :remote_image_url %>
   <%= f.input :first_name %>
   <%= f.input :last_name %>
   <%= f.input :email %>

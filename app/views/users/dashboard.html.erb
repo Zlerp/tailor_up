@@ -2,7 +2,7 @@
 <p>
   Hello <span id="userGreeting"><%= current_user.first_name %></span>,
 </p>
-
+<%= image_tag @user.image_url(:thumb).to_s %>
 <div class="edit">
   <td><%= link_to 'My Account', edit_user_path(current_user) %></td>
 </div>

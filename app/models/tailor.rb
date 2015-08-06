@@ -6,6 +6,7 @@ class Tailor < ActiveRecord::Base
   has_many :appointments
 
   belongs_to :company
+  mount_uploader :image, ImageUploader
   # validates_uniqueness_of :email, :phone
   # validates :first_name, presence: true
   # validates :last_name, presence: true

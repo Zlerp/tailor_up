@@ -1,10 +1,10 @@
-<h2>Tailor Show Page!</h2>
+<h2>Tailor Page!</h2>
 
 <p>
   this is currently Tailor:
   <%= @tailor.first_name %>
   <div class="edit">
-    <td><%= link_to 'My Settings', companies_tailor_path %></td>
+    <td><%= link_to 'My Settings', edit_tailor_path(current_tailor) %></td>
   </div>
 </p>
 
@@ -56,6 +56,7 @@
           <td><%= a.user.first_name %> </td>
           <td><%= a.address %> </td>
           <td><%= a.appointment_time.strftime('%b %e, %l:%M %p') %> </td>
+
           <td><%= link_to 'add', tailor_appointment_path(@tailor, a ), method: :post %></td>
         <% end %>
       </tr>
