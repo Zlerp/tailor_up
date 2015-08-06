@@ -5,6 +5,16 @@
   <%= @tailor.first_name %>
 </p>
 
+
 <h2> Availability </h2>
 
 <%= render '/availabilities/form' %>
+
+<h3>Your Appointments</h3>
+<ul>
+    <% @appointments.each do |a| %>
+    <% if a.tailor_id == current_tailor.id %>
+    <li><%= a.user.first_name %> </li>
+    <% end %>
+  <% end%>
+</ul>

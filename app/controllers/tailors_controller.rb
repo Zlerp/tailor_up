@@ -5,9 +5,9 @@ class TailorsController < ApplicationController
   # before_filter :authenticate_user!, only: [:new, :create]
 
   def new
+    @tailors = current_company.tailors.new
+  end
 
-  @tailors = current_company.tailors.new
-end
 
   def index
     @tailors = current_company.tailors.all
@@ -37,6 +37,7 @@ end
 
   def show
     @tailor = Tailor.find_by(params[:id])
+    @appointments = Appointment.all
   end
 
   def delete
