@@ -5,20 +5,23 @@ class AppointmentsController < ApplicationController
   # GET /appointments.json
   def index
     # @appointments = current_user.appointments.all
-    @appointments = Appointment.all
+    # @appointments = Appointment.all
   end
 
   # GET /appointments/1
   # GET /appointments/1.json
   def show
-      @article = Article.new
-      @articles = Article.all
+      @artricle = Article.new
   end
 
   # GET /appointments/new
   def new
     if current_user.appointments.count <= 0
       @appointment = current_user.appointments.new
+      @appointment.address = current_user.address
+      # DateTime.now.strftime("%Y-%d-%m %H:%M")
+        @article = Article.new
+
     else
       redirect_to dashboard_path
     end
@@ -35,10 +38,12 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = current_user.appointments.new(appointment_params)
     #  @appointment = Appointment.new(appointment_params)
-
+      if @appointment.pickup_location == ""
+        @appointment.pickup_location = current_user.address
+      end
     respond_to do |format|
       if @appointment.save
-        format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
+        format.html { redirect_to dashboard_path, notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
       else
         format.html { render :new }
@@ -66,8 +71,13 @@ class AppointmentsController < ApplicationController
   def destroy
     @appointment.destroy
     respond_to do |format|
-      format.html { redirect_to appointments_url, notice: 'Appointment was successfully destroyed.' }
+      if current_user != nil
+      format.html { redirect_to dashboard_path, notice: 'Appointment was successfully destroyed.' }
       format.json { head :no_content }
+
+      end
+
+
     end
   end
 

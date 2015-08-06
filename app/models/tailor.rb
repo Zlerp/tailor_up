@@ -1,5 +1,6 @@
 class Tailor < ActiveRecord::Base
   has_secure_password
+  has_many :appointments
   belongs_to :company
   # validates_uniqueness_of :email, :phone
   # validates :first_name, presence: true

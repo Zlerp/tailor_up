@@ -36,6 +36,11 @@ class TailorsController < ApplicationController
 
   def show
     @tailor = Tailor.find_by(params[:id])
+    @appointments = Appointment.all
+  end
+
+  def add_appointment
+    @appointment = Appointment.find_by(params[:id]) 
   end
 
   def delete

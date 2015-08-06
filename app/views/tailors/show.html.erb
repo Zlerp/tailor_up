@@ -4,3 +4,51 @@
   this is currently Tailor:
   <%= @tailor.first_name %>
 </p>
+
+<h3>Your Appointments</h3>
+<table>
+  <thead>
+    <tr>
+      <th>USER</th>
+      <th>ADDRESS</th>
+      <th>TIME</th>
+    </tr>
+  </thead>
+<br>
+  <tbody>
+    <% @appointments.each do |a| %>
+      <% if a.tailor_id == current_tailor.id%>
+        <div class="tailAvailAptsZ">
+          <tr>
+            <td><%= a.user.first_name %> </td>
+            <td><%= a.address %> </td>
+            <td><%= a.appointment_time.to_s[0...-7] %> </td>
+          </tr>
+        </div>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<h3>Available Appointments</h3>
+<table>
+  <thead>
+    <tr>
+      <th>USER</th>
+      <th>ADDRESS</th>
+      <th>TIME</th>
+    </tr>
+  </thead>
+<br>
+  <tbody>
+    <% @appointments.each do |a| %>
+      <tr>
+        <% if a.tailor_id == nil%>
+          <td><%= a.user.first_name %> </td>
+          <td><%= a.address %> </td>
+          <td><%= a.appointment_time.to_s[0...-7] %> </td>
+      </tr>
+      <% end %>
+    <% end%>
+  </tbody>
+</table>
