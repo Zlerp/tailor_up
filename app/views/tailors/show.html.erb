@@ -26,7 +26,6 @@
             <td><%= a.user.first_name %> </td>
             <td><%= a.address %> </td>
             <td><%= a.appointment_time.to_s[0...-7] %> </td>
-            <td><%# link_to 'add', add_appointment_tailor_path, method: :add_appointment %></td>
           </tr>
         </div>
       <% end %>
@@ -51,6 +50,7 @@
           <td><%= a.user.first_name %> </td>
           <td><%= a.address %> </td>
           <td><%= a.appointment_time.to_s[0...-7] %> </td>
+          <td><%= link_to 'add', tailor_appointment_path(@tailor, a ), method: :add_tailor_to_appointment %></td>
       </tr>
       <% end %>
     <% end%>
