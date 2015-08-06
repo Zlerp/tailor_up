@@ -1,0 +1,4 @@
+
+<% Tailor.all.map(&:availabilities).flatten.each do |availability| %>
+  <li><%= button_to availability.start.strftime("%I:00 %p") %></li>
+<% end %>

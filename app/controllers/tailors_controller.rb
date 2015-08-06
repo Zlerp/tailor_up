@@ -5,13 +5,9 @@ class TailorsController < ApplicationController
   # before_filter :authenticate_user!, only: [:new, :create]
 
   def new
-<<<<<<< HEAD
-    @tailors = current_company.tailors.new
-  end
-=======
+
   @tailors = current_company.tailors.new
 end
->>>>>>> 4d72b39678644e99c5a2831d071e1b2847373fe9
 
   def index
     @tailors = current_company.tailors.all
