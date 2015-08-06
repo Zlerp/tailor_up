@@ -14,9 +14,9 @@ class AvailabilitiesController < ApplicationController
     @availabilties = current_tailor.Availability.all
   end
 
-  # GET /availabilities/new
   def new
     @tailors = current_company.tailors
+    @tailor = Tailor.find(params[:tailor_id])
     @availability = Availability.new
     @availabilities = current_tailor.availabilities
 

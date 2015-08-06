@@ -1,1 +1,11 @@
-<h2> This is a form </h2>
+<h2> This is a Availability Form </h2>
+
+<%= form_for [@tailor, @availability] do |f| %>
+  <%= f.label :start %>:
+  <%= f.datetime_select :start %><br />
+
+  <%= f.label :end %>:
+  <%= f.datetime_select :end %><br />
+
+  <%= f.submit %>
+<% end %>

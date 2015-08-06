@@ -36,9 +36,7 @@ Rails.application.routes.draw do
 
   resources :sessions
   resource :companies do
-    resources :tailors do
-    resources :availabilities
-  end
+    resources :tailors
   end
 
   resources :tailors do
