@@ -1,4 +1,4 @@
 
 <% Tailor.all.map(&:availabilities).flatten.each do |availability| %>
-  <li><%= link_to availability.start.strftime("%I:00 %p"), new_appointment_path %> </li>
+  <li><button type="button"><%= link_to availability.start.strftime("%I:00 %p"), new_appointment_path %></button> </li>
 <% end %>
