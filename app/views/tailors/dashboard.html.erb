@@ -2,6 +2,7 @@
 
 <p>
   this is currently Tailor:
+  <%= image_tag @tailor.image_url(:thumb).to_s %>
   <%= @tailor.first_name %>
   <div class="edit">
     <td><%= link_to 'My Settings', edit_tailor_path(current_tailor) %></td>
