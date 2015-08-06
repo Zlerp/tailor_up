@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get '/new_session_tailor' => 'sessions#new_session_tailor'
   get '/new_session_user' => 'sessions#new_session_user'
 
+  get '/availabilities/new' => 'availabilities#new'
+
+
   get '/dashboard' => 'users#dashboard'
 
   post 'sessions/login_user'
