@@ -39,6 +39,10 @@ class TailorsController < ApplicationController
     @appointments = Appointment.all
   end
 
+  def add_appointment
+    @appointment = Appointment.find_by(params[:id]) 
+  end
+
   def delete
     @tailor.destroy
     redirect_to tailors_url

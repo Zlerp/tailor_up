@@ -38,7 +38,9 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = current_user.appointments.new(appointment_params)
     #  @appointment = Appointment.new(appointment_params)
-
+      if @appointment.pickup_location == ""
+        @appointment.pickup_location = current_user.address
+      end
     respond_to do |format|
       if @appointment.save
         format.html { redirect_to dashboard_path, notice: 'Appointment was successfully created.' }
