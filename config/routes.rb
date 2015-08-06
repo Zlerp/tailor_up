@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'calendar/show'
 
-  root 'sessions#new'
+  root 'sessions#new_session_user'
 
   get '/new_company' => 'sessions#new_company'
   get '/new_session_tailor' => 'sessions#new_session_tailor'
