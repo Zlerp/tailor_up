@@ -1,9 +1,12 @@
-<h2>Tailor Show Page!</h2>
+<h2>Tailor Page!</h2>
 
 <p>
   this is currently Tailor:
   <%= @tailor.first_name %>
   <div class="edit">
+
+    <td><%# link_to 'My Settings', edit_tailor_path(@tailor) %></td>
+
     <td><%= link_to 'My Settings', companies_tailor_path %></td>
   </div>
 </p>
@@ -25,7 +28,6 @@
 <br>
   <tbody>
     <% @appointments.each do |a| %>
-      <% if a.tailor_id == current_tailor.id%>
         <div class="tailAvailAptsZ">
           <tr>
             <td><%= a.user.first_name %> </td>
@@ -34,31 +36,8 @@
           </tr>
         </div>
       <% end %>
-    <% end %>
 
   </tbody>
 </table>
 
-<h3>Available Appointments</h3>
-<table>
-  <thead>
-    <tr>
-      <th>USER</th>
-      <th>ADDRESS</th>
-      <th>TIME</th>
-    </tr>
-  </thead>
-<br>
-  <tbody>
-    <% @appointments.each do |a| %>
-      <tr>
-        <% if a.tailor.nil?%>
-          <td><%= a.user.first_name %> </td>
-          <td><%= a.address %> </td>
-          <td><%= a.appointment_time.strftime('%b %e, %l:%M %p') %> </td>
-          <td><%= link_to 'add', tailor_appointment_path(@tailor, a ), method: :post %></td>
-        <% end %>
-      </tr>
-    <% end%>
-  </tbody>
-</table>
+<%= link_to 'Back', companies_path %>

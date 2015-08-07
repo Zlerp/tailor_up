@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150806214429) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "appointments", force: :cascade do |t|
     t.string   "stages"
     t.string   "address"
@@ -36,7 +39,7 @@ ActiveRecord::Schema.define(version: 20150806214429) do
     t.datetime "updated_at",     null: false
   end
 
-  add_index "articles", ["appointment_id"], name: "index_articles_on_appointment_id"
+  add_index "articles", ["appointment_id"], name: "index_articles_on_appointment_id", using: :btree
 
   create_table "availabilities", force: :cascade do |t|
     t.datetime "start"
@@ -48,7 +51,7 @@ ActiveRecord::Schema.define(version: 20150806214429) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "availabilities", ["tailor_id"], name: "index_availabilities_on_tailor_id"
+  add_index "availabilities", ["tailor_id"], name: "index_availabilities_on_tailor_id", using: :btree
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -87,4 +90,6 @@ ActiveRecord::Schema.define(version: 20150806214429) do
     t.string   "image"
   end
 
+  add_foreign_key "articles", "appointments"
+  add_foreign_key "availabilities", "tailors"
 end

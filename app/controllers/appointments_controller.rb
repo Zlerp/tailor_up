@@ -11,13 +11,8 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   # GET /appointments/1.json
   def show
-<<<<<<< HEAD
-      @article = Article.new
-
-=======
       @artricle = Article.new
       @appointment = current_tailor
->>>>>>> 1bec83b0cdcb18c9662b0686e30f77200d99e207
   end
 
   # GET /appointments/new
