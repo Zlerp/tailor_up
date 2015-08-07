@@ -11,4 +11,8 @@ class Tailor < ActiveRecord::Base
   # validates :first_name, presence: true
   # validates :last_name, presence: true
   # validates_format_of :phone, :with => /\A(1?(?: |\-|\.)?(?:\(\d{3}\)|\d{3})(?: |\-|\.)?\d{3}(?: |\-|\.)?\d{4})\z/, message: "incorrect format, ex. 888-888-8888"
+
+
+
+
 end

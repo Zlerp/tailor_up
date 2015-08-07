@@ -8,4 +8,9 @@ class User < ActiveRecord::Base
   # validates_format_of :phone, :with => /\A(1?(?: |\-|\.)?(?:\(\d{3}\)|\d{3})(?: |\-|\.)?\d{3}(?: |\-|\.)?\d{4})\z/, message: "incorrect format, ex. 888-888-8888"
   # validates :zip, format: { with: /(^\d{5}$)|(^\d{5}-\d{4}$)/, message: "Invalid Zipcode" }
 
+
+  ########## For Faker Gem ONLY  ############
+  # validates_uniqueness_of :email, :phone, :first_name, :last_name, :address
+
+
 end

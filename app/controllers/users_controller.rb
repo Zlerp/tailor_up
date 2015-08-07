@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   attr_accessor :password, :password_confirmation
 
     before_action :set_user, only: [:show, :edit, :update, :destroy, :dashboard]
+    # before_action :require_logged_in_user, only: [:dashboard]
 
     def show
       @appointment = Appointment.new
@@ -23,7 +24,8 @@ class UsersController < ApplicationController
     def create
       @user = User.new user_params
       if @user.save
-        redirect_to new_session_user_path
+        log_in(@user)
+        redirect_to dashboard_path
       else
         render :new
       end

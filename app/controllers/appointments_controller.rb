@@ -71,6 +71,7 @@ class AppointmentsController < ApplicationController
   # DELETE /appointments/1
   # DELETE /appointments/1.json
   def destroy
+    @appointment.articles.destroy_all   #Removes all articles associated to Appointment
     @appointment.destroy
     respond_to do |format|
       if current_user != nil
