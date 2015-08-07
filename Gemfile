@@ -37,6 +37,7 @@ gem 'shoulda-matchers', require: false
 gem 'capybara'
 gem 'fullcalendar-rails'
 gem 'simple_form'
+gem 'faker'
 
 gem 'better_errors'
 # Use Unicorn as the app server

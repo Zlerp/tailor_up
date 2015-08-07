@@ -6,3 +6,17 @@
 .compTailList{
     /*word-spacing: 2vw;*/
 }
+
+/*#other{
+  visibility: hidden;
+}*/
+
+.hidden{
+  visibility: hidden;
+}
+
+
+html.turbolinks-progress-bar::before {
+  background-color: rgba(#1890ff, 0.69) !important;
+  height: 5px !important;
+}

@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_company, :current_user, :current_tailor
 
+  include SessionsHelper
 
   def current_company
     @current_company ||= Company.find_by(id: session[:company_id])
@@ -20,5 +21,9 @@ class ApplicationController < ActionController::Base
   def require_logged_in
     return true if current_company
     redirect_to root_path
+  end
+
+  def require_logged_in_user
+    redirect_to new_user_session_path unless current_user
   end
 end
