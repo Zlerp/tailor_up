@@ -17,6 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
+gem 'figaro'
 # gem 'therubyracer', platforms: :ruby
 gem "fog-aws"
 # Use jquery as the JavaScript library
@@ -45,7 +46,7 @@ gem 'carrierwave'
 gem 'rmagick'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'dotenv-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
