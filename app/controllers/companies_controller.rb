@@ -17,7 +17,8 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new company_params
     if @company.save
-      redirect_to new_company_path, notice: 'Company: #{@company.name} has been created!'
+      log_in_company(@company)
+      redirect_to companies_path, notice: 'Company: #{@company.name} has been created!'
     else
       redirect_to :new
     end
