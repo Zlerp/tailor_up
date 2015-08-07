@@ -2,6 +2,7 @@
 
 <p>
   this is currently Tailor:
+  <%= image_tag @tailor.image_url(:thumb).to_s %>
   <%= @tailor.first_name %>
   <div class="edit">
     <td><%= link_to 'My Settings', edit_tailor_path(current_tailor) %></td>
@@ -9,8 +10,11 @@
 </p>
 
 
+<<<<<<< HEAD
 <h2> Availability </h2>
 
+=======
+>>>>>>> 85dfe9d6b877d9a6ff6636541bb80fdaa036d2f8
 <h3>Your Appointments</h3>
 <table>
   <thead>

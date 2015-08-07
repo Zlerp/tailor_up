@@ -1,12 +1,9 @@
-<h2>Tailor Page!</h2>
+<h2>Tailor Show Page!</h2>
 
 <p>
   this is currently Tailor:
   <%= @tailor.first_name %>
   <div class="edit">
-
-    <td><%# link_to 'My Settings', edit_tailor_path(@tailor) %></td>
-
     <td><%= link_to 'My Settings', companies_tailor_path %></td>
   </div>
 </p>
@@ -14,7 +11,7 @@
 
 <h2> Availability </h2>
 
-
+<%# render '/availabilities/form' %>
 
 <h3>Your Appointments</h3>
 <table>
@@ -39,5 +36,3 @@
 
   </tbody>
 </table>
-
-<%= link_to 'Back', companies_path %>

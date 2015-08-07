@@ -11,7 +11,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   # GET /appointments/1.json
   def show
-      @artricle = Article.new
+      @article = Article.new
       @appointment = current_tailor
   end
 
@@ -21,7 +21,7 @@ class AppointmentsController < ApplicationController
       if current_user.appointments.count <= 0
         @appointment = current_user.appointments.new
         @appointment.address = current_user.address
-        @appointment.appointment_time = Appointment.find_by(params[:start])
+        @appointment.appointment_time = params[:start]
 
         # DateTime.now.strftime("%Y-%d-%m %H:%M")
           @article = Article.new
@@ -98,7 +98,7 @@ class AppointmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_params
-      params.require(:appointment).permit(:stages, :address, :appointment_time, :due_time, :service, :pickup_location, :zip)
+      params.require(:appointment).permit(:start, :stages, :address, :appointment_time, :due_time, :service, :pickup_location, :zip)
     end
 
 end
