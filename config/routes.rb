@@ -35,8 +35,11 @@ Rails.application.routes.draw do
   # post '/add_appointment_tailor' => 'appointment#add_appointment'
 
   resources :sessions
+
+
   resource :companies do
     resources :tailors
+    resources :availabilities
   end
 
   resources :tailors do

@@ -18,7 +18,7 @@ class AvailabilitiesController < ApplicationController
     @tailors = current_company.tailors
     @tailor = Tailor.find(params[:tailor_id])
     @availability = Availability.new
-    @availabilities = current_tailor.availabilities
+
 
     unless current_company
       if current_tailor
@@ -37,8 +37,9 @@ class AvailabilitiesController < ApplicationController
   # POST /availabilities
   # POST /availabilities.json
   def create
-    @availability = current_tailor.availabilities.new(availability_params)
-
+    @availability = current_company.availabilities.new(availability_params)
+    @availability.tailor_id = params[:tailor_id]
+    
     if @availability.end.nil?
       @availability.end = @availability.start + 1.hour
     end
@@ -47,7 +48,7 @@ class AvailabilitiesController < ApplicationController
     # redirect_to root_path
     respond_to do |format|
       if @availability.save
-        format.html { redirect_to @availability, notice: 'Availability was successfully created.' }
+        format.html { redirect_to companies_path, notice: 'Availability was successfully created.' }
         format.json { render :show, status: :created, location: @availability }
       else
         format.html { render :new }

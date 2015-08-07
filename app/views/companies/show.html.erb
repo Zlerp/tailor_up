@@ -7,7 +7,7 @@
 <h2>Tailors</h2>
 <ul class='compTailList'>
   <% @company.tailors.each do |tailor| %>
-    <li> <%= link_to tailor.first_name, companies_tailor_path(tailor) %></li>
+    <li> <%= link_to tailor.first_name, companies_tailor_path(@tailor) %></li>
     <li> <%= tailor.phone %></li>
     <li> <%= tailor.email%></li>
     <td><%= link_to 'New Availability', new_tailor_availability_path(tailor) %></td>
