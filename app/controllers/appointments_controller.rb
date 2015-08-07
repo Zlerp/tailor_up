@@ -21,6 +21,8 @@ class AppointmentsController < ApplicationController
       if current_user.appointments.count <= 0
         @appointment = current_user.appointments.new
         @appointment.address = current_user.address
+        @appointment.appointment_time = Appointment.find_by(params[:start])
+
         # DateTime.now.strftime("%Y-%d-%m %H:%M")
           @article = Article.new
       else
