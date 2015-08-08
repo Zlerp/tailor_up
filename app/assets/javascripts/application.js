@@ -13,7 +13,10 @@
 //= require fullcalendar
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+// = require turbolinks
+// = require_tree
 
-Turbolinks.ProgressBar.enable();
+
+$(document).on('ready', function(event) {
+  Turbolinks.ProgressBar.enable();
+});

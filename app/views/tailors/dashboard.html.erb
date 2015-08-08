@@ -9,19 +9,14 @@
   </div>
 </p>
 
-
-<<<<<<< HEAD
-<h2> Availability </h2>
-
-=======
->>>>>>> 85dfe9d6b877d9a6ff6636541bb80fdaa036d2f8
 <h3>Your Appointments</h3>
-<table>
+<table class="tableDash">
   <thead>
     <tr>
       <th>USER</th>
       <th>ADDRESS</th>
       <th>TIME</th>
+      <th>PHONE</th>
     </tr>
   </thead>
 <br>
@@ -33,6 +28,8 @@
             <td><%= a.user.first_name %> </td>
             <td><%= a.address %> </td>
             <td><%= a.appointment_time.to_s[0...-7] %> </td>
+            <td><%= a.user.phone %> </td>
+
           </tr>
         </div>
       <% end %>

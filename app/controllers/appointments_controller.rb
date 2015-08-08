@@ -21,6 +21,7 @@ class AppointmentsController < ApplicationController
       if current_user.appointments.count <= 0
         @appointment = current_user.appointments.new
         @appointment.address = current_user.address
+        @appointment.zip = current_user.zip
         @appointment.appointment_time = params[:start]
 
         # DateTime.now.strftime("%Y-%d-%m %H:%M")

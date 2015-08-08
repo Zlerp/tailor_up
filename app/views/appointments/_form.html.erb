@@ -21,7 +21,9 @@
   </div>
   <div class="field">  <!-- Will not be displayed because appointment_time will be set by avail -->
     <%= f.label :appointment_time %><br>
-    <%= f.datetime_select :appointment_time , :disabled => true %>
+    <%= f.datetime_select :appointment_time  %>
+    <%# f.datetime_select :appointment_time , :disabled => true %>
+
   </div>
   <div class="field">
     <%= f.label :service %><br>
