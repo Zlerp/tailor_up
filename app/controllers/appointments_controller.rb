@@ -78,14 +78,17 @@ class AppointmentsController < ApplicationController
       if @appointment.stages == "Appointment Booked"
         @appointment.stages = "Processing Alterations"
         @appointment.save
+        UserMailer.appointment_processing(@appointment).deliver
         redirect_to tailors_dashboard_path
       elsif @appointment.stages == "Processing Alterations"
         @appointment.stages = "Ready for Drop Off"
         @appointment.save
+        UserMailer.appointment_delivery(@appointment).deliver
         redirect_to tailors_dashboard_path
       else @appointment.stages == "Ready for Drop Off"
         @appointment.stages = "Order Complete"
         @appointment.save
+        UserMailer.appointment_complete(@appointment).deliver
         redirect_to tailors_dashboard_path
       end
   end

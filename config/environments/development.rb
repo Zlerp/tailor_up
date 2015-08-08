@@ -19,8 +19,8 @@ Rails.application.configure do
     :address => 'smtp.gmail.com',
     :port => 587,
     :authentication => :plain,
-    :user_name => 'zhpdeals@gmail.com',
-    :password => 'Hunter620620'
+    :user_name => 'TailorUpMiami@gmail.com',
+    :password => 'Wyncodemiami'
     #:enable_starttls_auto => true # for rails >= 2.2 && ruby >= 1.8.7
   }
   # Don't care if the mailer can't send.
