@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+<%# raise %>
   <!-- <div class="field">    Will not be displayed because appointment_time will be set by tailor
     <%= f.label :stages %><br>
     <%= f.text_field :stages %>
@@ -19,7 +19,7 @@
     <%= f.label :address%><br>
     <%= f.text_field :address %>
   </div>
-  <div class="field">  <!-- Will not be displayed because appointment_time will be set by avail -->
+  <div class="field hidden">  <!-- Will not be displayed because appointment_time will be set by avail -->
     <%= f.label :appointment_time %><br>
     <%= f.datetime_select :appointment_time  %>
     <%# f.datetime_select :appointment_time , :disabled => true %>

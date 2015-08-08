@@ -19,6 +19,8 @@ class UsersController < ApplicationController
     end
 
     def dashboard
+      @tailors = Tailor.all
+      @days = Date.today.all_week
     end
 
     def create
@@ -26,7 +28,7 @@ class UsersController < ApplicationController
       if @user.save
         log_in(@user)
         UserMailer.registration_confirmation(@user).deliver
-        redirect_to dashboard_path
+        redirect_to dashboard_path,notice: "#{@user.first_name} was successfully created"
       else
         render :new
       end

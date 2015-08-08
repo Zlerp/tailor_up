@@ -1,3 +1,5 @@
+<p><%= flash[:notice] %></p>
+
 <h1>Users Dashboard</h1>
 <p>
   Hello <span id="userGreeting"><%= current_user.first_name %></span>,
@@ -18,7 +20,7 @@
 <ul>
   <% current_user.appointments.each do |a| %>
     <li>current status: <span class="aptInfo" id=""><%= a.stages %></span></li>
-    <li>Appointment Time: <span class="aptInfo"><%= a.appointment_time.to_time.to_s[0...-5] %></span></li>
+    <li>Appointment Time: <span class="aptInfo"><%= a.appointment_time.strftime('%A, %d %b %Y %l:%M %p') %></span></li>
     <li>Appointment Address: <span class="aptInfo"><%= a.address %></span></li>
     <li> <span class="addArticles"> <%= link_to 'Add Articles', new_appointment_article_path(a) %></span> |
     <span class="aptInfo"> <%= link_to 'Edit', edit_appointment_path(a) %></span> |
@@ -29,6 +31,13 @@
     <% end %>
   <% end %>
 </ul>
+
+
+
+<h3>Availabilities</h3>
+<%= render '/availabilities/list_availability' %>
+
+
 
 
 <!-- <h3>Availabilities</h3> -->

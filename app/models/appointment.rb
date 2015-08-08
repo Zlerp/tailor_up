@@ -1,7 +1,7 @@
 class Appointment < ActiveRecord::Base
   belongs_to :user
   belongs_to :tailor
-
+  has_many :availabilities
   has_many :articles
 
   validates :zip, format: { with: /(^\d{5}$)|(^\d{5}-\d{4}$)/, message: "- Invalid Zipcode" }
