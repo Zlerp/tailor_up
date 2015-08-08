@@ -39,7 +39,6 @@ class AvailabilitiesController < ApplicationController
   def create
     @availability = current_company.availabilities.new(availability_params)
     @availability.tailor_id = params[:tailor_id]
-    
     if @availability.end.nil?
       @availability.end = @availability.start + 1.hour
     end

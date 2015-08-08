@@ -42,6 +42,7 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     @appointment = current_user.appointments.new(appointment_params)
+    @appointment.tailor_id = 
     #  @appointment = Appointment.new(appointment_params)
     @appointment.stages = "Appointment Booked"
       if @appointment.pickup_location == ""
@@ -53,6 +54,7 @@ class AppointmentsController < ApplicationController
         UserMailer.appointment_booked(@appointment).deliver
         format.html { redirect_to dashboard_path, notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
+
       else
         format.html { render :new }
         format.json { render json: @appointment.errors, status: :unprocessable_entity }
@@ -121,7 +123,7 @@ class AppointmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_params
-      params.require(:appointment).permit(:start, :stages, :address, :appointment_time, :due_time, :service, :pickup_location, :zip)
+      params.require(:appointment).permit(:tailor_id, :start, :stages, :address, :appointment_time, :due_time, :service, :pickup_location, :zip)
     end
 
 end
