@@ -17,6 +17,7 @@
 // = require_tree
 
 
-$(document).on('ready', function(event) {
-  Turbolinks.ProgressBar.enable();
+$(document).ready(function() {
+  // Turbolinks.ProgressBar.enable();
+  $('#notice').delay(5000).slideUp();
 });

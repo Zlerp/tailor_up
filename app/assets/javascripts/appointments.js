@@ -1,2 +1,4 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+// function create_appointment(event) {
+//   event.preventDefault();
+//   $('#create_feedback').html('your appointment was created').fadeIn(500).delay(2000).fadeOut(500);
+// };

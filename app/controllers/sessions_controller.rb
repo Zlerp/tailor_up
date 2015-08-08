@@ -44,7 +44,7 @@ class SessionsController < ApplicationController
   end
   def logout_user
     session[:user_id] = nil
-    redirect_to '/'
+    redirect_to '/', flash:{notice:"please try to login again"}
   end
   def logout_tailor
     session[:tailor_id] = nil
