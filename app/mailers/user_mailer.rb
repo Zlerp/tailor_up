@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-default :from => "zhpdeals@gmail.com"
+default :from => "TailorUpMiami@gmail.com"
 
 def registration_confirmation(user)
   @user = user
