@@ -56,8 +56,11 @@ class UsersController < ApplicationController
         @user.password = ("#{@user.first_name}Reset")
         @user.password_confirmation = ("#{@user.first_name}Reset")
         if @user.save
+          puts "This Saved!!!!!"
           UserMailer.forgot_user_password(@user).deliver
           redirect_to new_session_user_path
+        else
+          puts "not saved"
         end
       end
     end
