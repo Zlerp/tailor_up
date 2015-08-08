@@ -1,5 +1,5 @@
 class AppointmentsController < ApplicationController
-  before_action :set_appointment, only: [:show, :edit, :update, :destroy]
+  before_action :set_appointment, only: [:show, :edit, :update, :destroy, :status]
 
   # GET /appointments
   # GET /appointments.json
@@ -31,6 +31,8 @@ class AppointmentsController < ApplicationController
       end
     end
   end
+
+
 
   # GET /appointments/1/edit
   def edit
@@ -69,6 +71,22 @@ class AppointmentsController < ApplicationController
         format.json { render json: @appointment.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def status
+      if @appointment.stages == "Appointment Booked"
+        @appointment.stages = "Processing Alterations"
+        @appointment.save
+        redirect_to tailors_dashboard_path
+      elsif @appointment.stages == "Processing Alterations"
+        @appointment.stages = "Ready for Drop Off"
+        @appointment.save
+        redirect_to tailors_dashboard_path
+      else @appointment.stages == "Ready for Drop Off"
+        @appointment.stages = "Order Complete"
+        @appointment.save
+        redirect_to tailors_dashboard_path
+      end
   end
 
   # DELETE /appointments/1

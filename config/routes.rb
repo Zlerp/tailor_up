@@ -13,9 +13,8 @@ Rails.application.routes.draw do
   get 'tailors/edit_tailor' => 'tailors#edit_tailor'
 
 
-
-
-
+  post 'appointments/:id' => 'appointments#status'
+  
   get '/dashboard' => 'users#dashboard'
 
   get '/tailors/dashboard'  => 'tailors#dashboard'

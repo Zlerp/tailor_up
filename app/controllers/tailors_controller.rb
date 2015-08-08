@@ -59,6 +59,7 @@ class TailorsController < ApplicationController
     redirect_to tailors_url
   end
 
+
   def destroy
     @tailor = current_company.tailors.find(params[:id])
     @tailor.destroy
