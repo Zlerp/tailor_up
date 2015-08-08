@@ -19,6 +19,8 @@ class UsersController < ApplicationController
     end
 
     def dashboard
+      @tailors = Tailor.all
+      @days = Date.today.all_week
     end
 
     def create

@@ -1,0 +1,10 @@
+<% Date.today.all_week.each do |day| %>
+  <div class="day">
+    <h4><%= day.strftime("%A") %></h4>
+    <ul>
+      <% Availability.where(start: day.midnight..(day.midnight + 1.day)).where("start > ?", Time.now).each do |availability| %>
+        <li><button type="button"><%= link_to availability.start.strftime("%I:00 %p"), new_appointment_path(:start => availability.start) %></button> </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

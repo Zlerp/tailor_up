@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150806214429) do
+ActiveRecord::Schema.define(version: 20150808200437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,10 +47,13 @@ ActiveRecord::Schema.define(version: 20150806214429) do
     t.integer  "tailor_id"
     t.integer  "user_id"
     t.boolean  "booked"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.boolean  "requested"
+    t.integer  "appointment_id"
   end
 
+  add_index "availabilities", ["appointment_id"], name: "index_availabilities_on_appointment_id", using: :btree
   add_index "availabilities", ["tailor_id"], name: "index_availabilities_on_tailor_id", using: :btree
 
   create_table "companies", force: :cascade do |t|
@@ -91,5 +94,6 @@ ActiveRecord::Schema.define(version: 20150806214429) do
   end
 
   add_foreign_key "articles", "appointments"
+  add_foreign_key "availabilities", "appointments"
   add_foreign_key "availabilities", "tailors"
 end
