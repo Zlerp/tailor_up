@@ -26,5 +26,9 @@ end
 def appointment_complete(appointment)
   emails(appointment, "Thanks for using TailorUp!")
 end
+def forgot_user_password(user)
+  @user = user
+  mail(:to => user.email, :subject => "TailorUp Password Reset")
+end
 
 end

@@ -12,9 +12,12 @@ Rails.application.routes.draw do
 
   get 'tailors/edit_tailor' => 'tailors#edit_tailor'
 
+  get 'users/forgot_password'=> 'users#forgot_password'
+  post 'users/forgot_password/reset' => 'users#forgot_password_mail'
+
 
   post 'appointments/:id' => 'appointments#status'
-  
+
   get '/dashboard' => 'users#dashboard'
 
   get '/tailors/dashboard'  => 'tailors#dashboard'

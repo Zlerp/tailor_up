@@ -45,6 +45,24 @@ class UsersController < ApplicationController
       redirect_to root_path
     end
 
+    def forgot_password
+    end
+
+    def forgot_password_mail
+      @user = User.find_by(email: params[:email])
+      if @user.nil?
+        # Need some logic here
+      else
+        @user.password = ("#{@user.first_name}Reset")
+        @user.password_confirmation = ("#{@user.first_name}Reset")
+        if @user.save
+          UserMailer.forgot_user_password(@user).deliver
+          redirect_to new_session_user_path
+        end
+      end
+    end
+
+
     private
 
     def set_user
