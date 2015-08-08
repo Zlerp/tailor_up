@@ -13,10 +13,12 @@
 <table class="tableDash">
   <thead>
     <tr>
+      <th>ID</th>
       <th>USER</th>
       <th>ADDRESS</th>
       <th>TIME</th>
       <th>PHONE</th>
+      <th>STATUS</th>
     </tr>
   </thead>
 <br>
@@ -25,10 +27,12 @@
       <% if a.tailor_id == current_tailor.id%>
         <div class="tailAvailAptsZ">
           <tr>
+            <td><%= a.id + 10000 %> </td>
+            <td><%= a.user.phone %> </td>
             <td><%= a.user.first_name %> </td>
             <td><%= a.address %> </td>
             <td><%= a.appointment_time.to_s[0...-7] %> </td>
-            <td><%= a.user.phone %> </td>
+            <td><%= a.stages%> </td>
 
           </tr>
         </div>

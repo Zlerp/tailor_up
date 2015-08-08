@@ -29,6 +29,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     # @article = @appointment.articles.new(article_params)
+    @article.kind = 'Jeans'
     @article.appointment_id = current_user.appointments.first.id
 
 
