@@ -1,14 +1,13 @@
 
 <div class="layer"></div>
-<div id="loginBackground"></div>
+<div id="loginBackgroundc"></div>
 <div class="context">
   <span id="loginTitle"><h1>company</h1></span>
   <%=form_tag sessions_login_company_path do %>
-  <%= render 'login' %>
+    <%= render 'login' %>
     <div class="signUpLinks">
       <%= link_to 'sign Up', new_companies_path%>
     </div>
   <% end %>
-
 </div>
 <%= render 'links' %>

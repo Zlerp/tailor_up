@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       session[:company_id] = @company.id
       redirect_to companies_path
     else
-      redirect_to new_company_path
+      redirect_to new_company_path, flash:{error:" invalid username or password"}
     end
   end
 
@@ -23,9 +23,9 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:email]).try(:authenticate, params[:password])
     if @user
       session[:user_id] = @user.id
-      redirect_to dashboard_path, flash:{notice:"#{@user.first_name} you are logged in!"}
+      redirect_to dashboard_path, flash:{notice:"#{@user.first_name} you are logged in"}
     else
-      redirect_to dashboard_path
+      redirect_to new_session_user_path, flash:{error:" invalid username or password"}
     end
   end
 
@@ -35,20 +35,20 @@ class SessionsController < ApplicationController
       session[:tailor_id] = @tailor.id
       redirect_to tailors_dashboard_path, flash:{notice:"#{@tailor.first_name} you are logged in!"}
     else
-      redirect_to new_session_tailor_path, flash:{notice:"please try to login again"}
+      redirect_to new_session_tailor_path, flash:{error:" invalid username or password"}
     end
   end
 
   def logout_company
     session[:company_id] = nil
-    redirect_to '/'
+    redirect_to '/', flash:{notice:"you have logged out"}
   end
   def logout_user
     session[:user_id] = nil
-    redirect_to '/', flash:{notice:"please try to login again"}
+    redirect_to '/', flash:{notice:"you have logged out"}
   end
   def logout_tailor
     session[:tailor_id] = nil
-    redirect_to '/'
+    redirect_to '/', flash:{notice:"you have logged out"}
   end
 end

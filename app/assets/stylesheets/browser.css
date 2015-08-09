@@ -1,7 +1,12 @@
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900italic,300,100,700,900);
+@import url(http://fonts.googleapis.com/css?family=Lobster|Pacifico|Fredoka+One);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,800,500,600);
 /*font-family: 'Lato', sans-serif;   --- Main  ---
 font-family: 'Fredoka One', cursive;
 font-family: 'Pacifico', cursive;
 font-family: 'Lobster', cursive;
+font-family: 'Raleway', sans-serif;
 */
 
 #dashboardTitle{
@@ -20,6 +25,9 @@ font-family: 'Lobster', cursive;
 }
 .homeButton i:hover{
   opacity: .8;
+}
+input{
+  outline: none;
 }
 
 .userLog{
@@ -52,12 +60,14 @@ body{
 }
 
 #loginTitle h1{
-  font-family: 'Fredoka One', cursive;
   font-family: 'Lobster', cursive;
   /*font-family: 'Pacifico', cursive;*/
+  /*font-family: 'Raleway', sans-serif;*/
+  font-weight: 100;
   margin-top: 30px;
   margin-bottom: 40px;
-  letter-spacing: 2vw;
+  letter-spacing: 1.5vw;
+  text-shadow: -2px 3px 5px black;
 }
 
 #notice{
@@ -69,13 +79,42 @@ body{
   color: white;
   opacity: .3;
   font-size: .8em;
+  z-index: 1000;
 }
 
 @media screen and (max-width: 1800px){
 
-
+  /*login for user*/
   #loginBackground{
     background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-08%20at%205.08.40%20PM_zpsxrkm8uah.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+    height: 100%;
+    /*position: absolute;*/
+    z-index: -100;
+    /*width: 100%;;
+    background: cover;
+    background-repeat: no-repeat;*/
+  }
+  /* Login for Company*/
+  #loginBackgroundc{
+    background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-09%20at%205.13.14%20AM_zpslajhgtoo.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+    height: 100%;
+    /*position: absolute;*/
+    z-index: -100;
+    /*width: 100%;;
+    background: cover;
+    background-repeat: no-repeat;*/
+  }
+  /*Login for Tailor*/
+  #loginBackgroundt{
+    background: url("http://www.theqg.com/media/hdr-tailor-sewing2.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
