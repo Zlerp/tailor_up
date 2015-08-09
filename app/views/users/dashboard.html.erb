@@ -1,4 +1,4 @@
-<p><%= flash[:notice] %></p>
+<p id="notice"><%= flash[:notice] %></p>
 
 <h1>Users Dashboard</h1>
 <p>
@@ -28,7 +28,10 @@
     <h4>Items:</h4>
     <% a.articles.each do |art| %>
       <li><%= art.kind %> | <%= art.quantity %> </li>
+      <li><%= link_to 'Edit', edit_article_path(art) %></li>
+      <li><%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %></li>
     <% end %>
+
   <% end %>
 </ul>
 

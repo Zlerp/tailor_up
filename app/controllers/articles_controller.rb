@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_article, only: [:show, :edit, :update, :destroy,]
 
   # before_action :set_appointment, only: [:create]
   # GET /articles
@@ -63,7 +63,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
     respond_to do |format|
-      format.html { redirect_to appointments_url, notice: 'Article was successfully destroyed.' }
+      format.html { redirect_to dashboard_path, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
