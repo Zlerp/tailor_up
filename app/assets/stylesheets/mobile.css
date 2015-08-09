@@ -1,4 +1,96 @@
-.LoginHeaders{
-  z-index: 90;
-  margin-top: 100px;
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900italic,300,100,700,900);
+/*font-family: 'Lato', sans-serif;*/
+
+body{
+
+  color: white;
+}
+
+@media screen and (max-width: 1800px){
+  /*.context{
+    padding-top: 100px;
+    opacity: .7;
+    color: white;
+    text-align: center;
+    width: 500px;
+    float: left;
+    position: absolute;
+    top:5vw;
+    left: 40%;
+    z-index: 10;
+  }*/
+
+  #loginBackground{
+    background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-08%20at%205.08.40%20PM_zpsxrkm8uah.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+    height: 100%;
+    /*position: absolute;*/
+    z-index: -5;
+    /*width: 100%;;
+    background: cover;
+    background-repeat: no-repeat;*/
+  }
+}
+
+
+@media screen and (max-width: 500px){
+
+  #loginBackground{
+    background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-08%20at%205.08.40%20PM_zpsxrkm8uah.png");
+    height: 100%;
+    width: 900px;
+    margin-top: 0;
+    position: absolute;
+    left: -400px;
+    z-index: -5;
+    background-repeat: no-repeat;
+
+  }
+
+  #email{
+    text-align: center;
+    width: 300px;
+    margin-left: 10%;
+  }
+  #password{
+    text-align: center;
+    width: 300px;
+    margin-left: 10%;
+  }
+
+  .context{
+
+    padding-top: 100px;
+    opacity: .7;
+    color: white;
+    text-align: center;
+    top:0;
+  }
+
+  .layer{
+    opacity: .1;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    /*z-index: -100;*/
+    opacity: .4;
+    position: absolute;
+    z-index: -2;
+  }
+
+  #submitLogin{
+    margin-left: 45%;
+    color: rgb(78, 78, 78);
+  }
+
+  #loginFields{
+  text-align: center;
+  }
+  #singupLinkHeader{
+
+  }
 }

@@ -4,52 +4,42 @@
   <link href="/pace/themes/pace-theme-barber-shop.css" rel="stylesheet" />
 </head>
 
-<% if current_company %>
-<div class="">
-    <%= link_to 'Company Home', companies_path %>  |
-    <%= link_to 'Company Logout', logout_company_path, method:"delete"%>
-</div>
-<% else %>
-<div class="">
-  <%= link_to 'Company Login', new_company_path%>
-</div>
-<% end %>
-
-<% if current_user %>
-<div class="">
-    <%= link_to 'User Home', dashboard_path %>  |
-    <%= link_to 'User Logout', logout_user_path, method:"delete"%>
-</div>
-<% else %>
-<div class="">
-  <%= link_to 'User Login', new_session_user_path%>
-</div>
-<% end %>
-<% if current_tailor %>
-<div class="">
-  <%= link_to 'Tailor Home', tailors_dashboard_path %>  |
-  <%= link_to 'Tailor Logout', logout_tailor_path, method:"delete"%>
-</div>
-<% else %>
-<div class="">
-  <%= link_to 'Tailor Login', new_session_tailor_path%>
-</div>
-<% end %>
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>TailorUp</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= stylesheet_link_tag "http://yandex.st/bootstrap/3.0.2/css/bootstrap.min.css", media: "all" %>
-  <%= javascript_include_tag "http://yandex.st/bootstrap/3.0.2/js/bootstrap.min.js" %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
 </head>
 <body>
-<div class="container">
+<div class="applicationContainer">
+
 <%= yield %>
+
+<% if current_tailor %>
+<div class="taiLog">
+  <%= link_to 'Tailor Home', tailors_dashboard_path %>  |
+  <%= link_to 'Tailor Logout', logout_tailor_path, method:"delete"%>
 </div>
+<% else %>
+<div class="taiLog">
+  <%= link_to 'Tailor Login', new_session_tailor_path%>
+</div>
+<% end %>
+<% if current_company %>
+<div id="comLog">
+    <%= link_to 'Company Home', companies_path %>  |
+    <%= link_to 'Company Logout', logout_company_path, method:"delete"%>
+</div>
+<% else %>
+<div id="comLog">
+  <%= link_to 'Company Login', new_company_path%>
+</div>
+<% end %>
+</div>
+
 
 </body>
 </html>
