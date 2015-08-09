@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   post 'appointments/:id' => 'appointments#status'
   # get 'tailors/dashboard/data' => 'tailors#dataLog'
   post 'tailors/dashboard/data' => 'tailors#dataLog'
+  post 'companies/data' => 'companies#dataLog'
+
+
 
   get '/dashboard' => 'users#dashboard'
 

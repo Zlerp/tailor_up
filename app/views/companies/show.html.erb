@@ -1,10 +1,14 @@
-<h1>Company Show Page</h1>
+<div class="layer">
 
+</div>
 <h3>Company:</h3>
 <%= @company.name %>
 
 <hr>
 <h2>Tailors</h2>
+<div class="dataLogSend">
+  <%= button_to "Send Log", action: "dataLog"  %>
+</div>
 <ul class='compTailList'>
   <% @company.tailors.each do |tailor| %>
     <li> <%= link_to tailor.first_name, companies_tailor_path(@tailor) %></li>
