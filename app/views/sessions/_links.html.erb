@@ -1,10 +1,10 @@
 <div class="adminlogs">
   <% if current_company.nil? && current_tailor.nil? && current_user.nil? %>
     <div class="taiLog">
-      <%= link_to 'tailor', new_session_tailor_path%>
+      <%= link_to 'Tailor', new_session_tailor_path%>
     </div>
     <div id="comLog">
-      <%= link_to 'company', new_company_path%>
+      <%= link_to 'Company', new_company_path%>
     </div>
   <% end %>
 </div>
