@@ -19,14 +19,21 @@
   <div class="homeButton">
     <%= link_to content_tag(:i, nil, :class => "fa fa-scissors fa-3x"), root_path %>
   </div>
-  <div class="userLog">
-    <% if current_user %>
-      <%= link_to 'home', dashboard_path %>
-      <%= link_to 'logout', logout_user_path, method:"delete"%>
-    <% else %>
-      <%= link_to 'login', new_session_user_path%>
-    <% end %>
-  </div>
+    <div class="userLog">
+      <% if current_tailor || current_company || current_user %>
+        <%= link_to 'logout', logout_path, method:"delete"%>
+          <% if current_user %>
+              <%= link_to 'home', dashboard_path %>
+          <% elsif current_company  %>
+              <%= link_to 'home', companies_path %>
+          <% elsif current_tailor %>
+              <%= link_to 'home', tailors_dashboard_path %>
+          <% else %>
+              <%= link_to 'login', new_session_user_path%>
+          <% end %>
+      <% else %>
+      <% end %>
+    </div>
 <%= yield %>
 
 </body>

@@ -1,18 +1,10 @@
 <div class="adminlogs">
-  <div class="taiLog">
-    <% if current_tailor %>
-      <%= link_to 'Tailor Home', tailors_dashboard_path %>  |
-      <%= link_to 'Tailor Logout', logout_tailor_path, method:"delete"%>
-    <% else %>
+  <% if current_company.nil? && current_tailor.nil? && current_user.nil? %>
+    <div class="taiLog">
       <%= link_to 'tailor', new_session_tailor_path%>
-    <% end %>
-  </div>
-  <div id="comLog">
-  <% if current_company %>
-    <%= link_to 'Company Home', companies_path %>  |
-    <%= link_to 'Company Logout', logout_company_path, method:"delete"%>
-  <% else %>
-    <%= link_to 'company', new_company_path%>
+    </div>
+    <div id="comLog">
+      <%= link_to 'company', new_company_path%>
+    </div>
   <% end %>
-  </div>
 </div>

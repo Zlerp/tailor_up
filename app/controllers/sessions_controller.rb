@@ -39,16 +39,10 @@ class SessionsController < ApplicationController
     end
   end
 
-  def logout_company
-    session[:company_id] = nil
-    redirect_to '/', flash:{notice:"you have logged out"}
-  end
-  def logout_user
-    session[:user_id] = nil
-    redirect_to '/', flash:{notice:"you have logged out"}
-  end
-  def logout_tailor
+  def logout
     session[:tailor_id] = nil
+    session[:user_id] = nil
+    session[:company_id] = nil
     redirect_to '/', flash:{notice:"you have logged out"}
   end
 end

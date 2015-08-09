@@ -30,9 +30,8 @@ Rails.application.routes.draw do
   # get '/tailors/:id/' => 'tailors#view', as: 'tailor_profile'
   # get '/tailors/:id' => 'tailors#new'
 
-  delete '/logout_company' => 'sessions#logout_company'
-  delete '/logout_user' => 'sessions#logout_user'
-  delete '/logout_tailor' => 'sessions#logout_tailor'
+  delete '/logout' => 'sessions#logout'
+
 
   # get '/company/tailor/:tailor' => 'company_tailor'
 
