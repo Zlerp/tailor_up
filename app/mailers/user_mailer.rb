@@ -31,4 +31,18 @@ def forgot_user_password(user)
   mail(:to => user.email, :subject => "TailorUp Password Reset")
 end
 
+def send_report_tailor(tailor)
+  @tailor = tailor
+        # attachments["test.csv"] = {mime_type: 'text/csv', content: File.read(Rails.root.join('app', 'views', 'user_mailer', 'send_report_tailor.csv'))}
+        mail(:to => tailor.email, :subject=>"TailorReports")
+                # format.text {render :text => "CSV INFORMTATION!"}
+    # end
+end
+def send_report_tailor(tailor)
+  @tailor = tailor
+        # attachments["test.csv"] = {mime_type: 'text/csv', content: File.read(Rails.root.join('lib', 'tasks', 'test.csv'))}
+        mail(:to => tailor.email, :subject=>"CompanyReports") # do |format|
+    #             format.text {render :text => "CSV INFORMTATION!"}
+    # end
+  end
 end

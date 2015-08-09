@@ -14,6 +14,12 @@ class TailorsController < ApplicationController
     # @tailors = Tailors.all
 
   end
+  def dataLog
+    @appointments = current_tailor.appointments.all
+      @tailor = current_tailor
+      UserMailer.send_report_tailor(@tailor).deliver
+      redirect_to tailors_dashboard_path, flash:{notice: 'Data has been emailed'}
+  end
 
   def edit
     @tailors = current_tailor

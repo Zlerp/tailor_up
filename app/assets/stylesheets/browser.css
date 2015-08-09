@@ -223,6 +223,7 @@ body{
 .taiLog{
   position: absolute;
   top: 95vh;
+  z-index: 5;
   left: 4vw;
 }
 .taiLog a{
