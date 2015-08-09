@@ -16,8 +16,8 @@
     <%= f.text_field :stages %>
   </div> -->
   <div class="field">
-    <%= f.label :address%><br>
-    <%= f.text_field :address %>
+    <%# f.label :address%><br>
+    <%= f.text_field :address, :placeholder => 'Address' %>
   </div>
   <div class="field hidden">  <!-- Will not be displayed because appointment_time will be set by avail -->
     <%= f.label :appointment_time %><br>
@@ -29,12 +29,12 @@
     <span id="dropdownOther"><strong>Service:</strong><%= f.select :service, ["Next Day", "Express", "Sunday & Holiday"], {:include_blank => 'Standar'} %></span>
   </div>
   <div class="field">
-    <%= f.label :pickup_location %><br>
+    <%# f.label :pickup_location %><br>
     <%= f.text_field :pickup_location, :placeholder => 'different location?' %>
   </div>
   <div class="field">
-    <%= f.label :zip %><br>
-    <%= f.text_field :zip %>
+    <%# f.label :zip %><br>
+    <%= f.text_field :zip, :placeholder => 'Zipcode' %>
   </div>
   <div class="actions">
     <%= f.submit %>
