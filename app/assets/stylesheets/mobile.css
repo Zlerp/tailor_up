@@ -3,9 +3,9 @@
 /*font-family: 'Lato', sans-serif;*/
 
 body{
-
   color: white;
 }
+
 
 @media screen and (max-width: 1800px){
   /*.context{
@@ -34,6 +34,18 @@ body{
     background: cover;
     background-repeat: no-repeat;*/
   }
+
+  #signupLinkHeader{
+    opacity: .6;
+  }
+  .context{
+
+    padding-top: 100px;
+    opacity: .6;
+    color: white;
+    text-align: center;
+    top:0;
+  }
 }
 
 
@@ -54,37 +66,109 @@ body{
   #email{
     text-align: center;
     width: 300px;
-    margin-left: 10%;
+    margin-left: 10vw;
   }
   #password{
     text-align: center;
     width: 300px;
-    margin-left: 10%;
+    margin-left: 10vw;
   }
 
-  .context{
+    #submitLogin{
+      border : solid 2px #ffffff;
+    	-webkit-box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+    	-moz-box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+    	box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+    	font-size : 20px;
+    	color : #ffffff;
+    	padding : 5px 15px;
+      text-align: center;
+      width: 120px;
+      margin: 0 auto;
+      -webkit-appearance: none;
+      opacity: .6;
+      border-radius: 5px;
+    }
 
-    padding-top: 100px;
-    opacity: .7;
-    color: white;
-    text-align: center;
-    top:0;
-  }
+    #submitLogin:hover{
+      font-weight: bold;
+      /*border-radius: 150px;*/
+      opacity: .8;
 
-  .layer{
-    opacity: .1;
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    /*z-index: -100;*/
-    opacity: .4;
-    position: absolute;
-    z-index: -2;
-  }
+    }
+    #submitLogin input {
+      appearance: none;
+      background:none;
+      border:none;
+      font-size:.7em;
+      font-family: 'Lato', sans-serif;
+    }
 
-  #submitLogin{
-    margin-left: 45%;
-    color: rgb(78, 78, 78);
+    .signupLinks a {
+      text-align: center;
+      color: white;
+      opacity: .6;
+      text-decoration: none;
+      font-size: .8em;
+      margin-left: 40px;
+      margin-top: 10px;
+    }
+    .signupLinks a:hover{
+      opacity: .8;
+    }
+    .signupLinks {
+      margin-top: 20px;
+      margin-left: 25%;
+      text-align: center;
+      width: 150px
+    }
+
+
+
+}
+.myButton:hover {
+	background-color:transparent;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.taiLog{
+  position: absolute;
+  top: 95vh;
+  left: 4vw;
+}
+.taiLog a{
+  color: white;
+  text-decoration: none;
+  opacity: .4;
+  font-size: .8em;
+}
+.taiLog a:hover{
+  color: white;
+  text-decoration: none;
+  opacity: .7;
+}
+#comLog{
+  position: absolute;
+  top: 95vh;
+  left: 82vw;
+}
+
+#comLog a{
+  color: white;
+  text-decoration: none;
+  opacity: .4;
+  font-size: .8em;
+}
+#comLog a:hover{
+  color: white;
+  text-decoration: none;
+  opacity: .7;
+}
+
+
   }
 
   #loginFields{
