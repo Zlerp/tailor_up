@@ -19,15 +19,13 @@
 
   </div>
   <p id="submitLogin">
-    <%= submit_tag 'Log in' %>
+    <%= submit_tag 'Log in', :class => "" %>
   </p>
     <% end %>
-  <p id="singupLinkHeader">
-    Don't have an account?
-  </p>
-  <div class="">
-    <%= link_to 'Sign Up!', new_user_path, data: { confirm: 'At the Current time, TailorUp is only serving the Miami area including but not limited to Coconut Grove, Coral Gables, Key Biscayne, Miami Beach, Bal Harbour, Brickell, Sunny Isles, Aventura, Wynwood, and Design District. Thank you.' }%>
-     | <%= link_to 'Forgot Password?', users_forgot_password_path %>
+
+  <div class="signUpLinks">
+    <%= link_to 'sign up', new_user_path, data: { confirm: 'At the Current time, TailorUp is only serving the Miami area including but not limited to Coconut Grove, Coral Gables, Key Biscayne, Miami Beach, Bal Harbour, Brickell, Sunny Isles, Aventura, Wynwood, and Design District. Thank you.' }%>
+      <%= link_to 'forgot password', users_forgot_password_path %>
   </div>
 
 </div>

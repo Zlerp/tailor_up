@@ -7,39 +7,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
   <title>TailorUp</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
 </head>
 <body>
-<div class="applicationContainer">
 
 <%= yield %>
-
-<% if current_tailor %>
-<div class="taiLog">
-  <%= link_to 'Tailor Home', tailors_dashboard_path %>  |
-  <%= link_to 'Tailor Logout', logout_tailor_path, method:"delete"%>
-</div>
-<% else %>
-<div class="taiLog">
-  <%= link_to 'Tailor Login', new_session_tailor_path%>
-</div>
-<% end %>
-<% if current_company %>
+<div class="adminlogs">
+  <div class="taiLog">
+    <% if current_tailor %>
+      <%= link_to 'Tailor Home', tailors_dashboard_path %>  |
+      <%= link_to 'Tailor Logout', logout_tailor_path, method:"delete"%>
+    <% else %>
+      <%= link_to 'tailor', new_session_tailor_path%>
+    <% end %>
+  </div>
 <div id="comLog">
+  <% if current_company %>
     <%= link_to 'Company Home', companies_path %>  |
     <%= link_to 'Company Logout', logout_company_path, method:"delete"%>
+  <% else %>
+    <%= link_to 'company', new_company_path%>
+  <% end %>
+  </div>
 </div>
-<% else %>
-<div id="comLog">
-  <%= link_to 'Company Login', new_company_path%>
-</div>
-<% end %>
-</div>
-
-
 </body>
 </html>
