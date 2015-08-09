@@ -23,7 +23,7 @@ class AppointmentsController < ApplicationController
         @appointment.address = current_user.address
         @appointment.zip = current_user.zip
         @appointment.appointment_time = params[:start]
-
+        @appointment.tailor_id = params[:tailor_id]
         # DateTime.now.strftime("%Y-%d-%m %H:%M")
           @article = Article.new
       else
@@ -31,6 +31,7 @@ class AppointmentsController < ApplicationController
       end
     end
   end
+
 
 
 
@@ -42,8 +43,8 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     @appointment = current_user.appointments.new(appointment_params)
-    @appointment.tailor_id = 
     #  @appointment = Appointment.new(appointment_params)
+    @appointment.tailor_id = params[:tailor_id]
     @appointment.stages = "Appointment Booked"
       if @appointment.pickup_location == ""
         @appointment.pickup_location = current_user.address

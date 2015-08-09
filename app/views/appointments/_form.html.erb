@@ -1,8 +1,9 @@
 <%= form_for(@appointment) do |f| %>
+  <%= hidden_field_tag("tailor_id", params[:tailor_id]) %>
   <% if @appointment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
-
+<% raise %>
       <ul>
       <% @appointment.errors.full_messages.each do |message| %>
         <li><%= message %></li>
