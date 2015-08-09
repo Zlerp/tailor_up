@@ -43,9 +43,12 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     @appointment = current_user.appointments.new(appointment_params)
+    availability = Availability.find(params[:availability_id])
     #  @appointment = Appointment.new(appointment_params)
     @appointment.tailor_id = params[:tailor_id]
     @appointment.stages = "Appointment Booked"
+
+
       if @appointment.pickup_location == ""
         @appointment.pickup_location = current_user.address
       end
@@ -53,6 +56,8 @@ class AppointmentsController < ApplicationController
     respond_to do |format|
       if @appointment.save
         UserMailer.appointment_booked(@appointment).deliver
+        availability.requested = true
+         availability.save
         format.html { redirect_to dashboard_path, notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
 

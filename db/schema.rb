@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20150808200437) do
     t.integer  "user_id"
     t.string   "zip"
     t.integer  "tailor_id"
+    t.datetime "start"
   end
 
   create_table "articles", force: :cascade do |t|
