@@ -4,8 +4,8 @@
     <h4><%= day.strftime("%A") %></h4>
     <% @tailors.each do |tailor| %>
       <ul>
-        <% Availability.where(tailor: tailor, start: day.midnight..(day.midnight + 1.day)).where("start > ?", Date.today).each do |availability| %>
-          <li><button type="button"><%= link_to availability.start.strftime("%I:00 %p"), new_appointment_path(:start => availability.start, :tailor_id => tailor.id) %></button> </li>
+        <% Availability.where(tailor: tailor, start: day.midnight..(day.midnight + 1.day)).where("start > ?", Date.today).where(:requested => nil).each do |availability| %>
+        <li><button type="button"><%= link_to availability.start.strftime("%I:00 %p"), new_appointment_path(:start => availability.start, :tailor_id => tailor.id, :availability_id => availability.id) %></button> </li>
         <% end %>
       </ul>
     <% end %>
