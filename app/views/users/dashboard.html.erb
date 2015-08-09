@@ -1,21 +1,11 @@
+<div class="layer">
+
+</div>
 <div id="userDashContainer">
+  <p id="notice"><%= flash[:notice] %></p>
 
 
-<% if current_user %>
-<div class="">
-    <%= link_to 'User Home', dashboard_path %>  |
-    <%= link_to 'User Logout', logout_user_path, method:"delete"%>
-</div>
-<% else %>
-<div class="">
-  <%= link_to 'User Login', new_session_user_path%>
-</div>
-<% end %>
-
-<p id="notice"><%= flash[:notice] %></p>
-
-
-<h1>Users Dashboard</h1>
+<h1 id=dashboardTitle>Dashboard</h1>
 <p>
   Hello <span id="userGreeting"><%= current_user.first_name %></span>,
 </p>

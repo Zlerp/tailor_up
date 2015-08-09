@@ -1,66 +1,36 @@
 
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900italic,300,100,700,900);
-/*font-family: 'Lato', sans-serif;*/
+@import url(http://fonts.googleapis.com/css?family=Lobster|Pacifico|Fredoka+One);
+/*font-family: 'Lato', sans-serif;   --- Main  ---
+font-family: 'Fredoka One', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Lobster', cursive;
+*/
 
-body{
-  color: white;
-}
-
-
-@media screen and (max-width: 1800px){
-  /*.context{
-    padding-top: 100px;
-    opacity: .7;
-    color: white;
-    text-align: center;
-    width: 500px;
-    float: left;
-    position: absolute;
-    top:5vw;
-    left: 40%;
-    z-index: 10;
-  }*/
-
-  #loginBackground{
-    background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-08%20at%205.08.40%20PM_zpsxrkm8uah.png") no-repeat center center fixed;
-    -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-    height: 100%;
-    /*position: absolute;*/
-    z-index: -5;
-    /*width: 100%;;
-    background: cover;
-    background-repeat: no-repeat;*/
-  }
-
-  #signupLinkHeader{
-    opacity: .6;
-  }
-  .context{
-
-    padding-top: 100px;
-    opacity: .6;
-    color: white;
-    text-align: center;
-    top:0;
-  }
-}
 
 
 @media screen and (max-width: 500px){
 
   #loginBackground{
     background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-08%20at%205.08.40%20PM_zpsxrkm8uah.png");
+    background-size: 1200px 600px;
     height: 100%;
     width: 900px;
     margin-top: 0;
     position: absolute;
     left: -400px;
-    z-index: -5;
+    z-index: -10;
     background-repeat: no-repeat;
 
+  }
+  
+  .userLog{
+    z-index: 50;
+    position: absolute;
+    left: 65vw;
+    width: 100px;
+    text-align: right;
+    margin-left: 10px;
   }
 
   #email{

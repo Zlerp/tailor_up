@@ -1,0 +1,102 @@
+/*font-family: 'Lato', sans-serif;   --- Main  ---
+font-family: 'Fredoka One', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Lobster', cursive;
+*/
+
+#dashboardTitle{
+  margin-top: 0;
+  padding-top: 15vh;
+}
+.homeButton i{
+  color: white;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 2vh;
+  left: 3vw;
+  z-index: 100;
+  opacity: .6;
+}
+.homeButton i:hover{
+  opacity: .8;
+}
+
+.userLog{
+  margin-top: 20px;
+}
+.userLog a{
+  word-spacing: 10px;
+  margin-right: 2vh;
+  z-index: 50;
+  color: white;
+  opacity: .6;
+}
+.userLog a:hover{
+  opacity: .8;
+}
+
+
+
+body{
+  color: white;
+}
+.layer{
+ background-color: black;
+ z-index: -8;
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ opacity: .6;
+
+}
+
+#loginTitle h1{
+  font-family: 'Fredoka One', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  /*font-family: 'Pacifico', cursive;*/
+  margin-top: -10px;
+  margin-bottom: 40px;
+}
+
+#notice{
+  text-align: center;
+  width: 100%;
+  /*position: absolute;*/
+  margin-top: 1vh;
+  float: right;
+  color: white;
+  opacity: .3;
+  font-size: .8em;
+}
+
+@media screen and (max-width: 1800px){
+
+
+  #loginBackground{
+    background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-08%20at%205.08.40%20PM_zpsxrkm8uah.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+    height: 100%;
+    /*position: absolute;*/
+    z-index: -100;
+    /*width: 100%;;
+    background: cover;
+    background-repeat: no-repeat;*/
+  }
+
+  #signupLinkHeader{
+    opacity: .6;
+  }
+  .context{
+
+    padding-top: 100px;
+    opacity: .6;
+    color: white;
+    text-align: center;
+    top:0;
+    z-index: 10;
+  }
+}

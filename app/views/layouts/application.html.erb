@@ -12,27 +12,22 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
 </head>
 <body>
-
-<%= yield %>
-<div class="adminlogs">
-  <div class="taiLog">
-    <% if current_tailor %>
-      <%= link_to 'Tailor Home', tailors_dashboard_path %>  |
-      <%= link_to 'Tailor Logout', logout_tailor_path, method:"delete"%>
+  <div class="homeButton">
+    <%= link_to content_tag(:i, nil, :class => "fa fa-scissors fa-3x"), root_path %>
+  </div>
+  <div class="userLog">
+    <% if current_user %>
+      <%= link_to 'home', dashboard_path %>
+      <%= link_to 'logout', logout_user_path, method:"delete"%>
     <% else %>
-      <%= link_to 'tailor', new_session_tailor_path%>
+      <%= link_to 'login', new_session_user_path%>
     <% end %>
   </div>
-<div id="comLog">
-  <% if current_company %>
-    <%= link_to 'Company Home', companies_path %>  |
-    <%= link_to 'Company Logout', logout_company_path, method:"delete"%>
-  <% else %>
-    <%= link_to 'company', new_company_path%>
-  <% end %>
-  </div>
-</div>
+<%= yield %>
+
 </body>
 </html>

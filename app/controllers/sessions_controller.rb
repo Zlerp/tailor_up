@@ -1,3 +1,4 @@
+# flash[:notice]
 class SessionsController < ApplicationController
   def new_company
   end
