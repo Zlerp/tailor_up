@@ -23,25 +23,25 @@ font-family: 'Lobster', cursive;
     background-repeat: no-repeat;
 
   }
-  
+
   .userLog{
     z-index: 50;
     position: absolute;
-    left: 65vw;
-    width: 100px;
+    width: 100%;
     text-align: right;
-    margin-left: 10px;
+    padding-right: 10px
   }
 
+  .loginFields p{
+    text-align: center;
+  }
   #email{
     text-align: center;
     width: 300px;
-    margin-left: 10vw;
   }
   #password{
     text-align: center;
     width: 300px;
-    margin-left: 10vw;
   }
 
     #submitLogin{
@@ -58,6 +58,7 @@ font-family: 'Lobster', cursive;
       -webkit-appearance: none;
       opacity: .6;
       border-radius: 5px;
+      margin-top: 15px;
     }
 
     #submitLogin:hover{
@@ -80,17 +81,25 @@ font-family: 'Lobster', cursive;
       opacity: .6;
       text-decoration: none;
       font-size: .8em;
-      margin-left: 40px;
-      margin-top: 10px;
+
+      width: 150px;
     }
     .signupLinks a:hover{
       opacity: .8;
     }
     .signupLinks {
-      margin-top: 20px;
-      margin-left: 25%;
+      margin-top: 40px;
       text-align: center;
-      width: 150px
+      width: 100%;
+      height: 70px;
+    }
+    a.forgotPass{
+      padding-top: 10px;
+      height: 30px;
+    }
+    .forgotPass{
+      padding-top: 15px;
+      height: 40px;
     }
 
 

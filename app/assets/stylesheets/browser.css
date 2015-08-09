@@ -53,10 +53,11 @@ body{
 
 #loginTitle h1{
   font-family: 'Fredoka One', cursive;
-  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Lobster', cursive;
   /*font-family: 'Pacifico', cursive;*/
-  margin-top: -10px;
+  margin-top: 30px;
   margin-bottom: 40px;
+  letter-spacing: 2vw;
 }
 
 #notice{

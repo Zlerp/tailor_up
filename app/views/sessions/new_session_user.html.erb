@@ -5,28 +5,14 @@
 <div class="context">
 <span id="loginTitle"><h1>TailorUp</h1></span>
   <%=form_tag sessions_login_user_path do %>
-    <div class="loginFields">
-      <p>
-        <%# label_tag :email %>
-        <%= text_field_tag :email, nil, :placeholder => 'example@TailorUp.com' %>
-      </p>
-      <p>
-        <%# label_tag :password %>
-        <%= password_field_tag :password%>
-      </p>
-    </div>
-
-
-  </div>
-  <p id="submitLogin">
-    <%= submit_tag 'log in'%>
-  </p>
+    <%= render 'login' %>
     <% end %>
-
   <div class="signUpLinks">
     <%= link_to 'sign up', new_user_path, data: { confirm: 'At the Current time, TailorUp is only serving the Miami area including but not limited to Coconut Grove, Coral Gables, Key Biscayne, Miami Beach, Bal Harbour, Brickell, Sunny Isles, Aventura, Wynwood, and Design District. Thank you.' }%>
+    <br>
+    <div class="forgotPass">
       <%= link_to 'forgot password', users_forgot_password_path %>
+    </div>
   </div>
-
 </div>
 <%= render 'links' %>
