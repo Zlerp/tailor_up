@@ -45,6 +45,46 @@ input{
 }
 
 
+  .userLog{
+    z-index: 50;
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    padding-right: 10px
+  }
+  .loginFields p{
+    text-align: center;
+  }
+  #submitLogin{
+    border : solid 2px #ffffff;
+    -webkit-box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+    -moz-box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+    box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+    font-size : 20px;
+    color : #ffffff;
+    padding : 5px 15px;
+    text-align: center;
+    width: 120px;
+    margin: 0 auto;
+    -webkit-appearance: none;
+    opacity: .6;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  #submitLogin:hover{
+    font-weight: bold;
+    opacity: .8;
+
+  }
+  #submitLogin input {
+    appearance: none;
+    background:none;
+    border:none;
+    font-size:.7em;
+    font-family: 'Lato', sans-serif;
+    /*outline:none;*/
+  }
+
 
 body{
   color: white;
@@ -90,13 +130,12 @@ body{
     -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
-   background-size: cover;
-    height: 100%;
-    /*position: absolute;*/
-    z-index: -100;
-    /*width: 100%;;
-    background: cover;
-    background-repeat: no-repeat;*/
+   height: 100%;
+   width: 100%;
+   margin-top: 0;
+   position: absolute;
+   z-index: -10;
+   background-repeat: no-repeat;
   }
   /* Login for Company*/
   #loginBackgroundc{
@@ -105,12 +144,12 @@ body{
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
-    height: 100%;
-    /*position: absolute;*/
-    z-index: -100;
-    /*width: 100%;;
-    background: cover;
-    background-repeat: no-repeat;*/
+   height: 100%;
+   width: 100%;
+   margin-top: 0;
+   position: absolute;
+   z-index: -10;
+   background-repeat: no-repeat;
   }
   /*Login for Tailor*/
   #loginBackgroundt{
@@ -119,13 +158,23 @@ body{
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
-    height: 100%;
-    /*position: absolute;*/
-    z-index: -100;
-    /*width: 100%;;
-    background: cover;
-    background-repeat: no-repeat;*/
+   height: 100%;
+   width: 100%;
+   margin-top: 0;
+   position: absolute;
+   z-index: -10;
+   background-repeat: no-repeat;
   }
+  #email{
+    text-align: center;
+    width: 400px;
+    font-size: 1em;
+  }
+  #password{
+    text-align: center;
+    width: 400px;
+  }
+
 
   #signupLinkHeader{
     opacity: .6;
@@ -139,4 +188,70 @@ body{
     top:0;
     z-index: 10;
   }
+  .signupLinks a {
+    text-align: center;
+    color: white;
+    opacity: .6;
+    text-decoration: none;
+    font-size: .9em;
+
+    width: 150px;
+  }
+  .signupLinks a:hover{
+    opacity: .8;
+  }
+  .signupLinks {
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+  }
+  .forgotPass{
+    padding-top: 15px;
+    height: 40px;
+  }
+}
+
+.myButton:hover {
+	background-color:transparent;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.taiLog{
+  position: absolute;
+  top: 95vh;
+  left: 4vw;
+}
+.taiLog a{
+  color: white;
+  text-decoration: none;
+  opacity: .4;
+  font-size: .8em;
+}
+.taiLog a:hover{
+  color: white;
+  text-decoration: none;
+  opacity: .7;
+}
+#comLog{
+  text-align: right;
+  position: absolute;
+  top: 95vh;
+  width: 100%;
+  padding-right: 4vw;
+}
+
+#comLog a{
+  color: white;
+  text-decoration: none;
+  opacity: .4;
+  font-size: .8em;
+}
+#comLog a:hover{
+  color: white;
+  text-decoration: none;
+  opacity: .7;
 }
