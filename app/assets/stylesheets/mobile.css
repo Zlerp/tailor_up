@@ -8,40 +8,40 @@ font-family: 'Raleway', sans-serif;
 
 
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 750px){
 
   #loginBackground{
     background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-08%20at%205.08.40%20PM_zpsxrkm8uah.png");
-    background-size: 1200px 600px;
+    background-size: 1200px 700px;
     height: 100%;
-    width: 900px;
+    width: 1200px;
     margin-top: 0;
     position: absolute;
-    left: -400px;
+    left: -450px;
     z-index: -10;
     background-repeat: no-repeat;
 
   }
   #loginBackgroundc{
     background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-09%20at%205.13.14%20AM_zpslajhgtoo.png");
-    background-size: 1200px 600px;
+    background-size: 1200px 700px;
     height: 100%;
-    width: 900px;
+    width: 1200px;
     margin-top: 0;
     position: absolute;
-    left: -400px;
+    left: -450px;
     z-index: -10;
     background-repeat: no-repeat;
 
   }
   #loginBackgroundt{
     background: url("http://www.theqg.com/media/hdr-tailor-sewing2.jpg");
-    background-size: 1200px 600px;
+    background-size: 1200px 700px;
     height: 100%;
-    width: 900px;
+    width: 1200px;
     margin-top: 0;
     position: absolute;
-    left: -400px;
+    left: -450px;
     z-index: -10;
     background-repeat: no-repeat;
 
