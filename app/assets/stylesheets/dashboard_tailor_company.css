@@ -1,0 +1,71 @@
+/*font-family: 'Lato', sans-serif;   --- Main  ---
+font-family: 'Fredoka One', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Raleway', sans-serif;
+*/
+
+
+
+
+#dashboardTitle{
+  margin-top: 0;
+  padding-top: 15vh;
+}
+
+.profItems{
+  float: right;
+  width: 100%;
+  text-align: center;
+}
+
+div.imgCenter {
+  width: 100%;
+  text-align: center;
+}
+#profImg {
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  /*border: white solid 2px;*/
+  border-radius: 300px;
+  text-align: right;
+  margin: 0 auto;
+  margin-top: 70px;
+  box-shadow: -3px 2px 30px black;
+  background-color: black;
+  opacity: .9;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+}
+
+#profImg img{
+    height: 100%;
+    margin: 0 auto;
+    opacity: .3;
+}
+#profImg img:hover{
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+    opacity: .8;
+}
+#profName{
+  margin-top: 20px;
+  font-size: 4em;
+}
+#loggedAs{
+  opacity: .5;
+  text-align: right;
+  position: absolute;
+  top: 95vh;
+  width: 100%;
+  padding-right: 10px;
+}
+
+.tableDash{
+  width: 75vw;
+  margin: 0 auto;
+  text-align: center;
+}

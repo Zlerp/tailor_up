@@ -1,7 +1,7 @@
 
-@import url(http://fonts.googleapis.com/css?family=Lato:400,900italic,300,100,700,900);
-@import url(http://fonts.googleapis.com/css?family=Lobster|Pacifico|Fredoka+One);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,800,500,600);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900italic,300,100,700,900);
+@import url(https://fonts.googleapis.com/css?family=Lobster|Pacifico|Fredoka+One);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,800,500,600);
 /*font-family: 'Lato', sans-serif;   --- Main  ---
 font-family: 'Fredoka One', cursive;
 font-family: 'Pacifico', cursive;
@@ -9,9 +9,10 @@ font-family: 'Lobster', cursive;
 font-family: 'Raleway', sans-serif;
 */
 
-#dashboardTitle{
-  margin-top: 0;
-  padding-top: 15vh;
+
+
+Zedit{
+
 }
 .homeButton i{
   color: white;
@@ -59,10 +60,10 @@ input{
     text-align: center;
   }
   #submitLogin{
-    /*border : solid 2px #ffffff;*/
-    /*-webkit-box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+    border : solid 2px #ffffff;
+    -webkit-box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
     -moz-box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
-    box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);*/
+    box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
     font-size : 20px;
     color : #ffffff;
     padding : 5px 15px;
@@ -101,6 +102,16 @@ body{
 
 }
 
+.layerT{
+ background-color: black;
+ z-index: -8;
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ opacity: .4;
+
+}
+
 #loginTitle h1{
   font-family: 'Lobster', cursive;
   /*font-family: 'Pacifico', cursive;*/
@@ -126,6 +137,18 @@ body{
 
 @media screen and (max-width: 1800px){
 
+  .tDashBack{
+    background: url("http://i296.photobucket.com/albums/mm195/Zlerp/AAEAAQAAAAAAAADcAAAAJGI3MjdlNmExLThlNWItNGNmNS1hOWM2LTI2OTJhNGRhYmIxNA_zpstvqyknbr.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   height: 100%;
+   width: 100%;
+   margin-top: 0;
+   position: absolute;
+   z-index: -10;
+   background-repeat: no-repeat;
+  }
   /*login for user*/
   #loginBackground{
     background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-08%20at%205.08.40%20PM_zpsxrkm8uah.png") no-repeat center center fixed;
@@ -257,8 +280,4 @@ body{
   color: white;
   text-decoration: none;
   opacity: .7;
-}
-
-.fa-scissors{
-  te
 }
