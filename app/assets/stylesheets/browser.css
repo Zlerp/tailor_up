@@ -19,7 +19,7 @@ Zedit{
   height: 40px;
   width: 40px;
   position: absolute;
-  top: 2vh;
+  top: 10px;
   left: 3vw;
   z-index: 100;
   opacity: .6;
@@ -35,7 +35,7 @@ input{
 }
 
 .userLog{
-  margin-top: 20px;
+  margin-top: 25px;
 }
 .userLog a{
   word-spacing: 10px;
@@ -43,6 +43,7 @@ input{
   z-index: 50;
   color: white;
   opacity: .6;
+  z-index: 99;
 }
 .userLog a:hover{
   opacity: .8;
@@ -138,7 +139,7 @@ body{
 @media screen and (max-width: 1800px){
 
   .tDashBack{
-    background: url("http://i296.photobucket.com/albums/mm195/Zlerp/AAEAAQAAAAAAAADcAAAAJGI3MjdlNmExLThlNWItNGNmNS1hOWM2LTI2OTJhNGRhYmIxNA_zpstvqyknbr.jpg") no-repeat center center fixed;
+    background: url("http://i.imgur.com/hECsn.png") no-repeat center center fixed;
     -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;

@@ -1,6 +1,6 @@
 <div class="layer"></div>
 <div class="tDashBack"></div>
-
+<div class="darkBar"></div>
 </div>
 <p id="notice"><%= flash[:notice] %></p>
 
@@ -54,7 +54,8 @@
                   <br>
                     <%= a.appointment_time.strftime("%l:%M %p") %>
                   </td>
-                  <td><%= link_to a.user.phone, :value => "#{a.user.phone}" %></td>
+                  <td><%# link_to a.user.phone, :value => "#{a.user.phone}" %></td>
+                  <td><%= a.user.phone %></td>
                   <td><%= a.articles.count %></td>
                   <td><%= a.stages%> </td>
                   <td></td>

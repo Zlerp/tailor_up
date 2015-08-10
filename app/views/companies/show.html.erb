@@ -1,28 +1,47 @@
-<div class="layer">
-
+<div class="layer"></div>
+<div class="tDashBack"></div>
+<div class="darkBar"></div>
+<div class="profItems">
+  <div id="profNameCom">
+    <%= @company.name %>
+  </div>
 </div>
-<h3>Company:</h3>
-<%= @company.name %>
+<!-- <h4>Tailors</h4> -->
 
-<hr>
-<h2>Tailors</h2>
-<div class="dataLogSend">
-  <%= button_to "Send Log", action: "dataLog"  %>
+
+<div class="dataLogSendC">
+  <%= button_to "Logs", action: "dataLog"  %>
 </div>
-<ul class='compTailList'>
-  <% @company.tailors.each do |tailor| %>
-    <li> <%= link_to tailor.first_name, companies_tailor_path(@tailor) %></li>
-    <li> <%= tailor.phone %></li>
-    <li> <%= tailor.email%></li>
-    <td><%= link_to 'New Availability', new_tailor_availability_path(tailor) %></td>
-    <td><%= link_to 'Destroy', tailor, method: :destroy, data: { confirm: 'Are you sure you want to delete this Tailor?' } %></td>
+<div class="addTailor">
+  <%= link_to content_tag(:i, nil, :class => "fa fa-plus-square fa-3x"), new_tailor_path %>
+</div>
+<table class="tableDash centered bordered">
+  <thead>
+    <tr>
+      <th>TAILORS</th>
+      <th>PHONE</th>
+      <th>EMAIL</th>
+      <th>APPOINTMENTS</th>
+      <th>EDIT</th>
+    </tr>
+  </thead>
+<tbody>
+    <% @company.tailors.each do |tailor| %>
+      <div class="tailAvailAptsZ">
+        <tr class='compTailList'>
+          <td> <%= link_to tailor.first_name, companies_tailor_path(@tailor) %></td>
+          <!-- <td><%# link_to tailor.phone, :value => "#{tailor.phone}" %></td> -->
+          <td> <%= tailor.phone%></td>
+          <td> <%= tailor.email%></td>
+          <td> <%= tailor.appointments.count %></td>
+          <td>
+            <%= link_to 'Availability', new_tailor_availability_path(tailor) %> |
+             <%= link_to 'Destroy', tailor, method: :destroy, data: { confirm: 'Are you sure you want to delete this Tailor?' } %>
+          </td>
+        </tr>
+      </div>
+    <% end %>
+  </tbody>
+</table>
 
-    <br>
-<% end %>
-
-</ul>
-
-<h3>New Tailor</h3>
-
-
-<%= link_to 'New Tailors', new_tailor_path %>
+<div class="bottom"><p id="loggedAs">signed in as a company</p></footer></div>
