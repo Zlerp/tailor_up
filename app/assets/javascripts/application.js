@@ -20,4 +20,6 @@
 $(document).ready(function() {
   // Turbolinks.ProgressBar.enable();
   $('#notice').delay(5000).slideUp();
+  $('select').material_select();
+
 });

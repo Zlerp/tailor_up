@@ -14,6 +14,13 @@ class CompaniesController < ApplicationController
   def index
   end
 
+  def dataLog
+    @tailors = current_company.tailors
+      @company = current_company
+      UserMailer.send_report_company(@company).deliver
+      redirect_to companies_path, flash:{notice: 'Data has been emailed'}
+  end
+
   def create
     @company = Company.new company_params
     if @company.save

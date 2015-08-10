@@ -1,49 +1,78 @@
+<div class="layer"></div>
+<div class="tDashBack"></div>
+<div class="darkBar"></div>
+</div>
 <p id="notice"><%= flash[:notice] %></p>
-<h2>Tailor Page!</h2>
 
-<p>
-  this is currently Tailor:
-  <%= image_tag @tailor.image_url(:thumb).to_s %>
-  <%= @tailor.first_name %>
-  <div class="edit">
-    <td><%= link_to 'My Settings', edit_tailor_path(current_tailor) %></td>
+<div class="profItems">
+  <div class="imgCenter">
+      <div id="profImg">
+        <%= link_to edit_tailor_path(current_tailor) do %>
+            <%= image_tag @tailor.image_url(:thumb).to_s %>
+        <% end %>
+      </div>
   </div>
-</p>
-
-<h3>Your Appointments</h3>
-<table class="tableDash">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>USER</th>
-      <th>ADDRESS</th>
-      <th>TIME</th>
-      <th>PHONE</th>
-      <th>STATUS</th>
-    </tr>
-  </thead>
-<br>
-  <tbody>
-    <% @appointments.each do |a| %>
-      <% if a.tailor_id == current_tailor.id %>
-        <div class="tailAvailAptsZ">
-          <tr>
-            <td><%= a.id + 10000 %> </td>
-            <td><%= a.user.phone %> </td>
-            <td><%= a.user.first_name %> </td>
-            <td><%= a.address %> </td>
-            <td><%= a.appointment_time.to_s[0...-7] %> </td>
-            <td><%= a.stages%> </td>
-            <%if a.stages == "Order Complete" %>
-            <%else %>
-              <td> <%= button_to "Update Status", a, action: "status", data: { confirm: 'Are you sure you want to update the status of this order?' } %></td>
-            <%end%>
+  <div id="profName">
+    <%= @tailor.first_name %>
+  </div>
+</div>
 
 
-          </tr>
-        </div>
+<div class="Zedit">
+  <td><%# link_to 'My Settings', edit_tailor_path(current_tailor) %></td>
+</div>
+
+
+<div class="tableCenter">
+  <table class="tableDash centered bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>USER</th>
+        <th>ADDRESS</th>
+        <th>TIME</th>
+        <th>PHONE</th>
+        <th>ITEMS</th>
+        <th>STATUS</th>
+        <th><th>
+      </tr>
+    </thead>
+  <br>
+    <tbody>
+      <% if current_tailor.appointments.count == 0 %>
+          <h4>No Appointments</h4>
+      <% else %>
+        <% @appointments.each do |a| %>
+          <% if a.tailor_id == current_tailor.id && a.stages != "Order Complete" %>
+              <div class="tailAvailAptsZ">
+                <tr>
+                  <td><%= a.id + 10000 %> </td>
+                  <td><%= a.user.first_name %> </td>
+                  <td><%= a.address %> </td>
+                  <td>
+                    <%= a.appointment_time.strftime("%b %e") %>
+                  <br>
+                    <%= a.appointment_time.strftime("%l:%M %p") %>
+                  </td>
+                  <td><%# link_to a.user.phone, :value => "#{a.user.phone}" %></td>
+                  <td><%= a.user.phone %></td>
+                  <td><%= a.articles.count %></td>
+                  <td><%= a.stages%> </td>
+                  <td></td>
+                  <%if a.stages == "Order Complete" %>
+                  <%else %>
+                    <td class="dataLogSend emailzz"> <%= button_to "Update", a, action: "status", data: { confirm: 'Are you sure you want to update the status of this order?' } %></td>
+                  <%end%>
+                </tr>
+              </div>
+          <% end %>
+        <% end %>
       <% end %>
-    <% end %>
+      <div class="dataLogSend emailzz">
+        <%= button_to "Logs", action: "dataLog" %>
+      </div>
+    </tbody>
+  </table>
 
-  </tbody>
-</table>
+
+<div class="bottom"><p id="loggedAs">signed in as a tailor</p></footer></div>

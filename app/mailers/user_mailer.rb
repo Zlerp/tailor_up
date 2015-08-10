@@ -31,4 +31,12 @@ def forgot_user_password(user)
   mail(:to => user.email, :subject => "TailorUp Password Reset")
 end
 
+def send_report_tailor(tailor)
+  @tailor = tailor
+        mail(:to => tailor.email, :subject=>"TailorReports")
+end
+def send_report_company(company)
+  @company = company
+        mail(:to => company.email, :subject=>"CompanyReports")
+  end
 end

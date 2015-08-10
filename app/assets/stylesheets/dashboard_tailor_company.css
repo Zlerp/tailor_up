@@ -1,0 +1,185 @@
+/*font-family: 'Lato', sans-serif;   --- Main  ---
+font-family: 'Fredoka One', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Raleway', sans-serif;
+*/
+
+
+
+
+#dashboardTitle{
+  margin-top: 0;
+  padding-top: 15vh;
+}
+
+.profItems{
+  float: right;
+  width: 100%;
+  text-align: center;
+}
+
+div.imgCenter {
+  width: 100%;
+  text-align: center;
+}
+#profImg {
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  /*border: white solid 2px;*/
+  border-radius: 300px;
+  text-align: right;
+  margin: 0 auto;
+  margin-top: 70px;
+  box-shadow: -3px 2px 30px black;
+  background-color: black;
+  opacity: .9;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+}
+
+#profImg img{
+    height: 100%;
+    margin: 0 auto;
+    opacity: .3;
+}
+#profImg img:hover{
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+    opacity: .8;
+}
+#profName{
+  margin-top: 20px;
+  padding-right: 10px;
+  font-size: 4em;
+  text-shadow: -1px 2px 10px black;
+  opacity: .5;
+  font-family: 'Pacifico', cursive;
+
+}
+#profNameCom{
+  margin-top: 80px;
+  padding-right: 10px;
+  font-size: 4em;
+  text-shadow: -1px 2px 10px black;
+  opacity: .5;
+  font-family: 'Pacifico', cursive;
+
+}
+#loggedAs{
+  opacity: .5;
+  text-align: right;
+  position: absolute;
+  top: 95vh;
+  width: 100%;
+  padding-right: 10px;
+}
+@media screen and (min-width: 750px){
+  .tableDash{
+    width: 75vw;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: -1px 1px 10px black;
+    opacity: .7;
+    background-color: black;
+  }
+}
+
+.tailAvailAptsZ td{
+  text-align: center;
+  opacity: .7;
+}
+
+.dataLogSend{
+  text-align: left;
+  margin-left: 5%;
+}
+
+.dataLogSend input{
+  border : solid 2px #ffffff;
+  -webkit-box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+  -moz-box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+  box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+  font-size : .8em;
+  color : #ffffff;
+  padding : 5px;
+  text-align: center;
+  width: 70px;
+  margin: 0 auto;
+  -webkit-appearance: none;
+  opacity: .6;
+  border-radius: 5px;
+  margin-top: 15px;
+  background-color: none;
+  appearance: none;
+  background:none;
+  font-size:.7em;
+  font-family: 'Lato', sans-serif;
+  outline:none;
+}
+.dataLogSend input:hover{
+  opacity: .8;
+}
+
+.dataLogSendC input{
+  border : solid 2px #ffffff;
+  -webkit-box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+  -moz-box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+  box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+  font-size : .8em;
+  color : #ffffff;
+  padding : 5px;
+  text-align: center;
+  width: 70px;
+  margin: 0 auto;
+  -webkit-appearance: none;
+  opacity: .6;
+  border-radius: 5px;
+  margin-top: 15px;
+  background-color: none;
+  appearance: none;
+  background:none;
+  font-size:.7em;
+  font-family: 'Lato', sans-serif;
+  outline:none;
+}
+.dataLogSendC{
+  text-align: right;
+  margin-right: 10%;
+  margin-bottom: -48px;
+}
+.dataLogSendC input:hover{
+  opacity: .8;
+}
+
+.tableCenter{
+  text-align: center;
+}
+
+.darkBar{
+  background-color: black;
+  height: 65px;
+  opacity: .7;
+
+}
+
+.fa-plus-square{
+
+  padding-left:  50px;
+  padding-bottom: 20px;
+  text-decoration: none;
+  color: white;
+  opacity: .7;
+  text-shadow: -1px 2px 10px black;
+
+}
+
+.fa-plus-square:hover{
+  opacity: .9;
+  text-shadow: -2px 4px 14px black;
+
+
+}

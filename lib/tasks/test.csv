@@ -1,0 +1,5 @@
+THIS IS A TEST!!!
+
+<%# current_tailor.apppointments.all do |a| %>
+  <%# a.phone %>
+  <%#end%>
