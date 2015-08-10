@@ -180,4 +180,71 @@ font-family: 'Raleway', sans-serif;
   #singupLinkHeader{
 
   }
+
+  .imgUser img {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 150px;
+	height: 150px;
+	border-radius: 75px;
+	-webkit-border-radius: 75px;
+	-moz-border-radius: 75px;
+  border: 3px solid white;
+
+  }
+
+  .dBackground {
+    background-image: url("pic.jpg");
+    height: 180px;
+    /*width: 100%;*/
+  }
+
+  .Hello {
+    text-align: center;
+    padding-top: 18%;
+    font-family: 'Lobster',cursive;
+    font-size: 30px;
+    color: #EBEBEB;
+  }
+
+  .DashbContent {
+    padding-top: 25%;
+  }
+    .editbutton {
+    display: inline-block;
+    position: relative;
+    /*margin: 1.2em 0 1em 0;*/
+    padding: 5px;
+    background: #A950A9;
+    border: none;
+    text-decoration: none;
+    /*font-weight: 700;*/
+  }
+
+   .editbutton a{
+    color: white;
+  }
+
+  .NewAbutton a{
+    color: grey;
+  }
+  /*.NewAbutton {
+    margin-top: 15px;
+    border-top: 2px solid grey;
+    border-left: 7px solid #A950A9;*/
+
+  }
+  .Appoinlist {
+    margin-top: 15px;
+    border-top: 2px solid grey;
+    border-left: 7px solid #A950A9;
+  }
+
+
+  .btn, .btn-large {
+    background-color: #A950A9;
+  }
+
 }
