@@ -23,9 +23,8 @@
 </div>
 
 
-<br><br><br><br><br>
 <div class="tableCenter">
-  <table class="tableDash">
+  <table class="tableDash centered bordered">
     <thead>
       <tr>
         <th>ID</th>
@@ -33,35 +32,44 @@
         <th>ADDRESS</th>
         <th>TIME</th>
         <th>PHONE</th>
+        <th>ITEMS</th>
         <th>STATUS</th>
+        <th><th>
       </tr>
     </thead>
   <br>
     <tbody>
-      <% @appointments.each do |a| %>
-        <% if a.tailor_id == current_tailor.id %>
-          <div class="tailAvailAptsZ">
-            <tr>
-              <td><%= a.id + 10000 %> </td>
-              <td><%= a.user.first_name %> </td>
-              <td><%= a.address %> </td>
-              <td><%= a.appointment_time.to_s[0...-7] %> </td>
-              <td><%= a.user.phone %> </td>
-              <td><%= a.stages%> </td>
-              <%if a.stages == "Order Complete" %>
-              <%else %>
-                <td> <%= button_to "Update Status", a, action: "status", data: { confirm: 'Are you sure you want to update the status of this order?' } %></td>
-              <%end%>
-
-
-            </tr>
-          </div>
+      <% if current_tailor.appointments.count == 0 %>
+          <h4>No Appointments</h4>
+      <% else %>
+        <% @appointments.each do |a| %>
+          <% if a.tailor_id == current_tailor.id && a.stages != "Order Complete" %>
+              <div class="tailAvailAptsZ">
+                <tr>
+                  <td><%= a.id + 10000 %> </td>
+                  <td><%= a.user.first_name %> </td>
+                  <td><%= a.address %> </td>
+                  <td>
+                    <%= a.appointment_time.strftime("%b %e") %>
+                  <br>
+                    <%= a.appointment_time.strftime("%l:%M %p") %>
+                  </td>
+                  <td><%= link_to a.user.phone, :value => "#{a.user.phone}" %></td>
+                  <td><%= a.articles.count %></td>
+                  <td><%= a.stages%> </td>
+                  <td></td>
+                  <%if a.stages == "Order Complete" %>
+                  <%else %>
+                    <td class="dataLogSend emailzz"> <%= button_to "Update", a, action: "status", data: { confirm: 'Are you sure you want to update the status of this order?' } %></td>
+                  <%end%>
+                </tr>
+              </div>
+          <% end %>
         <% end %>
       <% end %>
-      <div class="dataLogSend">
-        <%= button_to "Send Log", action: "dataLog"  %>
+      <div class="dataLogSend emailzz">
+        <%= button_to "Logs", action: "dataLog" %>
       </div>
-
     </tbody>
   </table>
 

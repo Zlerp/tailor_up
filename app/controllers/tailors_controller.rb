@@ -41,7 +41,7 @@ class TailorsController < ApplicationController
 
   def update
     if @tailor.update(tailor_params)
-      redirect_to @tailor, notice: 'Tailor was Updated!'
+      redirect_to tailors_dashboard_path, notice: 'Tailor was Updated!'
     else
       render :edit
     end

@@ -54,6 +54,8 @@ div.imgCenter {
 #profName{
   margin-top: 20px;
   font-size: 4em;
+  text-shadow: -1px 2px 10px black;
+  opacity: .5;
 }
 #loggedAs{
   opacity: .5;
@@ -63,9 +65,53 @@ div.imgCenter {
   width: 100%;
   padding-right: 10px;
 }
+@media screen and (min-width: 750px){
+  .tableDash{
+    width: 75vw;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: -1px 1px 10px black;
+    opacity: .7;
+    background-color: black;
+  }
+}
 
-.tableDash{
-  width: 75vw;
+.tailAvailAptsZ td{
+  text-align: center;
+  opacity: .7;
+}
+
+.dataLogSend{
+  text-align: left;
+  margin-left: 5%;
+}
+
+.dataLogSend input{
+  border : solid 2px #ffffff;
+  -webkit-box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+  -moz-box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+  box-shadow : inset 0px 0px 4px rgba(0,0,0,0.7);
+  font-size : .8em;
+  color : #ffffff;
+  padding : 5px;
+  text-align: center;
+  width: 70px;
   margin: 0 auto;
+  -webkit-appearance: none;
+  opacity: .6;
+  border-radius: 5px;
+  margin-top: 15px;
+  background-color: none;
+  appearance: none;
+  background:none;
+  font-size:.7em;
+  font-family: 'Lato', sans-serif;
+  outline:none;
+}
+
+.dataLogSend input:hover{
+  opacity: .8;
+}
+.tableCenter{
   text-align: center;
 }

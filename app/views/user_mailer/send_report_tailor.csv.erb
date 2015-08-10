@@ -1,5 +1,5 @@
-<%- headers = ['Name', 'Last Name', 'Email', 'Phone', 'Address', 'Zip', 'Appointment Time', 'Status'] -%>
+<%- headers = ['Appointment ID', 'Name', 'Last Name', 'Email', 'Phone', 'Address', 'Zip', 'Date', 'Status'] -%>
 <%= CSV.generate_line headers %>
 <%- @tailor.appointments.each do |a| -%>
-  <%= CSV.generate_line([a.user.first_name, a.user.last_name, a.user.email, a.user.phone, a.address, a.zip, a.appointment_time, a.stages]) %>
+  <%= CSV.generate_line([a.id + 10000, a.user.first_name, a.user.last_name, a.user.email, a.user.phone, a.address, a.zip, a.appointment_time, a.stages]) %>
 <%- end -%>
