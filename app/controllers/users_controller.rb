@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   attr_accessor :password, :password_confirmation
-
     before_action :set_user, only: [:show, :edit, :update, :destroy, :dashboard]
     # before_action :require_logged_in_user, only: [:dashboard]
 
@@ -23,8 +22,18 @@ class UsersController < ApplicationController
       @days = Date.today.all_week
     end
 
+    def method_name
+
+    end
+
     def create
       @user = User.new user_params
+      # before_save do |user|
+      #   user.first_name = user.first_name.downcase.capitalize
+      #   user.last_name = user.last_name.downcase.capitalize
+      #   user.email = user.email.downcase
+      # end
+
       if @user.save
         log_in(@user)
         UserMailer.registration_confirmation(@user).deliver
