@@ -14,41 +14,47 @@
 
 <div class="DashbContent">
   <div class='editbutton'>
-<%= link_to 'Edit Profile', edit_user_path(current_user)%>
+    <%= link_to 'Edit Profile', edit_user_path(current_user)%>
+  </div>
+  <div class="NewAbutton">
+    <%= link_to 'New appointments', new_appointment_path%>
+  </div>
+  <div class="Appoinlist">
+    <ul>
+      <h4> Appointments </h4>
+      <% if current_user.appointments.nil? %>
+      <p>
+        "You have no appointments"
+      </p>
+      <% else %>
+      <% current_user.appointments.each do |a| %>
+      <li>Current status: <span class="aptInfofirst" id=""><%= a.stages %></span></li>
+      <li>Appointment Time: <span class="aptInfo"><%= a.appointment_time.strftime('%A, %d %b %Y %l:%M %p') %></span></li>
+      <li>Appointment Address: <span class="aptInfo"><%= a.address %></span></li>
+      <span class="aptInfo"> <%= link_to 'Edit', edit_appointment_path(a) %></span> |
+      <%= link_to 'Destroy', a, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
-<div class="NewAbutton">
-<%= link_to 'New appointments', new_appointment_path%>
-</div>
-<!-- <h3>Appointments</h3> -->
-
-
-<ul>
 <div class="Appoinlist">
-  <% current_user.appointments.each do |a| %>
-    <li>Current status: <span class="aptInfofirst" id=""><%= a.stages %></span></li>
-    <li>Appointment Time: <span class="aptInfo"><%= a.appointment_time.strftime('%A, %d %b %Y %l:%M %p') %></span></li>
-    <li>Appointment Address: <span class="aptInfo"><%= a.address %></span></li>
-    <span class="aptInfo"> <%= link_to 'Edit', edit_appointment_path(a) %></span> |
-    <span><%= link_to 'Destroy', a, method: :delete, data: { confirm: 'Are you sure?' } %></span></li>
-</div>
-</ul>
-
-<ul>
-    <h4>Items:</h4>
-    <li> <span class="addArticles"> <%= link_to 'Add Articles', new_appointment_article_path(a) %></span>
-    <% a.articles.each do |art| %>
-      <li><%= art.kind %> | <%= art.quantity %> </li>
-      <li><%= link_to 'Edit', edit_article_path(art) %></li>
-      <li><%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      <h5>Items</h5>
+      <span class="addArticles"> <%= link_to 'Add Articles', new_appointment_article_path(a) %></span>
+      <% a.articles.each do |art| %>
+        <li><%= art.kind %> | <%= art.quantity %> </li>
+        <li><%= link_to 'Edit', edit_article_path(art) %></li>
+        <li><%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
+    <% end %>
+    </ul>
 
+  </div>
 
+  <div class="Appoinlistb">
+
+    <div>
 <!-- <h3>Availabilities</h3>
 <%# render '/availabilities/list_availability' %> -->
 
-<!-- </div> -->
+</div>
 
 
 <!-- <h3>Availabilities</h3> -->

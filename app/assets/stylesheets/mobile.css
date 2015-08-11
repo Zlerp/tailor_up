@@ -63,7 +63,7 @@ font-family: 'Raleway', sans-serif;
 }
 
 
-  }
+
 
   #loginFields{
   text-align: center;
@@ -131,9 +131,31 @@ font-family: 'Raleway', sans-serif;
     margin-top: 15px;
     border-top: 2px solid grey;
     border-left: 7px solid #A950A9;
+    border-bottom: : 2px solid grey;
+    text-align: left;
+    padding-left: 15px;
+    margin-bottom: -15;
   }
 
 
   .btn, .btn-large {
     background-color: #A950A9;
   }
+.Appoinlistb {
+  border-top: 2px solid grey;
+  margin-top: 15px;
+}
+
+  .NewuSerImgback {
+    background-image: url("newUserbck.jpg");
+    height: 190px;
+    background-size: 100% 100%;
+    /*background-repeat: no-repeat;*/
+
+  }
+  .Hello p {
+    font-size: 40px;
+}
+
+
+}

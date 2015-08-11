@@ -1,3 +1,4 @@
+<div class= "NewuSerImgback">
 <%= simple_form_for @user, :html => {:multipart => true} do |f| %>
   <%= f.file_field :image %>
   <%= f.label :remote_image_url, "or image URL" %> <br />
@@ -12,3 +13,4 @@
   <%= f.input :password_confirmation %>
   <%= f.button :submit %>
 <% end %>
+</div>
