@@ -54,14 +54,10 @@ font-family: 'Raleway', sans-serif;
   margin: 0 auto;
   text-align: center;
   text-shadow: -1px 1px 10px black;
-  opacity: .7;
+  opacity: .6;
   background-color: black;
 }
 .dataLogSend input{
   font-size: .7em;
   width: 40px;
-}
-
-.emailzz input{
-  margin-bottom: 20px;
 }

@@ -29,7 +29,6 @@ div.imgCenter {
   height: 250px;
   /*border: white solid 2px;*/
   border-radius: 300px;
-  text-align: right;
   margin: 0 auto;
   margin-top: 70px;
   box-shadow: -3px 2px 30px black;
@@ -83,7 +82,7 @@ div.imgCenter {
     margin: 0 auto;
     text-align: center;
     text-shadow: -1px 1px 10px black;
-    opacity: .7;
+    opacity: .6;
     background-color: black;
   }
 }
@@ -95,7 +94,7 @@ div.imgCenter {
 
 .dataLogSend{
   text-align: left;
-  margin-left: 5%;
+  margin-left: 10px;;
 }
 
 .dataLogSend input{
