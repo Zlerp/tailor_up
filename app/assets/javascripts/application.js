@@ -33,7 +33,12 @@ $(document).ready(function() {
           $( '#showA' ).addClass('btnSelect');
           $( '#showT' ).removeClass('btnSelect');
           $( '#showC' ).removeClass('btnSelect');
+
   });
+  $('.btnZ' ).click(function() {
+          $(this).animate({height: '60px'});
+  });
+
 
   $( '#showT' ).click(function() {
           $( '#tableA' ).hide();
@@ -42,6 +47,7 @@ $(document).ready(function() {
           $( '#showT' ).addClass('btnSelect');
           $( '#showA' ).removeClass('btnSelect');
           $( '#showC' ).removeClass('btnSelect');
+          // $( '#showT' ).animate({height: '60px'});
 
   });
 
@@ -52,6 +58,7 @@ $(document).ready(function() {
           $( '#showC' ).addClass('btnSelect');
           $( '#showT' ).removeClass('btnSelect');
           $( '#showA' ).removeClass('btnSelect');
+          // $( '#showC' ).animate({height: '60px'});
   });
 
 });

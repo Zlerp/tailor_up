@@ -32,7 +32,6 @@ font-family: 'Raleway', sans-serif;
       font-size: .8em;
   }
 
-
   /*------- DASHBOARD ----------*/
 
 #profImg {
@@ -42,11 +41,7 @@ font-family: 'Raleway', sans-serif;
 
 }
 #profName{
-  font-size: 3em
-}
-
-##profName{
-  font-size: 3em
+  font-size: 3em;
 }
 
 .tableDash{
@@ -135,3 +130,14 @@ font-family: 'Raleway', sans-serif;
   .btn, .btn-large {
     background-color: #A950A9;
   }
+  .btnZ{
+    width: 32.5%;
+  }
+.btnWrapper{
+  width: 100%;
+
+}
+  .tailorBtnS{
+    width: 48%;
+  }
+}

@@ -59,6 +59,8 @@ div.imgCenter {
   font-family: 'Pacifico', cursive;
 
 }
+
+
 #loggedAs{
   opacity: .5;
   text-align: right;
@@ -215,4 +217,7 @@ color: rgba(255, 255, 255, 0.8);
   text-shadow: 0 0 5px #733573;
 
   background:none;
+}
+.tailorBtnS{
+  width: 37vw;
 }

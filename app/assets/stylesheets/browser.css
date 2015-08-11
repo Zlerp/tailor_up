@@ -174,7 +174,7 @@ body{
     opacity: .7;
     color: white;
     text-align: center;
-    top:0;
+    top: 0;
     z-index: 10;
   }
   .signupLinks a {
@@ -183,7 +183,6 @@ body{
     opacity: .6;
     text-decoration: none;
     font-size: .9em;
-
     width: 150px;
   }
   .signupLinks a:hover{
