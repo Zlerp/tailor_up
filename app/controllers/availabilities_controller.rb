@@ -6,6 +6,8 @@ class AvailabilitiesController < ApplicationController
   # GET /availabilities.json
   def index
     @availabilities = Availability.all
+    @days = Date.today.all_week
+    @tailors = Tailor.all
   end
 
   # GET /availabilities/1

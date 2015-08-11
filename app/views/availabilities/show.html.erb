@@ -1,17 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Tailor:</strong>
-  <%= @availability.tailor_id %>
-</p>
-
-<p>
-  <strong>Start:</strong>
-  <%= @availability.start %>
-</p>
-
-<p>
-  <strong>End:</strong>
-  <%= @availability.end %>
-</p>
-<div id='calendar'></div>
+<% @days.each do |day| %>
+  <div class="day">
+    <h4><%= day.strftime("%A") %></h4>
+    <% @tailors.each do |tailor| %>
+      <ul>
+        <% Availability.where(tailor: tailor, start: day.midnight..(day.midnight + 1.day)).where("start > ?", Date.today).where(:requested => nil).each do |availability| %>
+        <li><button type="button"><%= link_to availability.start.strftime("%I:00 %p"), new_appointment_path(:start => availability.start, :tailor_id => tailor.id, :availability_id => availability.id) %></button> </li>
+        <% end %>
+      </ul>
+    <% end %>
+</div>
+<% end %>
