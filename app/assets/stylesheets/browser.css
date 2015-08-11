@@ -17,7 +17,6 @@ Zedit{
 .homeButton i{
   color: white;
   height: 40px;
-  width: 100%;
   position: fixed;
   top: 0;
   left: 10px;
@@ -42,7 +41,7 @@ input{
 .userLog a{
   word-spacing: 10px;
   margin-right: 2vh;
-  z-index: 50;
+  z-index: 200;
   color: white;
   opacity: .6;
   z-index: 99;

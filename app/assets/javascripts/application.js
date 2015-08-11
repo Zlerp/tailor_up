@@ -20,9 +20,9 @@
 $(document).ready(function() {
   // Turbolinks.ProgressBar.enable();
   $('#notice').delay(5000).slideUp();
-  $( '#tableA' ).hide();
+  $( '#tableT' ).hide();
   $( '#tableC' ).hide();
-  $( '#showA' ).removeClass('btnSelect');
+  $( '#showT' ).removeClass('btnSelect');
   $( '#showC' ).removeClass('btnSelect');
 
 
