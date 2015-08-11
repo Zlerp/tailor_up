@@ -7,6 +7,6 @@ class Company < ActiveRecord::Base
   before_save :format_values
 
   def format_values
-    email.donwcase!
+    email.downcase!
   end
 end

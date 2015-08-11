@@ -50,18 +50,9 @@ div.imgCenter {
     margin: 0 auto;
     opacity: .8;
 }
-#profName{
-  margin-top: 20px;
-  padding-right: 10px;
-  font-size: 4em;
-  text-shadow: -1px 2px 10px black;
-  opacity: .5;
-  font-family: 'Pacifico', cursive;
 
-}
 #profNameCom{
   margin-top: 80px;
-  padding-right: 10px;
   font-size: 4em;
   text-shadow: -1px 2px 10px black;
   opacity: .5;
@@ -181,4 +172,16 @@ div.imgCenter {
   text-shadow: -2px 4px 14px black;
 
 
+}
+
+.btnWrapper{
+  width: 75vw;
+  margin: 0 auto;
+  background-color: black;
+}
+.btnWrapper button{
+  width: 24.7vw;
+  margin: 0 auto;
+  background-color: none;
+  border: 2px solid rgba(255, 255, 255, 0.53);
 }

@@ -20,6 +20,26 @@
 $(document).ready(function() {
   // Turbolinks.ProgressBar.enable();
   $('#notice').delay(5000).slideUp();
-  $('select').material_select();
+  $( '#tableA' ).hide();
+  $( '#tableC' ).hide();
+
+  $( '#showA' ).click(function() {
+          $( '#tableT' ).hide();
+          $( '#tableC' ).hide();
+          $( '#tableA' ).show();
+  });
+
+  $( '#showT' ).click(function() {
+          $( '#tableA' ).hide();
+          $( '#tableC' ).hide();
+          $( '#tableT').show();
+
+  });
+
+  $( '#showC' ).click(function() {
+          $( '#tableT' ).hide();
+          $( '#tableA' ).hide();
+          $( '#tableC').show();
+  });
 
 });
