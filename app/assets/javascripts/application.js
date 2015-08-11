@@ -22,17 +22,26 @@ $(document).ready(function() {
   $('#notice').delay(5000).slideUp();
   $( '#tableA' ).hide();
   $( '#tableC' ).hide();
+  $( '#showA' ).removeClass('btnSelect');
+  $( '#showC' ).removeClass('btnSelect');
+
 
   $( '#showA' ).click(function() {
           $( '#tableT' ).hide();
           $( '#tableC' ).hide();
           $( '#tableA' ).show();
+          $( '#showA' ).addClass('btnSelect');
+          $( '#showT' ).removeClass('btnSelect');
+          $( '#showC' ).removeClass('btnSelect');
   });
 
   $( '#showT' ).click(function() {
           $( '#tableA' ).hide();
           $( '#tableC' ).hide();
           $( '#tableT').show();
+          $( '#showT' ).addClass('btnSelect');
+          $( '#showA' ).removeClass('btnSelect');
+          $( '#showC' ).removeClass('btnSelect');
 
   });
 
@@ -40,6 +49,9 @@ $(document).ready(function() {
           $( '#tableT' ).hide();
           $( '#tableA' ).hide();
           $( '#tableC').show();
+          $( '#showC' ).addClass('btnSelect');
+          $( '#showT' ).removeClass('btnSelect');
+          $( '#showA' ).removeClass('btnSelect');
   });
 
 });

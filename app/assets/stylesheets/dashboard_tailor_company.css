@@ -153,6 +153,9 @@ div.imgCenter {
   background-color: black;
   height: 65px;
   opacity: .7;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
 
 }
 
@@ -177,11 +180,39 @@ div.imgCenter {
 .btnWrapper{
   width: 75vw;
   margin: 0 auto;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .btnWrapper button{
+background:none;
+}
+
+.btnWrapper button:hover{
+border: 2px solid rgba(255, 255, 255, 0.8);
+color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+.btnZ{
   width: 24.7vw;
   margin: 0 auto;
-  background-color: none;
-  border: 2px solid rgba(255, 255, 255, 0.53);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.4);
+  appearance: none;
+  background:none;
+  font-family: 'Lato', sans-serif;
+  outline:none;
+  height: 50px;
+  font-weight: 300;
+
+}
+.btnSelect{
+  color: #A950A9;
+  box-shadow: 0 0 10px #733573;
+  border: 2px solid #A950A9;
+  opacity: .7;
+  font-weight: 800;
+  text-shadow: 0 0 5px #733573;
+
+  background:none;
 }
