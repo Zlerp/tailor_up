@@ -1,51 +1,54 @@
-<div class="layer">
-
-</div>
+<!-- <div class="layer"> -->
 <div id="userDashContainer">
   <p id="notice"><%= flash[:notice] %></p>
-
-
-<h1 id=dashboardTitle>Dashboard</h1>
-<p>
-  Hello <span id="userGreeting"><%= current_user.first_name %></span>,
-</p>
-<%= image_tag @user.image_url(:thumb).to_s %>
-<div class="edit">
-  <td><%= link_to 'My Account', edit_user_path(current_user) %></td>
+<div class="dBackground">
+  <!-- <img src="../../assets/images/dpic.jpg"> -->
+<!-- <h3 id=dashboardTitle></h3> -->
+<div class="Hello">
+  Hello <span id="userGreeting"><%= current_user.first_name %></span>
+</div>
+<div class="imgUser">
+  <%= image_tag @user.image_url(:thumb).to_s%>
+</div>
 </div>
 
-<h3>New appointment</h3>
-
-
-<%= link_to 'New appointments', new_appointment_path %>
-
-<h3>Appointments</h3>
+<div class="DashbContent">
+  <div class='editbutton'>
+<%= link_to 'Edit Profile', edit_user_path(current_user)%>
+</div>
+<div class="NewAbutton">
+<%= link_to 'New appointments', new_appointment_path%>
+</div>
+<!-- <h3>Appointments</h3> -->
 
 
 <ul>
+<div class="Appoinlist">
   <% current_user.appointments.each do |a| %>
-    <li>current status: <span class="aptInfo" id=""><%= a.stages %></span></li>
+    <li>Current status: <span class="aptInfofirst" id=""><%= a.stages %></span></li>
     <li>Appointment Time: <span class="aptInfo"><%= a.appointment_time.strftime('%A, %d %b %Y %l:%M %p') %></span></li>
     <li>Appointment Address: <span class="aptInfo"><%= a.address %></span></li>
-    <li> <span class="addArticles"> <%= link_to 'Add Articles', new_appointment_article_path(a) %></span> |
     <span class="aptInfo"> <%= link_to 'Edit', edit_appointment_path(a) %></span> |
     <span><%= link_to 'Destroy', a, method: :delete, data: { confirm: 'Are you sure?' } %></span></li>
+</div>
+</ul>
+
+<ul>
     <h4>Items:</h4>
+    <li> <span class="addArticles"> <%= link_to 'Add Articles', new_appointment_article_path(a) %></span>
     <% a.articles.each do |art| %>
       <li><%= art.kind %> | <%= art.quantity %> </li>
       <li><%= link_to 'Edit', edit_article_path(art) %></li>
       <li><%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %></li>
     <% end %>
-
   <% end %>
 </ul>
 
 
+<!-- <h3>Availabilities</h3>
+<%# render '/availabilities/list_availability' %> -->
 
-<h3>Availabilities</h3>
-<%= render '/availabilities/list_availability' %>
-
-</div>
+<!-- </div> -->
 
 
 <!-- <h3>Availabilities</h3> -->

@@ -91,7 +91,8 @@ input{
 
 
 body{
-  color: white;
+  color: grey;
+  text-align: center;
 }
 .layer{
  background-color: black;
