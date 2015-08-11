@@ -15,7 +15,14 @@
 <div class="addTailor">
   <%= link_to content_tag(:i, nil, :class => "fa fa-plus-square fa-3x"), new_tailor_path %>
 </div>
-<table class="tableDash centered bordered">
+
+
+<div class="btnWrapper">
+  <button id="showA" class="btnSelect btnZ">APPOINTMENTS</button>
+  <button id="showT" class="btnSelect btnZ">TAILORS</button>
+  <button id="showC" class="btnSelect btnZ">COMPLETED</button>
+</div>
+<table id="tableT" class="tableDash centered bordered">
   <thead>
     <tr>
       <th>TAILORS</th>
@@ -43,5 +50,85 @@
     <% end %>
   </tbody>
 </table>
-
+<table id="tableA" class="tableDash centered bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>USER</th>
+      <th>ADDRESS</th>
+      <th>TIME</th>
+      <th>PHONE</th>
+      <th>ITEMS</th>
+      <th>STATUS</th>
+      <th><th>
+    </tr>
+  </thead>
+<tbody>
+    <% @company.tailors.each do |tailor| %>
+      <div class="tailAvailAptsZ">
+        <% tailor.appointments.each do |a| %>
+          <% if a.stages != "Order Complete" %>
+            <tr>
+              <td><%= a.id + 10000 %> </td>
+              <td><%= a.user.first_name %> </td>
+              <td><%= a.address %> </td>
+              <td>
+                <%# a.appointment_time.strftime("%b %e") %>
+              <br>
+                <%# a.appointment_time.strftime("%l:%M %p") %>
+              </td>
+              <!-- <td><%# link_to a.user.phone, :value => "#{a.user.phone}" %></td> -->
+              <td><%= a.user.phone %></td>
+              <td><%= a.articles.count %></td>
+              <td><%= a.stages%> </td>
+                <%if a.stages == "Order Complete" %>
+                <%else %>
+                  <td class="dataLogSend emailzz"> <%= button_to "Update", a, action: "status", data: { confirm: "Are you sure you want to update the status of #{a.tailor.first_name}'s order?" } %></td>
+                <%end%>
+              <% else %>
+              <% end %>
+            <% end %>
+          </tr>
+      </div>
+    <% end %>
+  </tbody>
+</table>
+<table id="tableC" class="tableDash centered bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>USER</th>
+      <th>ADDRESS</th>
+      <th>TIME</th>
+      <th>PHONE</th>
+      <th>ITEMS</th>
+      <th>STATUS</th>
+      <th><th>
+    </tr>
+  </thead>
+<tbody>
+    <% @company.tailors.each do |tailor| %>
+      <div class="tailAvailAptsZ">
+        <% tailor.appointments.each do |a| %>
+          <% if a.stages == "Order Complete" %>
+            <tr>
+              <td><%= a.id + 10000 %> </td>
+              <td><%= a.user.first_name %> </td>
+              <td><%= a.address %> </td>
+              <td>
+                <%# a.appointment_time.strftime("%b %e") %>
+              <br>
+                <%# a.appointment_time.strftime("%l:%M %p") %>
+              </td>
+              <!-- <td><%# link_to a.user.phone, :value => "#{a.user.phone}" %></td> -->
+              <td><%= a.user.phone %></td>
+              <td><%= a.articles.count %></td>
+              <td><%= a.stages%> </td>
+            <% end %>
+            <% end %>
+          </tr>
+      </div>
+    <% end %>
+  </tbody>
+</table>
 <div class="bottom"><p id="loggedAs">signed in as a company</p></footer></div>

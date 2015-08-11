@@ -5,8 +5,13 @@ font-family: 'Lobster', cursive;
 font-family: 'Raleway', sans-serif;
 */
 
-
-
+a{
+  color: white;
+  opacity: .7;
+}
+a:hover{
+  opacity: 1;
+}
 
 #dashboardTitle{
   margin-top: 0;
@@ -29,7 +34,6 @@ div.imgCenter {
   height: 250px;
   /*border: white solid 2px;*/
   border-radius: 300px;
-  text-align: right;
   margin: 0 auto;
   margin-top: 70px;
   box-shadow: -3px 2px 30px black;
@@ -51,24 +55,17 @@ div.imgCenter {
     margin: 0 auto;
     opacity: .8;
 }
-#profName{
-  margin-top: 20px;
-  padding-right: 10px;
-  font-size: 4em;
-  text-shadow: -1px 2px 10px black;
-  opacity: .5;
-  font-family: 'Pacifico', cursive;
 
-}
 #profNameCom{
   margin-top: 80px;
-  padding-right: 10px;
   font-size: 4em;
   text-shadow: -1px 2px 10px black;
   opacity: .5;
   font-family: 'Pacifico', cursive;
 
 }
+
+
 #loggedAs{
   opacity: .5;
   text-align: right;
@@ -83,7 +80,7 @@ div.imgCenter {
     margin: 0 auto;
     text-align: center;
     text-shadow: -1px 1px 10px black;
-    opacity: .7;
+    opacity: .6;
     background-color: black;
   }
 }
@@ -95,7 +92,7 @@ div.imgCenter {
 
 .dataLogSend{
   text-align: left;
-  margin-left: 5%;
+  margin-left: 10px;;
 }
 
 .dataLogSend input{
@@ -163,6 +160,9 @@ div.imgCenter {
   background-color: black;
   height: 65px;
   opacity: .7;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
 
 }
 
@@ -182,4 +182,57 @@ div.imgCenter {
   text-shadow: -2px 4px 14px black;
 
 
+}
+
+.btnWrapper{
+  width: 75vw;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.btnWrapper button{
+background:none;
+}
+
+.btnWrapper button:hover{
+border: 2px solid #A950A9;
+color: #A950A9;
+opacity: .6;
+}
+
+
+
+.btnZ{
+  width: 24.7vw;
+  margin: 0 auto;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.4);
+  appearance: none;
+  background:none;
+  font-family: 'Lato', sans-serif;
+  outline:none;
+  height: 50px;
+  font-weight: 300;
+
+
+}
+.btnSelect{
+  color: #A950A9;
+  box-shadow: 0 5px 5px black;
+  border: 2px solid #A950A9;
+  opacity: .9;
+  font-weight: 800;
+
+  background:none;
+}
+.btnSelect{
+  color: #A950A9;
+  box-shadow: 0 5px 5px black;
+  border: 2px solid #A950A9;
+  opacity: .9;
+  font-weight: 800;
+
+  background:none;
+}
+.tailorBtnS{
+  width: 37vw;
 }

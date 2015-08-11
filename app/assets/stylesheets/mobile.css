@@ -28,11 +28,6 @@ font-family: 'Raleway', sans-serif;
     width: 300px;
   }
 
-    .signupLinks a {
-      font-size: .8em;
-  }
-
-
   /*------- DASHBOARD ----------*/
 
 #profImg {
@@ -42,11 +37,7 @@ font-family: 'Raleway', sans-serif;
 
 }
 #profName{
-  font-size: 3em
-}
-
-##profName{
-  font-size: 3em
+  font-size: 3em;
 }
 
 .tableDash{
@@ -54,7 +45,7 @@ font-family: 'Raleway', sans-serif;
   margin: 0 auto;
   text-align: center;
   text-shadow: -1px 1px 10px black;
-  opacity: .7;
+  opacity: .6;
   background-color: black;
 }
 .dataLogSend input{
@@ -63,13 +54,8 @@ font-family: 'Raleway', sans-serif;
 }
 
 
-
-
   #loginFields{
   text-align: center;
-  }
-  #singupLinkHeader{
-
   }
 
   .imgUser img {
@@ -94,7 +80,7 @@ font-family: 'Raleway', sans-serif;
 
   .Hello {
     text-align: center;
-    padding-top: 18%;
+    padding-top: 40px;
     font-family: 'Lobster',cursive;
     font-size: 30px;
     color: #EBEBEB;
@@ -121,12 +107,7 @@ font-family: 'Raleway', sans-serif;
   .NewAbutton a{
     color: grey;
   }
-  /*.NewAbutton {
-    margin-top: 15px;
-    border-top: 2px solid grey;
-    border-left: 7px solid #A950A9;*/
 
-  }
   .Appoinlist {
     margin-top: 15px;
     border-top: 2px solid grey;
@@ -136,7 +117,7 @@ font-family: 'Raleway', sans-serif;
     padding-left: 15px;
     margin-bottom: -15;
   }
-
+@media screen and (max-width: 750px){
 
   .btn, .btn-large {
     background-color: #A950A9;
@@ -149,13 +130,90 @@ font-family: 'Raleway', sans-serif;
   .NewuSerImgback {
     background-image: url("newUserbck.jpg");
     height: 190px;
-    background-size: 100% 100%;
+    background-size: 100% 150%;
+    overflow-y: hidden;
+
     /*background-repeat: no-repeat;*/
 
   }
+
+  .NewuSerImgback p {
+      text-shadow: -2px 4px 5px black;
+  }
   .Hello p {
     font-size: 40px;
+
 }
 
+.NEwuserfromA{
+  width: 50vw;
+margin: 0 auto;
+}
+
+  .btnZ{
+    width: 32.5%;
+    font-size: .9em;
+    height: 40px;
+  }
+.btnWrapper{
+  width: 100%;
+
+}
+#userimg{
+  padding-left: 10%;
+}
+  .tailorBtnS{
+    width: 48%;
+  }
+  .signUpLinks{
+    font-size: .8em;
+  }
+
+  input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 1em;
+  border-bottom: 2px solid grey;
+  height: 22px;
+ }
+
+
+    input#user_image {
+    width: 80px;
+    text-align: left;
+
+}
+
+.btn, .btn-large, .btn-flat {
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent
+}
+label.optional {
+  display: none;
+}
+
+.btn:hover{
+  background-color: #BB70BB;
+}
+/*.string.optional:hover{
+  color: black
+}*/
+
+  input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=url]:focus, input[type=time]:focus, input[type=date]:focus, input[type=datetime-local]:focus, input[type=tel]:focus, input[type=number]:focus, input[type=search]:focus, textarea.materialize-textarea{
+  border-bottom: 2px solid #AA4CAA !important;
+  box-shadow: 0 1px 0 0 #AA4CAA !important;
+}
+/*input[type=all]:focus{
+  border-bottom: 1px solid red !important;
+  box-shadow: 0 1px 0 0 red !important;
+}*/
 
 }

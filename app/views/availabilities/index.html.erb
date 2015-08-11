@@ -1,32 +1,13 @@
-<p id="notice"><%= notice %></p>
 
-<h1>My Availabilities This Week</h1>
-
-<table>
-  <thead>
-    <tr>
-
-      <th>Start</th>
-      <th>End</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @availabilities.each do |availability| %>
-      <tr>
-        <td><%= availability.tailor %></td>
-        <td><%= availability.start %></td>
-        <td><%= availability.end %></td>
-      </tr>
-
-  <%= (render partial: 'listavailability') %>
+<% @days.each do |day| %>
+  <div class="day">
+    
+    <% @tailors.each do |tailor| %>
+      <ul>
+        <% Availability.where(tailor: tailor, start: day.midnight..(day.midnight + 1.day)).where("start > ?", Date.today).where(:requested => nil).each do |availability| %>
+        <li><button type="button"><%= link_to availability.start.strftime("%I:00 %p"), new_appointment_path(:start => availability.start, :tailor_id => tailor.id, :availability_id => availability.id) %></button> </li>
+        <% end %>
+      </ul>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'My Dashboard'%>
-
-<br>
+</div>
+<% end %>

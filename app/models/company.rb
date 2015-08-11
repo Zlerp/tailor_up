@@ -3,4 +3,10 @@ class Company < ActiveRecord::Base
   has_many :tailors
   has_many :availabilities, through: :tailors
   # validates_uniqueness_of :email
+
+  before_save :format_values
+
+  def format_values
+    email.downcase!
+  end
 end

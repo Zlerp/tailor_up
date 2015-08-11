@@ -1,16 +1,17 @@
-<div class= "NewuSerImgback">
+
 <%= simple_form_for @user, :html => {:multipart => true} do |f| %>
+  <p>
+    Upload your profile picture
+  </p>
   <%= f.file_field :image %>
-  <%= f.label :remote_image_url, "or image URL" %> <br />
-  <%= f.text_field :remote_image_url %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :address %>
-  <%= f.input :zip %>
-  <%= f.input :phone %>
-  <%= f.input :email %>
-  <%= f.input :password %>
-  <%= f.input :password_confirmation %>
+  <%# f.text_field :remote_image_url %>
+  <%= f.input :first_name, :placeholder => "First name" %>
+  <%= f.input :last_name, :placeholder => "Last name"%>
+  <%= f.input :address, :placeholder => "Address" %>
+  <%= f.input :zip, :placeholder => "Zipcode" %>
+  <%= f.input :phone, :placeholder => "Phone number" %>
+  <%= f.input :email, :placeholder => "Email" %>
+  <%= f.input :password, :placeholder => "password" %>
+  <%= f.input :password_confirmation, :placeholder => "password confirmation" %>
   <%= f.button :submit %>
 <% end %>
-</div>

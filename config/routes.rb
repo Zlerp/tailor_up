@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
     root 'sessions#new_session_user'
     # root 'users#dashboard'
+    get '/availabilities/index' => 'availabilities#index'
 
   get '/new_company' => 'sessions#new_company'
   get '/new_session_tailor' => 'sessions#new_session_tailor'
