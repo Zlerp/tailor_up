@@ -28,11 +28,6 @@ font-family: 'Raleway', sans-serif;
     width: 300px;
   }
 
-    .signupLinks a {
-      font-size: .8em;
-  }
-
-
   /*------- DASHBOARD ----------*/
 
 #profImg {
@@ -42,11 +37,7 @@ font-family: 'Raleway', sans-serif;
 
 }
 #profName{
-  font-size: 3em
-}
-
-##profName{
-  font-size: 3em
+  font-size: 3em;
 }
 
 .tableDash{
@@ -65,9 +56,6 @@ font-family: 'Raleway', sans-serif;
 
   #loginFields{
   text-align: center;
-  }
-  #singupLinkHeader{
-
   }
 
   .imgUser img {
@@ -119,19 +107,30 @@ font-family: 'Raleway', sans-serif;
   .NewAbutton a{
     color: grey;
   }
-  /*.NewAbutton {
-    margin-top: 15px;
-    border-top: 2px solid grey;
-    border-left: 7px solid #A950A9;*/
 
-  }
   .Appoinlist {
     margin-top: 15px;
     border-top: 2px solid grey;
     border-left: 7px solid #A950A9;
   }
-
+@media screen and (max-width: 750px){
 
   .btn, .btn-large {
     background-color: #A950A9;
   }
+  .btnZ{
+    width: 32.5%;
+    font-size: .9em;
+    height: 40px;
+  }
+.btnWrapper{
+  width: 100%;
+
+}
+  .tailorBtnS{
+    width: 48%;
+  }
+  .signUpLinks{
+    font-size: .8em; 
+  }
+}

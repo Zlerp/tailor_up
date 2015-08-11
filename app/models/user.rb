@@ -17,6 +17,6 @@ class User < ActiveRecord::Base
   def format_values
     first_name.capitalize!
     last_name.capitalize!
-    email.donwcase!
+    email.downcase!
   end
 end
