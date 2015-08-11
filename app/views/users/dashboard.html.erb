@@ -53,48 +53,13 @@
 
 <!-- <h3>Availabilities</h3> -->
 <%#render '/availabilities/listavailability' %>
-
 <div class="calendar">
+<% @days.each do |day| %>
 <a style="display:block" href="availabilities/index">
 <div class="weekday">
-  <p>Monday <span class="arrow">></span><br /></p>
+  <p><span class="arrow">></span><br /></p>
+  <h4><%= day.strftime("%A") %></h4>
+  <% end %>
 </div>
   </a>
-  
-<a style="display:block" href="availabilities/index">
-<div class="weekday">
-  <p>Tuesday<span class="arrow">></span><br /></p>
-</div>
-</a>
-
-<a style="display:block" href="availabilities/index">
-<div class="weekday">
-  <p>Wednesday<span class="arrow">></span><br /></p>
-</div>
-</a>
-
-<a style="display:block" href="availabilities/index">
-  <div class="weekday">
-  <p>Thursday<span class="arrow">></span><br /></p>
-</div>
-</a>
-
-<a style="display:block" href="availabilities/index">
-  <div class="weekday">
-  <p>Friday<span class="arrow">></span><br /></p>
-</div>
-</a>
-
-<a style="display:block" href="availabilities/index">
-  <div class="weekday">
-  <p>Saturday<span class="arrow">></span><br /></p>
-</div>
-</a>
-
-<a style="display:block" href="availabilities/index">
-  <div class="weekday">
-  <p>Sunday<span class="arrow">></span><br /></p>
-</div>
-</a>
-
 </div>
