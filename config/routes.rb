@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
     root 'sessions#new_session_user'
     # root 'users#dashboard'
-    get '/availabilities/index' => 'availabilities#index'
+    get '/availabilities' => 'availabilities#index'
 
   get '/new_company' => 'sessions#new_company'
   get '/new_session_tailor' => 'sessions#new_session_tailor'
@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   get 'users/forgot_password'=> 'users#forgot_password'
   post 'users/forgot_password/reset' => 'users#forgot_password_mail'
+
+get '/availabilities/index' => 'availabilities#index'
 
 
   post 'appointments/:id' => 'appointments#status'

@@ -27,7 +27,11 @@ h4  {
 }
 div .calendar {
   width: 100%;
+  padding: 2em 4em 30em 2em;
+
 }
+
+
 .calendar {
   font-family: helvetica, sans-serif;
   margin: 0 auto;
@@ -36,10 +40,9 @@ div .calendar {
 }
 .calendar div {
   height: 20px;
-  background-size: cover;
   position: relative;
   margin: 40px 0 0 0;
-  border-radius: 12px;
+
 }
 
 
@@ -51,17 +54,11 @@ div .calendar {
   padding: 20px;
   line-height: 28px;
   text-align: justify;
-  position: absolute;
+  position:absolute;
   bottom: -10;
   margin: 0;
   width: 43em;
-  height: px;
 }
-
-.weekday small {
-  opacity: 0;
-}
-
 .weekday .arrow {
   float: right;
 }
