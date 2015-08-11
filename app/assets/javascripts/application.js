@@ -18,12 +18,25 @@
 
 
 $(document).ready(function() {
-  // Turbolinks.ProgressBar.enable();
   $('#notice').delay(5000).slideUp();
   $( '#tableT' ).hide();
   $( '#tableC' ).hide();
   $( '#showT' ).removeClass('btnSelect');
   $( '#showC' ).removeClass('btnSelect');
+  if (window.matchMedia('(max-width: 767px)').matches) {
+            $( '#showA' ).animate({height: '45px'});
+
+    } else {
+            $( '#showA' ).animate({height: '55px'});
+
+    }
+
+  $( '.btnZ' ).hover(function() {
+      $(this).animate({
+
+      });
+  });
+
 
 
   $( '#showA' ).click(function() {
@@ -33,10 +46,16 @@ $(document).ready(function() {
           $( '#showA' ).addClass('btnSelect');
           $( '#showT' ).removeClass('btnSelect');
           $( '#showC' ).removeClass('btnSelect');
+          if (window.matchMedia('(max-width: 767px)').matches) {
+                    $(this).animate({height: '45px'});
+                    $( '#showT' ).animate({height: '40px'});
+                    $( '#showC' ).animate({height: '40px'});
+            } else {
+                    $(this).animate({height: '55px'});
+                    $( '#showT' ).animate({height: '50px'});
+                    $( '#showC' ).animate({height: '50px'});
+            }
 
-  });
-  $('.btnZ' ).click(function() {
-          $(this).animate({height: '60px'});
   });
 
 
@@ -47,7 +66,15 @@ $(document).ready(function() {
           $( '#showT' ).addClass('btnSelect');
           $( '#showA' ).removeClass('btnSelect');
           $( '#showC' ).removeClass('btnSelect');
-          // $( '#showT' ).animate({height: '60px'});
+          if (window.matchMedia('(max-width: 767px)').matches) {
+                    $(this).animate({height: '45px'});
+                    $( '#showA' ).animate({height: '40px'});
+                    $( '#showC' ).animate({height: '40px'});
+            } else {
+                    $(this).animate({height: '55px'});
+                    $( '#showA' ).animate({height: '50px'});
+                    $( '#showC' ).animate({height: '50px'});
+            }
 
   });
 
@@ -58,7 +85,15 @@ $(document).ready(function() {
           $( '#showC' ).addClass('btnSelect');
           $( '#showT' ).removeClass('btnSelect');
           $( '#showA' ).removeClass('btnSelect');
-          // $( '#showC' ).animate({height: '60px'});
+          if (window.matchMedia('(max-width: 767px)').matches) {
+                    $(this).animate({height: '45px'});
+                    $( '#showA' ).animate({height: '40px'});
+                    $( '#showT' ).animate({height: '40px'});
+            } else {
+                    $(this).animate({height: '55px'});
+                    $( '#showA' ).animate({height: '50px'});
+                    $( '#showT' ).animate({height: '50px'});
+            }
   });
 
 });

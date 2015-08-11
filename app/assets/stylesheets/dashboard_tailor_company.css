@@ -5,8 +5,13 @@ font-family: 'Lobster', cursive;
 font-family: 'Raleway', sans-serif;
 */
 
-
-
+a{
+  color: white;
+  opacity: .7;
+}
+a:hover{
+  opacity: 1;
+}
 
 #dashboardTitle{
   margin-top: 0;
@@ -189,8 +194,9 @@ background:none;
 }
 
 .btnWrapper button:hover{
-border: 2px solid rgba(255, 255, 255, 0.8);
-color: rgba(255, 255, 255, 0.8);
+border: 2px solid #A950A9;
+color: #A950A9;
+opacity: .6;
 }
 
 
@@ -207,14 +213,23 @@ color: rgba(255, 255, 255, 0.8);
   height: 50px;
   font-weight: 300;
 
+
 }
 .btnSelect{
   color: #A950A9;
-  box-shadow: 0 0 10px #733573;
+  box-shadow: 0 5px 5px black;
   border: 2px solid #A950A9;
-  opacity: .7;
+  opacity: .9;
   font-weight: 800;
-  text-shadow: 0 0 5px #733573;
+
+  background:none;
+}
+.btnSelect{
+  color: #A950A9;
+  box-shadow: 0 5px 5px black;
+  border: 2px solid #A950A9;
+  opacity: .9;
+  font-weight: 800;
 
   background:none;
 }

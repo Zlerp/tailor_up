@@ -9,11 +9,6 @@ font-family: 'Lobster', cursive;
 font-family: 'Raleway', sans-serif;
 */
 
-
-
-Zedit{
-
-}
 .homeButton i{
   color: white;
   height: 40px;
@@ -177,23 +172,7 @@ body{
     top: 0;
     z-index: 10;
   }
-  .signupLinks a {
-    text-align: center;
-    color: white;
-    opacity: .6;
-    text-decoration: none;
-    font-size: .9em;
-    width: 150px;
-  }
-  .signupLinks a:hover{
-    opacity: .8;
-  }
-  .signupLinks {
-    margin-top: 30px;
-    text-align: center;
-    width: 100%;
-    height: 70px;
-  }
+
   .forgotPass{
     padding-top: 15px;
     height: 40px;
@@ -243,4 +222,8 @@ body{
   color: white;
   text-decoration: none;
   opacity: .7;
+}
+
+.signUpLinks{
+  margin-top: 30px; 
 }
