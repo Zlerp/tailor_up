@@ -28,7 +28,6 @@ h4  {
 div .calendar {
   width: 100%;
   padding: 2em 4em 30em 2em;
-
 }
 
 
@@ -57,7 +56,7 @@ div .calendar {
   position: absolute;
   bottom: -10;
   margin: 0;
-  width: 43em;
+  width: 28em;
 
 }
 .weekday .arrow {
