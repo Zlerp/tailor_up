@@ -59,7 +59,7 @@ class AppointmentsController < ApplicationController
         UserMailer.appointment_booked(@appointment).deliver
         availability = Availability.find(params[:availability_id])
         availability.requested = true
-         availability.save
+        availability.save
         format.html { redirect_to dashboard_path, notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
 
@@ -128,8 +128,8 @@ class AppointmentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_appointment
-      @appointment = Appointment.find(params[:id])
-      # @appointment = current_user.appointments.find(params[:id])
+      # @appointment = Appointment.find(params[:id])
+      @appointment = current_user.appointments.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
