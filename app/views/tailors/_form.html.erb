@@ -1,14 +1,11 @@
 <%= simple_form_for @tailors do |f| %>
-  <h4>Add a Image:</h4>
   <%=f.file_field :image %>
-  <%# f.label :remote_image_url, "or image URL" %> <br>
-  <%# f.text_field :remote_image_url %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :email %>
-  <%= f.input :phone %>
-  <%= f.input :location %>
-  <%= f.input :password %>
-  <%= f.input :password_confirmation %>
+  <%= f.input :first_name, :placeholder => "First name" %>
+  <%= f.input :last_name, :placeholder => "Last name"%>
+  <%= f.input :email, :placeholder => "Email" %>
+  <%= f.input :phone, :placeholder => "Phone number" %>
+  <%= f.input :location, :placeholder => "Location"  %>
+  <%= f.input :password, :placeholder => "Password" %>
+  <%= f.input :password_confirmation, :placeholder => "Password confirmation" %>
   <%= f.button :submit %>
 <% end %>

@@ -44,7 +44,7 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = current_user.appointments.new(appointment_params)
     # availability = Availability.find(params[:availability_id])
-     @appointment = Appointment.new(appointment_params)
+    #  @appointment = Appointment.new(appointment_params)
     @appointment.tailor_id = params[:tailor_id]
     @appointment.stages = "Appointment Booked"
 
@@ -52,10 +52,12 @@ class AppointmentsController < ApplicationController
       if @appointment.pickup_location == ""
         @appointment.pickup_location = current_user.address
       end
+      @appointment.save
 
     respond_to do |format|
       if @appointment.save
         UserMailer.appointment_booked(@appointment).deliver
+        availability = Availability.find(params[:availability_id])
         availability.requested = true
          availability.save
         format.html { redirect_to dashboard_path, notice: 'Appointment was successfully created.' }

@@ -1,7 +1,7 @@
 
 <% @days.each do |day| %>
   <div class="day">
-    
+
     <% @tailors.each do |tailor| %>
       <ul>
         <% Availability.where(tailor: tailor, start: day.midnight..(day.midnight + 1.day)).where("start > ?", Date.today).where(:requested => nil).each do |availability| %>
