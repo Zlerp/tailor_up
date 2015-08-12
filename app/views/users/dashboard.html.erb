@@ -36,9 +36,9 @@
 <div class="Appoinlist">
       <h5>Items</h5>
       <% if current_user.appointments.last.stages == "Awaiting Articles" %>
-        <div class="articleAlert">
+        <!-- <div class="articleAlert">
             <p>ADD<br>ARTICLE</p>
-        </div>
+        </div> -->
       <% elsif current_user.appointments.last.stages == "Awaiting Submit" %>
         <p>
           <%= button_to "BOOK", action: "appointment_booked"  %>
