@@ -22,7 +22,7 @@
   <div class="Appoinlist">
     <ul>
       <h4> Appointments </h4>
-      <% if current_user.appointments.nil? %>
+      <% if current_user.appointments.blank? %>
       <p>
         "You have no appointments"
       </p>
@@ -66,7 +66,7 @@
   <p>Monday <span class="arrow">></span><br /></p>
 </div>
   </a>
-  
+
 <a style="display:block" href="availabilities/index">
 <div class="weekday">
   <p>Tuesday<span class="arrow">></span><br /></p>

@@ -211,9 +211,16 @@ label.optional {
   border-bottom: 2px solid #AA4CAA !important;
   box-shadow: 0 1px 0 0 #AA4CAA !important;
 }
+
+input.btn {
+  margin-top: 30px;
+}
 /*input[type=all]:focus{
   border-bottom: 1px solid red !important;
   box-shadow: 0 1px 0 0 red !important;
 }*/
+form p {
+  text-align: center;
+}
 
 }
