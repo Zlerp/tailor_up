@@ -84,6 +84,9 @@ height: 180px;
 
 }
 
+.imgUser img{
+  z-index: 100;
+}
 
 #loggedAs{
   opacity: .5;
@@ -92,6 +95,25 @@ height: 180px;
   top: 90vh;
   width: 100%;
   padding-right: 10px;
+}
+
+.formSpace1{
+  height: 80px;
+  z-index: -100;
+
+}
+.formSpace2{
+  height: 25px;
+  z-index: -100;
+
+}
+.formSpace3{
+  height: 40px;
+  z-index: -100;
+}
+.formSpace4{
+  height: 50px;
+  z-index: -100;
 }
 @media screen and (min-width: 750px){
   .tableDash{

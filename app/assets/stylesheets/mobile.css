@@ -13,7 +13,7 @@ font-family: 'Raleway', sans-serif;
     background-image: url("newUserbck.jpg");
     height: 190px;
     background-size: 100% 150%;
-    overflow-y: hidden;
+    overflow: inherit;
 
     /*background-repeat: no-repeat;*/
 
@@ -109,7 +109,6 @@ font-family: 'Raleway', sans-serif;
     background-image: url("newUserbck.jpg");
     height: 190px;
     background-size: 100% 150%;
-    overflow-y: hidden;
 
     /*background-repeat: no-repeat;*/
 

@@ -1,6 +1,16 @@
-<h3>Edit Your Dashboard</h3>
-<%= image_tag @user.image_url(:thumb).to_s %>
-<%= render 'form' %>
+<div class= "NewuSerImgback">
+  <p class="Hello">Edit Tailor</p>
+  <div class="imgUser">
+    <%= image_tag @user.image_url(:thumb).to_s%>
+  </div>
+</div>
+
+<div class="formSpace4"></div>
+
+<div class = "NEwuserfromA">
+  <%= render 'form' %>
+</div>
+
 <div class="canceled">
   <%= link_to content_tag(:i, nil, :class => "fa fa-chevron-left fa-3x"), dashboard_path %>
 </div>
