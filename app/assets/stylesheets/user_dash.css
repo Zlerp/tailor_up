@@ -1,26 +1,8 @@
-@media screen and (min-width: 750px){
-  .imgUser img {
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  width: 150px;
-  height: 150px;
-  border-radius: 75px;
-  -webkit-border-radius: 75px;
-  -moz-border-radius: 75px;
-  border: 3px solid white;
-
-  }
-
-    .imgUser{
-      /*float: right;*/
-      text-align: center;
-      margin: 0 auto;
-      width: 250px;
-      height: 250px;
-    }
-    .NewuSerImgback {
+margin: 0 auto;
+width: 250px;
+ height: 250px;
+}
+  .NewuSerImgback {
       background-image: url("newUserbck.jpg");
       height: 290px;
       background-size: 100% 150%;
@@ -36,56 +18,36 @@
   text-align: center;
 }
 h4  {
-  color: purple;
+color: purple;
 }
 div .calendar {
-  width: 100%;
-  padding: 2em 4em 30em 2em;
-
-}
-
-
-.calendar {
-  font-family: helvetica, sans-serif;
-  margin: 0 auto;
-  max-width: 600px;
-
-}
-.calendar div {
-  height: 20px;
-  position: relative;
-  margin: 40px 0 0 0;
-
-}
-
-
-.weekday p {
-  color: rgba(255,255,255,1);
-  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
-  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
-  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
-  padding: 20px;
-  line-height: 28px;
-  text-align: justify;
-  position:absolute;
-  bottom: -10;
-  margin: 0;
-  width: 43em;
+padding: 20px;
+line-height: 28px;
+text-align: justify;
+position:absolute;
+bottom: -10;
+margin: 0;
+width: 43em;
+  height: px;
 }
 .weekday .arrow {
-  float: right;
+float: right;
 }
 @media .calendar (max-width: 500px) {
   div {
     margin: 20px 2px 0 12px;
-  }
-  p  {
-    font-size: 20px;
-    line-height: 24px;
-  }
-  small {
-    font-size: 16px;
-  }
+
+@media (max-width: 500px) {
+  div .calendar {
+    margin: 20px 12px 0 12px;
+}
+  p .calendar {
+font-size: 20px;
+line-height: 24px;
+}
+  small .calendar {
+font-size: 16px;
+}
 }
 
 .dBackground {
@@ -146,7 +108,6 @@ div .calendar {
 .Appoinlistb {
 border-top: 2px solid grey;
 margin-top: 15px;
-}
 
 
 
@@ -163,7 +124,6 @@ width: 50vw;
 margin: 0 auto;
 }
 @media screen and (max-width: 750px){
-
 
 
 .btnZ{
