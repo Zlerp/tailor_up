@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
   def login_company
 
     @company = Company.find_by(email: params[:email].downcase).try(:authenticate, params[:password])
+    @company = Company.find_by(email: params[:email].downcase).try(:authenticate, params[:password])
 
     if @company
       session[:company_id] = @company.id
@@ -22,16 +23,19 @@ class SessionsController < ApplicationController
   end
 
   def login_user
+    # @user = User.find_by(email: params[:email].downcase).try(:authenticate, params[:password])
     @user = User.find_by(email: params[:email].downcase).try(:authenticate, params[:password])
     if @user
       session[:user_id] = @user.id
       redirect_to dashboard_path, flash:{notice:"#{@user.first_name} you are logged in"}
     else
       redirect_to new_session_user_path, flash:{error:" invalid username or password"}
+      puts "*************NOT WORKING*********************************************"
     end
   end
 
   def login_tailor
+    # @tailor = Tailor.find_by(email: params[:email].downcase).try(:authenticate, params[:password])
     @tailor = Tailor.find_by(email: params[:email].downcase).try(:authenticate, params[:password])
     if @tailor
       session[:tailor_id] = @tailor.id
