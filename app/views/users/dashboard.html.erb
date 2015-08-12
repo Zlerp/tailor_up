@@ -12,7 +12,7 @@
 </div>
 </div>
 
-<div class="DashbContent">homebutton
+<div class="DashbContent">
 
   <div class='editbutton'>
     <%= link_to 'Edit Profile', edit_user_path(current_user)%>
@@ -21,15 +21,12 @@
     <%= link_to 'New appointments', new_appointment_path%>
   </div>
   <div class="Appoinlist">
-    <ul>
-<<<<<<< HEAD
+    <ul style="margin-bottom: 0px;">
+
       <h4> Appointments </h4>
       <% if current_user.appointments.blank? %>
-=======
-      <% if current_user.appointments.nil? %>
->>>>>>> cfd4006bb66c0eda18ee79467f2ac2cfd498b33c
-      <p>
-        "You have no appointments"
+      <p style="margin-bottom: 0px;">
+        You have no appointments <i class="fa fa-thumbs-o-down"></i>
       </p>
       <% else %>
       <% current_user.appointments.each do |a| %>
@@ -107,5 +104,3 @@
   <p>Sunday<span class="arrow">></span><br /></p>
 </div>
 </a>
-
-</div>

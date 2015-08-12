@@ -109,13 +109,13 @@ font-family: 'Raleway', sans-serif;
   }
 
   .Appoinlist {
-    margin-top: 15px;
+    /*margin-top: 15px;*/
     border-top: 2px solid grey;
     border-left: 7px solid #A950A9;
     border-bottom: : 2px solid grey;
     text-align: left;
     padding-left: 15px;
-    margin-bottom: -15;
+    /*margin-bottom: -15;*/
   }
 @media screen and (max-width: 750px){
 
@@ -124,7 +124,7 @@ font-family: 'Raleway', sans-serif;
   }
 .Appoinlistb {
   border-top: 2px solid grey;
-  margin-top: 15px;
+  /*margin-top: 15px;*/
 }
 
   .NewuSerImgback {
