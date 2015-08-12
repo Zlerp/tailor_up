@@ -11,8 +11,13 @@ def emails(appointment, subject)
   mail(:to => appointment.user.email, :subject => subject )
 end
 
-def appointment_booked(appointment)
-  emails(appointment, "Appointment Booked with TailorUp!")
+def appointment_booked(user)
+  @user = user
+  mail(:to => user.email, :subject => "Your TailorUp Appointment was Booked!")
+end
+def appointment_bookedT(tailor)
+  @tailor = tailor
+  mail(:to => tailor.email, :subject => "An Appointment was Booked!")
 end
 
 def appointment_processing(appointment)

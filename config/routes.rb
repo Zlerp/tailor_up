@@ -24,6 +24,7 @@ get '/availabilities/index' => 'availabilities#index'
   post 'tailors/dashboard/data' => 'tailors#dataLog'
   post 'companies/data' => 'companies#dataLog'
 
+  post 'dashboard/appointment_create' => 'users#appointment_booked'
 
 
   get '/dashboard' => 'users#dashboard'

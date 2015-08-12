@@ -197,6 +197,15 @@ input.btn {
   box-shadow: 0 1px 0 0 red !important;
 }*/
 
+.articleAlert{
+  /*position: relative;*/
+  float: right;
+  padding-bottom: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: #AA4CAA;
+
+}
 
 
 

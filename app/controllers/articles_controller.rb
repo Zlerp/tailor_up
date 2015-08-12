@@ -32,7 +32,9 @@ class ArticlesController < ApplicationController
     @article.kind = 'Jeans'
     @article.appointment_id = current_user.appointments.first.id
 
-
+    @appointment = @article.appointment
+    @appointment.stages = "Awaiting Submit"
+    @appointment.save
     respond_to do |format|
       if @article.save
         format.html { redirect_to dashboard_path, notice: 'Article was successfully created.' }

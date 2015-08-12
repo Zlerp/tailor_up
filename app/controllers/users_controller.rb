@@ -51,6 +51,17 @@ class UsersController < ApplicationController
       end
     end
 
+    def appointment_booked
+      @user = current_user
+      @appointment = current_user.appointments.last
+      @tailor = @appointment.tailor
+      @appointment.stages = "Appointment Booked"
+      @appointment.save
+      UserMailer.appointment_booked(@user).deliver
+      UserMailer.appointment_bookedT(@tailor).deliver
+      redirect_to dashboard_path
+    end
+
     def destroy
       @user.destroy
       redirect_to root_path
