@@ -1,7 +1,12 @@
+.day {
+  margin-top: 5em;
+}
+
 .time_search{
   width:300px;
-  margin-left: -10em;
-  margin-top: 5em;
+  height: 5em;
+  margin-left: -5.5em;
+  margin-top: 1em;
   color: rgb(128,0,128);
   background: linear-gradient(bottom, rgb(128,0,128), rgba(0,0,0,.4));
   background: -webkit-linear-gradient(bottom, rgb(128,0,128), rgba(0,0,0,.4));
