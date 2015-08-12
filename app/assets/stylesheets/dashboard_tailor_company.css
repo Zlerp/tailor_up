@@ -70,7 +70,7 @@ div.imgCenter {
   opacity: .5;
   text-align: right;
   position: absolute;
-  top: 95vh;
+  top: 90vh;
   width: 100%;
   padding-right: 10px;
 }
@@ -166,11 +166,16 @@ div.imgCenter {
 
 }
 
+.addTailor{
+  text-align: left;
+}
+
 .fa-plus-square{
 
-  padding-left:  50px;
+  width: auto;
   padding-bottom: 20px;
   text-decoration: none;
+  margin-left: 30px;
   color: white;
   opacity: .7;
   text-shadow: -1px 2px 10px black;

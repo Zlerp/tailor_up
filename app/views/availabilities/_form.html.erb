@@ -1,8 +1,7 @@
-<h2> This is a Availability Form </h2>
 
 <%= form_for [@tailor, @availability] do |f| %>
   <%= f.label :start %>:
-  <%= f.datetime_select :start, ampm: true, default: {minute: 0}, discard_minute: true %><br />
+  <%= f.datetime_select :start, ampm: true, default: {minute: 0}, discard_minute: true, class: "datepicker" %><br />
 
   <%= f.label :end %>:
   <%= f.datetime_select :end, ampm: true, default: {minute: 0}, discard_minute: true  %><br />

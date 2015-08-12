@@ -41,6 +41,7 @@ input{
   color: white;
   opacity: .6;
   z-index: 99;
+  text-shadow: -1px 1px 4px black;
 }
 .userLog a:hover{
   opacity: .8;

@@ -17,9 +17,6 @@
   <div class='editbutton'>
     <%= link_to 'Edit Profile', edit_user_path(current_user)%>
   </div>
-  <div class="NewAbutton">
-    <%= link_to 'New appointments', new_appointment_path%>
-  </div>
   <div class="Appoinlist">
     <ul style="margin-bottom: 0px;">
 
@@ -61,13 +58,16 @@
 
 <!-- <h3>Availabilities</h3> -->
 <%#render '/availabilities/listavailability' %>
-
 <div class="calendar">
+<% @days.each do |day| %>
 <a style="display:block" href="availabilities/index">
 <div class="weekday">
-  <p>Monday <span class="arrow">></span><br /></p>
+  <p><span class="arrow">></span><br /></p>
+  <h4><%= day.strftime("%A") %></h4>
+  <% end %>
 </div>
   </a>
+
 
 <a style="display:block" href="availabilities/index">
 <div class="weekday">
@@ -104,3 +104,5 @@
   <p>Sunday<span class="arrow">></span><br /></p>
 </div>
 </a>
+
+</div>
