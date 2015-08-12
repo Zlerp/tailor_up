@@ -96,8 +96,7 @@ $(document).ready(function() {
             }
   });
 
-  $(function() {
-     $(".datepicker").datepicker();
-   });
+  $("#availability_start_1i").datepicker({ minDate: 0 });
+
 
 });

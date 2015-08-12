@@ -9,6 +9,10 @@ font-family: 'Lobster', cursive;
 font-family: 'Raleway', sans-serif;
 */
 
+.aptInfo a{
+  color: black;
+}
+
 .homeButton a{
   color: white;
   height: 40px;
@@ -152,6 +156,9 @@ body{
    background-repeat: no-repeat;
   }
   /*login for user*/
+  input.optional{
+    text-align: center;
+  }
 
   #email{
     text-align: center;

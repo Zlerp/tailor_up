@@ -22,7 +22,9 @@
   <td><%# link_to 'My Settings', edit_tailor_path(current_tailor) %></td>
 </div>
 
-
+<div class="dataLogSend emailzz">
+  <%= button_to "Logs", action: "dataLog" %>
+</div>
   <div class="btnWrapper">
     <button id="showA" class="btnSelect tailorBtnS btnZ">APPOINTMENTS</button>
     <button id="showC" class="btnSelect tailorBtnS btnZ">COMPLETED</button>
@@ -66,9 +68,6 @@
               </div>
           <% end %>
       <% end %>
-      <div class="dataLogSend emailzz">
-        <%= button_to "Logs", action: "dataLog" %>
-      </div>
     </tbody>
   </table>
   <table id="tableC" class="tableDash centered bordered">

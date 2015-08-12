@@ -1,10 +1,10 @@
 
 <%= form_for [@tailor, @availability] do |f| %>
   <%= f.label :start %>:
-  <%= f.datetime_select :start, ampm: true, default: {minute: 0}, discard_minute: true, class: "datepicker" %><br />
+  <%= f.datetime_select :start, ampm: true, default: {minute: 0}, discard_minute: true, :input_html => { :class => 'foo' } %><br />
 
   <%= f.label :end %>:
-  <%= f.datetime_select :end, ampm: true, default: {minute: 0}, discard_minute: true  %><br />
+  <%= f.datetime_select :end, ampm: true, default: {minute: 0}, discard_minute: true, id: "datepicker"  %><br />
 
   <%= f.submit %>
 <% end %>

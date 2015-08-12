@@ -33,15 +33,15 @@
       <li>Appointment Time: <span class="aptInfo"><%= a.appointment_time.strftime('%A, %d %b %Y %l:%M %p') %></span></li>
       <li>Appointment Address: <span class="aptInfo"><%= a.address %></span></li>
       <span class="aptInfo"> <%= link_to 'Edit', edit_appointment_path(a) %></span> |
-      <%= link_to 'Destroy', a, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <span class="aptInfo"><%= link_to 'Destroy', a, method: :delete, data: { confirm: 'Are you sure?' } %><span class="aptInfo">
 </div>
 <div class="Appoinlist">
       <h5>Items</h5>
-      <span class="addArticles"> <%= link_to 'Add Articles', new_appointment_article_path(a) %></span>
+      <span class="addArticles aptInfo"> <%= link_to 'Add Articles', new_appointment_article_path(a) %></span>
       <% a.articles.each do |art| %>
         <li><%= art.kind %> | <%= art.quantity %> </li>
-        <li><%= link_to 'Edit', edit_article_path(art) %></li>
-        <li><%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+        <li><span class="aptInfo"><%= link_to 'Edit', edit_article_path(art) %><span class="aptInfo"></li>
+        <li><span class="aptInfo"><%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %><span class="aptInfo"></li>
       <% end %>
     <% end %>
     <% end %>

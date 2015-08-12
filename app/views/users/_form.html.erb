@@ -5,13 +5,13 @@
   </p>
   <%= f.file_field :image %>
   <%# f.text_field :remote_image_url %>
-  <%= f.input :first_name, :placeholder => "First name" %>
-  <%= f.input :last_name, :placeholder => "Last name"%>
-  <%= f.input :address, :placeholder => "Address" %>
-  <%= f.input :zip, :placeholder => "Zipcode" %>
-  <%= f.input :phone, :placeholder => "Phone number" %>
-  <%= f.input :email, :placeholder => "Email" %>
-  <%= f.input :password, :placeholder => "password" %>
-  <%= f.input :password_confirmation, :placeholder => "password confirmation" %>
+  <%= f.input :first_name, :placeholder => "First name", label: false %>
+  <%= f.input :last_name, :placeholder => "Last name", label: false%>
+  <%= f.input :address, :placeholder => "Address", label: false %>
+  <%= f.input :zip, :placeholder => "Zipcode", label: false %>
+  <%= f.input :phone, :placeholder => "Phone number", label: false %>
+  <%= f.input :email, :placeholder => "Email", label: false %>
+  <%= f.input :password, :placeholder => "password", label: false %>
+  <%= f.input :password_confirmation, :placeholder => "password confirmation", label: false %>
   <%= f.button :submit, value="Create!"  %>
 <% end %>
