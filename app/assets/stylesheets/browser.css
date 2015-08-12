@@ -9,15 +9,16 @@ font-family: 'Lobster', cursive;
 font-family: 'Raleway', sans-serif;
 */
 
-.homeButton i{
+.homeButton a{
   color: white;
   height: 40px;
+  width: 100px;
   position: fixed;
   top: 0;
   left: 10px;
   text-align: left;
   margin-top: 12px;
-  z-index: 100;
+  z-index: 1000;
   opacity: .6;
   text-shadow: -1px 2px 2px black;
 }
@@ -45,7 +46,9 @@ input{
   opacity: .8;
 }
 
-
+input {
+  background: none;
+}
   .userLog{
     z-index: 50;
     position: fixed;
@@ -225,5 +228,5 @@ body{
 }
 
 .signUpLinks{
-  margin-top: 30px; 
+  margin-top: 30px;
 }

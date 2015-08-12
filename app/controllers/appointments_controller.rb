@@ -43,8 +43,8 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     @appointment = current_user.appointments.new(appointment_params)
-    availability = Availability.find(params[:availability_id])
-    #  @appointment = Appointment.new(appointment_params)
+    # availability = Availability.find(params[:availability_id])
+     @appointment = Appointment.new(appointment_params)
     @appointment.tailor_id = params[:tailor_id]
     @appointment.stages = "Appointment Booked"
 
