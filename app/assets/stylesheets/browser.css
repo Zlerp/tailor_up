@@ -31,6 +31,21 @@ font-family: 'Raleway', sans-serif;
   text-shadow: -2px 3px 4px black;
 
 }
+
+.canceled{
+  position: fixed;
+  bottom: 0;
+  text-align: left;
+  height: 50px;
+  opacity: .7;
+}
+
+.canceled i{
+font-weight: 100;
+color: #A950A9;
+
+}
+
 input{
   outline: none;
 }

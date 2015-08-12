@@ -1,13 +1,14 @@
-<h1>Tailor Edit Page</h1>
-
 
 <h1>Edit The Tailor</h1>
 <%= image_tag @tailor.image_url(:thumb).to_s %>
 <%= render 'form' %>
 
-<!-- Logic to ensure correct back button for correct account -->
 <% if current_company != nil %>
-  <%= link_to 'Back', companies_path %>
+<div class="canceled">
+  <%= link_to content_tag(:i, nil, :class => "fa fa-chevron-left fa-3x"), companies_path %>
+</div>
 <% else %>
-  <%= link_to 'Back', tailors_dashboard_path %>
+<div class="canceled">
+  <%= link_to content_tag(:i, nil, :class => "fa fa-chevron-left fa-3x"), tailors_dashboard_path %>
+</div>
 <% end %>

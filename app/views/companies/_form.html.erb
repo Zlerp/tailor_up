@@ -1,8 +1,8 @@
 <%= simple_form_for @company do |f| %>
-  <%= f.input :name %>
-  <%= f.input :email %>
-  <%= f.input :password %>
-  <%= f.input :password_confirmation %>
-  <%= f.input :location %>
-  <%= f.button :submit %>
+  <%= f.input :name, :placeholder => "Name", label: false %>
+  <%= f.input :email, :placeholder => "Email", label: false %>
+  <%= f.input :location, :placeholder => "password", label: false  %>
+  <%= f.input :password, :placeholder => "pasword", label: false %>
+  <%= f.input :password_confirmation, :placeholder => "password confirmation", label: false %>
+  <%= f.button :submit, value="Create!"  %>
 <% end %>

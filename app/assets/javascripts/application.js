@@ -100,3 +100,21 @@ $(document).ready(function() {
 
 
 });
+
+$(document).on('page:load', ready);
+
+// $('.fa-scissors').click(function(){
+//   $( '#tableA' ).hide();
+//   $( '#tableC' ).hide();
+//   $( '#tableT').show();
+//   $( '#showT' ).addClass('btnSelect');
+//   $( '#showA' ).removeClass('btnSelect');
+//   $( '#showC' ).removeClass('btnSelect');
+//   if (window.matchMedia('(max-width: 767px)').matches) {
+//             $( '#showA' ).animate({height: '45px'});
+//
+//     } else {
+//             $( '#showA' ).animate({height: '55px'});
+//
+//     }
+// });

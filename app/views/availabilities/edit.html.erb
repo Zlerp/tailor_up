@@ -3,4 +3,6 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @availability %> |
-<%= link_to 'Back', availabilities_path %>
+<div class="canceled">
+  <%= link_to content_tag(:i, nil, :class => "fa fa-chevron-left fa-3x"), companies_path %>
+</div>

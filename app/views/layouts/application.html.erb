@@ -10,20 +10,26 @@
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="homeButton">
+
+
+<div class="homeButton">
+    <% if current_tailor || current_company || current_user %>
+        <% if current_user %>
+            <%= link_to content_tag(:i, nil, :class => "fa fa-scissors fa-3x"), dashboard_path %>
+        <% elsif current_company  %>
+            <%= link_to content_tag(:i, nil, :class => "fa fa-scissors fa-3x"), companies_path %>
+        <% elsif current_tailor %>
+            <%= link_to content_tag(:i, nil, :class => "fa fa-scissors fa-3x"), tailors_dashboard_path %>
+        <% else %>
+        <% end %>
+      <% else %>
     <%= link_to content_tag(:i, nil, :class => "fa fa-scissors fa-3x"), root_path %>
-  </div>
+<% end %>
+
+</div>
     <div class="userLog">
       <% if current_tailor || current_company || current_user %>
         <%= link_to 'logout', logout_path, method:"delete"%>
-          <% if current_user %>
-              <%= link_to 'home', dashboard_path %>
-          <% elsif current_company  %>
-              <%= link_to 'home', companies_path %>
-          <% elsif current_tailor %>
-              <%= link_to 'home', tailors_dashboard_path %>
-          <% else %>
-          <% end %>
       <% else %>
 
       <%= link_to 'login', new_session_user_path%>
