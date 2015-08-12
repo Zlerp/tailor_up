@@ -1,4 +1,4 @@
-<!-- , :html => {:multipart => true} -->
+
 <%= simple_form_for @user do |f| %>
   <p>
     Upload your profile picture
@@ -13,5 +13,5 @@
   <%= f.input :email, :placeholder => "Email" %>
   <%= f.input :password, :placeholder => "password" %>
   <%= f.input :password_confirmation, :placeholder => "password confirmation" %>
-  <%= f.button :submit %>
+  <%= f.button :submit, value="Create!"  %>
 <% end %>
