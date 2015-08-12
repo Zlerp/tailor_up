@@ -1,0 +1,9 @@
+.time_search{
+  width:300px;
+  margin-left: -10em;
+  margin-top: 5em;
+  color: rgb(128,0,128);
+  background: linear-gradient(bottom, rgb(128,0,128), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgb(128,0,128), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgb(128,0,128), rgba(0,0,0,.4));
+}
