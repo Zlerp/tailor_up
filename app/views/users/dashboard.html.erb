@@ -12,7 +12,8 @@
 </div>
 </div>
 
-<div class="DashbContent">
+<div class="DashbContent">homebutton
+
   <div class='editbutton'>
     <%= link_to 'Edit Profile', edit_user_path(current_user)%>
   </div>
@@ -21,8 +22,12 @@
   </div>
   <div class="Appoinlist">
     <ul>
+<<<<<<< HEAD
       <h4> Appointments </h4>
       <% if current_user.appointments.blank? %>
+=======
+      <% if current_user.appointments.nil? %>
+>>>>>>> cfd4006bb66c0eda18ee79467f2ac2cfd498b33c
       <p>
         "You have no appointments"
       </p>
