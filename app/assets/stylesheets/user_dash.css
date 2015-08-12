@@ -62,15 +62,15 @@ div .calendar {
 .weekday .arrow {
   float: right;
 }
-@media (max-width: 500px) {
-  div .calendar {
-    margin: 20px 12px 0 12px;
+@media .calendar (max-width: 500px) {
+  div {
+    margin: 20px 2px 0 12px;
   }
-  p .calendar {
+  p  {
     font-size: 20px;
     line-height: 24px;
   }
-  small .calendar {
+  small {
     font-size: 16px;
   }
 }
