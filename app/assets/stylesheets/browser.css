@@ -9,6 +9,10 @@ font-family: 'Lobster', cursive;
 font-family: 'Raleway', sans-serif;
 */
 
+a{
+  color: white;
+}
+
 .aptInfo a{
   color: black;
 }
