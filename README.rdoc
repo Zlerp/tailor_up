@@ -2,9 +2,9 @@
 
 ==Summary
 TailorUP, a Ruby on Rails Web Application designed to create an easy interactive
- alternative for customers to request a tailor appointment for fitting, monitor
- progression of alterations, and receive delivered garments without having to
- leave the comforts of their home.
+alternative for customers to request a tailor appointment for fitting, monitor
+progression of alterations, and receive delivered garments without having to
+leave the comforts of their home.
 
 ==What is the need?
 This application was designed for an actual company located in Wynwood called
