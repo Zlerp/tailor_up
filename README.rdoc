@@ -12,7 +12,7 @@ Caveat. Caveat's clients are usually busy business owners and entrepreneurs who
 don't have time to come to the Wynwood area for a fitting. We've designed the
 application to allow the tailor to come to them.
 
-Technologies we used:
+==Technologies we used:
 
 * Ruby on Rails
 
