@@ -23,7 +23,7 @@
       <h4> Appointment </h4>
       <% if current_user.appointments.blank? %>
       <p style="margin-bottom: 0px;">
-        You have no appointments <i class="fa fa-thumbs-o-down"></i>
+        You have no appointments :( <i class="fa fa-thumbs-o-down"></i>
       </p>
       <% else %>
       <% current_user.appointments.each do |a| %>
@@ -36,9 +36,9 @@
 <div class="Appoinlist">
       <h5>Items</h5>
       <% if current_user.appointments.last.stages == "Awaiting Articles" %>
-        <div class="articleAlert">
+        <!-- <div class="articleAlert">
             <p>ADD<br>ARTICLE</p>
-        </div>
+        </div> -->
       <% elsif current_user.appointments.last.stages == "Awaiting Submit" %>
         <p>
           <%= button_to "BOOK", action: "appointment_booked"  %>

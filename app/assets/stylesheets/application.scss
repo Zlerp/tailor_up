@@ -14,17 +14,3 @@
  *= require_tree .
  *= require_self
  */
-
-.day {
-  float: left;
-  display: inline;
-  padding-left: 5em;
-}
-.day ul {
-   list-style-type: none;
-   margin-left: -3.6em;
-}
-
-select {
-  display: inline-block;
-}

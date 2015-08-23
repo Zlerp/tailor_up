@@ -17,98 +17,11 @@
 // = require_tree
 
 
-$(document).ready(function() {
-  $('#notice').delay(5000).slideUp();
-  $( '#tableT' ).hide();
-  $( '#tableC' ).hide();
-  $( '#showT' ).removeClass('btnSelect');
-  $( '#showC' ).removeClass('btnSelect');
-  if (window.matchMedia('(max-width: 767px)').matches) {
-            $( '#showA' ).animate({height: '45px'});
-
-    } else {
-            $( '#showA' ).animate({height: '55px'});
-
-    }
-
-  $( '.btnZ' ).hover(function() {
-      $(this).animate({
-
-      });
-  });
-
-
-
-  $( '#showA' ).click(function() {
-          $( '#tableT' ).hide();
-          $( '#tableC' ).hide();
-          $( '#tableA' ).show();
-          $( '#showA' ).addClass('btnSelect');
-          $( '#showT' ).removeClass('btnSelect');
-          $( '#showC' ).removeClass('btnSelect');
-          if (window.matchMedia('(max-width: 767px)').matches) {
-                    $(this).animate({height: '45px'});
-                    $( '#showT' ).animate({height: '40px'});
-                    $( '#showC' ).animate({height: '40px'});
-            } else {
-                    $(this).animate({height: '55px'});
-                    $( '#showT' ).animate({height: '50px'});
-                    $( '#showC' ).animate({height: '50px'});
-            }
-
-  });
-
-
-  $( '#showT' ).click(function() {
-          $( '#tableA' ).hide();
-          $( '#tableC' ).hide();
-          $( '#tableT').show();
-          $( '#showT' ).addClass('btnSelect');
-          $( '#showA' ).removeClass('btnSelect');
-          $( '#showC' ).removeClass('btnSelect');
-          if (window.matchMedia('(max-width: 767px)').matches) {
-                    $(this).animate({height: '45px'});
-                    $( '#showA' ).animate({height: '40px'});
-                    $( '#showC' ).animate({height: '40px'});
-            } else {
-                    $(this).animate({height: '55px'});
-                    $( '#showA' ).animate({height: '50px'});
-                    $( '#showC' ).animate({height: '50px'});
-            }
-
-  });
-
-  $( '#showC' ).click(function() {
-          $( '#tableT' ).hide();
-          $( '#tableA' ).hide();
-          $( '#tableC').show();
-          $( '#showC' ).addClass('btnSelect');
-          $( '#showT' ).removeClass('btnSelect');
-          $( '#showA' ).removeClass('btnSelect');
-          if (window.matchMedia('(max-width: 767px)').matches) {
-                    $(this).animate({height: '45px'});
-                    $( '#showA' ).animate({height: '40px'});
-                    $( '#showT' ).animate({height: '40px'});
-            } else {
-                    $(this).animate({height: '55px'});
-                    $( '#showA' ).animate({height: '50px'});
-                    $( '#showT' ).animate({height: '50px'});
-            }
-  });
-
-  $("#availability_start_1i").datepicker({ minDate: 0 });
-
-
-});
-
-$(document).on('page:load', ready);
-
-// $('.fa-scissors').click(function(){
-//   $( '#tableA' ).hide();
+// $(document).ready(function() {
+//   $('#notice').delay(5000).slideUp();
+//   $( '#tableT' ).hide();
 //   $( '#tableC' ).hide();
-//   $( '#tableT').show();
-//   $( '#showT' ).addClass('btnSelect');
-//   $( '#showA' ).removeClass('btnSelect');
+//   $( '#showT' ).removeClass('btnSelect');
 //   $( '#showC' ).removeClass('btnSelect');
 //   if (window.matchMedia('(max-width: 767px)').matches) {
 //             $( '#showA' ).animate({height: '45px'});
@@ -117,4 +30,75 @@ $(document).on('page:load', ready);
 //             $( '#showA' ).animate({height: '55px'});
 //
 //     }
+//
+//   $( '.btnZ' ).hover(function() {
+//       $(this).animate({
+//
+//       });
+//   });
+//
+//
+//
+//   $( '#showA' ).click(function() {
+//           $( '#tableT' ).hide();
+//           $( '#tableC' ).hide();
+//           $( '#tableA' ).show();
+//           $( '#showA' ).addClass('btnSelect');
+//           $( '#showT' ).removeClass('btnSelect');
+//           $( '#showC' ).removeClass('btnSelect');
+//           if (window.matchMedia('(max-width: 767px)').matches) {
+//                     $(this).animate({height: '45px'});
+//                     $( '#showT' ).animate({height: '40px'});
+//                     $( '#showC' ).animate({height: '40px'});
+//             } else {
+//                     $(this).animate({height: '55px'});
+//                     $( '#showT' ).animate({height: '50px'});
+//                     $( '#showC' ).animate({height: '50px'});
+//             }
+//
+//   });
+//
+//
+//   $( '#showT' ).click(function() {
+//           $( '#tableA' ).hide();
+//           $( '#tableC' ).hide();
+//           $( '#tableT').show();
+//           $( '#showT' ).addClass('btnSelect');
+//           $( '#showA' ).removeClass('btnSelect');
+//           $( '#showC' ).removeClass('btnSelect');
+//           if (window.matchMedia('(max-width: 767px)').matches) {
+//                     $(this).animate({height: '45px'});
+//                     $( '#showA' ).animate({height: '40px'});
+//                     $( '#showC' ).animate({height: '40px'});
+//             } else {
+//                     $(this).animate({height: '55px'});
+//                     $( '#showA' ).animate({height: '50px'});
+//                     $( '#showC' ).animate({height: '50px'});
+//             }
+//
+//   });
+//
+//   $( '#showC' ).click(function() {
+//           $( '#tableT' ).hide();
+//           $( '#tableA' ).hide();
+//           $( '#tableC').show();
+//           $( '#showC' ).addClass('btnSelect');
+//           $( '#showT' ).removeClass('btnSelect');
+//           $( '#showA' ).removeClass('btnSelect');
+//           if (window.matchMedia('(max-width: 767px)').matches) {
+//                     $(this).animate({height: '45px'});
+//                     $( '#showA' ).animate({height: '40px'});
+//                     $( '#showT' ).animate({height: '40px'});
+//             } else {
+//                     $(this).animate({height: '55px'});
+//                     $( '#showA' ).animate({height: '50px'});
+//                     $( '#showT' ).animate({height: '50px'});
+//             }
+//   });
+//
+//   $("#availability_start_1i").datepicker({ minDate: 0 });
+//
+//
 // });
+//
+// $(document).on('page:load', ready);
