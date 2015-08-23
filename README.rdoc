@@ -1,28 +1,56 @@
-== README
+== TailorUp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Summary
+TailorUP, a Ruby on Rails Web Application designed to create an easy interactive
+ alternative for customers to request a tailor appointment for fitting, monitor
+ progression of alterations, and receive delivered garments without having to
+ leave the comforts of their home.
 
-Things you may want to cover:
+##What is the need?
+This application was designed for an actual company located in Wynwood called
+Caveat. Caveat's clients are usually busy business owners and entrepreneurs who
+don't have time to come to the Wynwood area for a fitting. We've designed the
+application to allow the tailor to come to them.
 
-* Ruby version
+Technologies we used:
 
-* System dependencies
+* Ruby on Rails
 
-* Configuration
+* Rspec for testing
 
-* Database creation
+* HTML, CSS, Javascript for styling
 
-* Database initialization
+* ActionMailer for a mailing system to the User
 
-* How to run the test suite
+* Exporting CSV file for auditing purposes
 
-* Services (job queues, cache servers, search engines, etc.)
+* PostgreSQL for the database
 
-* Deployment instructions
-
-* ...
+* Heroku for Deployment
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== Interfaces
+
+This application has three interfaces which includes Company, User, and Tailor.
+
+## User
+A user would sign in to the User Interface and see a list of availabilities for
+a potential fitting. They would be able to pick an availability from
+Monday-Saturday 10am-6pm (Shop Hours) then this would allow them to create their
+appointment listing out the type of garments needing alterations. The User
+would receive updates via email and application when the tailor is on the way to
+the for fittings, when alteration status are updated, and also once alterations
+are delivered.
+
+##Tailor
+A tailor would sign in to the Tailor Interface and see a list of their
+appointments in que as well as the appointments they are currently altering.
+This interface would allow the tailor to update the status of alterations
+through a click of a button.
+
+##Company
+A company would sign in to the Company Interface and see a list of their
+tailors and their tailor's appointments. A company would set the tailor's
+availability and add newly hired tailors by the click of a button.
+The company interface also has the capability to export a CSV listing every
+appointment the company ever had for auditing purposes. 
