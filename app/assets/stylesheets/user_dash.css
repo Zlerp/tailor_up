@@ -100,7 +100,7 @@ div .calendar {
   text-decoration: none;
   /*font-weight: 700;*/
 }
- p input {
+ /*p input {*/
    /*color: #A950A9;*/
 .loginFields input {
   color: #A950A9;
@@ -172,7 +172,7 @@ padding-left: 10%;
 .input input{
   text-align: center;
 }
-}
+/*}*/
 
 form p {
   text-align: center;
