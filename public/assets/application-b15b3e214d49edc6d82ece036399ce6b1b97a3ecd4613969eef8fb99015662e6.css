@@ -1149,7 +1149,7 @@ html.turbolinks-progress-bar::before {
 }
 /*Login for Tailor*/
 #loginBackgroundt{
-  background: url("/assets/bg03.png") no-repeat center center fixed;
+  background: url(<%= asset_data_uri "/assets/bg03.png" %>) no-repeat center center fixed;
   -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
@@ -1766,7 +1766,7 @@ font-family: 'Raleway', sans-serif;
     background-size: 1300px 800px;
   }
   #loginBackgroundt{
-    background: url("/assets/bg03.png")no-repeat center center fixed;;
+    background: url(<%= asset_data_uri "/assets/bg03.png" %>)no-repeat center center fixed;;
     background-size: 1300px 800px;
   }
   #email{
