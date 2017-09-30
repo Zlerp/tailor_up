@@ -3,7 +3,7 @@ body{
 }
 
 #loginBackground{
-  background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-08%20at%205.08.40%20PM_zpsxrkm8uah.png") no-repeat center center fixed;
+  background: url("/assets/tairloupbackgroundimg.png") no-repeat center center fixed;
   -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
@@ -30,7 +30,7 @@ body{
 }
 /*Login for Tailor*/
 #loginBackgroundt{
-  background: url("http://www.theqg.com/media/hdr-tailor-sewing2.jpg") no-repeat center center fixed;
+  background: url("/assets/bg03.png") no-repeat center center fixed;
   -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
