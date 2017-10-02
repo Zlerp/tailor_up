@@ -172,7 +172,7 @@ NOTE: use percentage font sizes or else old IE chokes
 
 /* Firefox has an annoying inner border */
 .fc button::-moz-focus-inner { margin: 0; padding: 0; }
-	
+
 .fc-state-default { /* non-theme */
 	border: 1px solid;
 }
@@ -195,7 +195,7 @@ NOTE: use percentage font sizes or else old IE chokes
 	margin: 0 .2em;
 	vertical-align: middle;
 }
-	
+
 /*
   button states
   borrowed from twitter bootstrap (http://twitter.github.com/bootstrap/)
@@ -404,7 +404,7 @@ hr.fc-divider {
 	border-right: 0 hidden transparent;
 
 	/* no bottom borders on rows */
-	border-bottom: 0 hidden transparent; 
+	border-bottom: 0 hidden transparent;
 }
 
 .fc-row:first-child table {
@@ -695,7 +695,7 @@ a.fc-more:hover {
 .fc .fc-toolbar > * > :first-child { /* extra precedence to override button border margins */
 	margin-left: 0;
 }
-	
+
 /* title text */
 
 .fc-toolbar h2 {
@@ -712,7 +712,7 @@ a.fc-more:hover {
 .fc-toolbar .ui-state-hover {
 	z-index: 2;
 }
-	
+
 .fc-toolbar .fc-state-down {
 	z-index: 3;
 }
@@ -1135,7 +1135,7 @@ html.turbolinks-progress-bar::before {
 }
 /* Login for Company*/
 #loginBackgroundc{
-  background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-09%20at%205.13.14%20AM_zpslajhgtoo.png") no-repeat center center fixed;
+  background: url("/assets/caveat.png") no-repeat center center fixed;
   -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
@@ -1762,7 +1762,7 @@ font-family: 'Raleway', sans-serif;
 
   }
   #loginBackgroundc{
-    background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-09%20at%205.13.14%20AM_zpslajhgtoo.png") no-repeat center center fixed;
+    background: url("/assets/caveat.png") no-repeat center center fixed;
     background-size: 1300px 800px;
   }
   #loginBackgroundt{
