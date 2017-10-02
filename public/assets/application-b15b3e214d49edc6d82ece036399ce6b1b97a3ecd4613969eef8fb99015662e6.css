@@ -1135,7 +1135,7 @@ html.turbolinks-progress-bar::before {
 }
 /* Login for Company*/
 #loginBackgroundc{
-  background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-09%20at%205.13.14%20AM_zpslajhgtoo.png") no-repeat center center fixed;
+  background: url("/assets/caveat.png") no-repeat center center fixed;
   -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
@@ -1762,7 +1762,7 @@ font-family: 'Raleway', sans-serif;
 
   }
   #loginBackgroundc{
-    background: url("http://i296.photobucket.com/albums/mm195/Zlerp/Screen%20Shot%202015-08-09%20at%205.13.14%20AM_zpslajhgtoo.png") no-repeat center center fixed;
+    background: url("/assets/caveat.png") no-repeat center center fixed;
     background-size: 1300px 800px;
   }
   #loginBackgroundt{
