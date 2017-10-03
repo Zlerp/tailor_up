@@ -1122,7 +1122,7 @@ html.turbolinks-progress-bar::before {
   margin-top: 20em;
 }
 #loginBackground{
-  background: url("/assets/tairloupbackgroundimg.png") no-repeat center center fixed;
+  background: url("https://i.imgur.com/zuDZJM0.png") no-repeat center center fixed;
   -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
@@ -1135,7 +1135,7 @@ html.turbolinks-progress-bar::before {
 }
 /* Login for Company*/
 #loginBackgroundc{
-  background: url("/assets/caveat.png") no-repeat center center fixed;
+  background: url("https://i.imgur.com/k2t95Ck.png") no-repeat center center fixed;
   -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
@@ -1757,12 +1757,12 @@ font-family: 'Raleway', sans-serif;
   }
 
   #loginBackground{
-    background: url("/assets/tairloupbackgroundimg.png") no-repeat center center fixed;
+    background: url("https://i.imgur.com/zuDZJM0.png") no-repeat center center fixed;
     background-size: 1300px 800px;
 
   }
   #loginBackgroundc{
-    background: url("/assets/caveat.png") no-repeat center center fixed;
+    background: url("https://i.imgur.com/k2t95Ck.png") no-repeat center center fixed;
     background-size: 1300px 800px;
   }
   #loginBackgroundt{
